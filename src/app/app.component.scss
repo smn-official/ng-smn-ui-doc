@@ -1,0 +1,5 @@
+@import 'app.theme';
+
+a {
+    color: map_get($theme, accent-color);
+}

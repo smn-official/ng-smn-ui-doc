@@ -1,0 +1,75 @@
+<ui-toolbar class="fixed flat elevate-on-scroll primary elevate-on-s960" id="app-header">
+    <button (click)="menuOpen = true" class="ui-button flat icon" uiRipple>
+        <i class="material-icons">menu</i>
+    </button>
+    <a routerLink="/" class="logo">
+        <img src="http://smn.com.br/content/img/logotipo/dark-lying.svg"
+             alt="">
+    </a>
+    <span class="title" *ngIf="!menuOpen">{{title}}</span>
+    <div class="align-right">
+        <button class="ui-button flat icon" uiRipple [uiMenuTrigger]="menuLanguage" align="right">
+            <i class="material-icons">language</i>
+        </button>
+    </div>
+</ui-toolbar>
+
+<ui-nav-drawer class="persistent" [(open)]="menuOpen">
+    <ui-toolbar class="flat">
+        <button (click)="menuOpen = false" class="ui-button flat icon" uiRipple>
+            <i class="material-icons">arrow_back</i>
+        </button>
+        <a routerLink="/" class="logo">
+            <img src="http://smn.com.br/content/img/logotipo/light-lying.svg"
+                 alt="">
+        </a>
+        <!--<span class="title">{{title}}</span>-->
+    </ui-toolbar>
+    <div class="ui-nav-drawer-overflow">
+        <div class="ui-list">
+            <a class="ui-list-item" uiRipple routerLink="/" [routerLinkActive]="['active']"
+               [routerLinkActiveOptions]="{ exact: true }">Início</a>
+            <div class="ui-list-item" uiRipple [uiListItem]="componentes">
+                Componentes
+                <span class="arrow"><i class="material-icons">keyboard_arrow_right</i></span>
+            </div>
+            <div class="ui-list-item-group" #componentes>
+                <a class="ui-list-item" uiRipple routerLink="/button" [routerLinkActive]="['active']">Button</a>
+                <a class="ui-list-item" uiRipple routerLink="/card" [routerLinkActive]="['active']">Card</a>
+                <a class="ui-list-item" uiRipple routerLink="/fab" [routerLinkActive]="['active']">Floating Action Button</a>
+            </div>
+            <!--<a class="ui-list-item" uiRipple routerLink="/buttons">Buttons</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/cards">Cards</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/data-tables">Data tables</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/date-pickers">Date pickers</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/dialog">Dialog</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/dividers">Dividers</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/inputs">Inputs</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/layout">Layout</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/masks">Masks</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/menus">Menus</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/nav-drawer">Navigation drawer</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/progress">Progress & activity</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/selection-controls">Selection controls</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/smart-list">Smart list</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/snackbars">Snackbars & toasts</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/subheader">Subheader</a>-->
+            <!--<a class="ui-list-item" uiRipple routerLink="/toolbars">Toolbars</a>-->
+        </div>
+    </div>
+</ui-nav-drawer>
+
+<router-outlet></router-outlet>
+
+<ui-menu #menuLanguage>
+    <div class="ui-menu-content size-2x" (click)="$event.stopPropagation()">
+        <div class="ui-menu-item" uiRipple>
+            <i class="icon material-icons">done</i>
+            Português
+        </div>
+        <div class="ui-menu-item" uiRipple>
+            <i class="icon material-icons" [style.visibility]="'hidden'">done</i>
+            Inglês
+        </div>
+    </div>
+</ui-menu>
