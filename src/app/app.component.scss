@@ -3,3 +3,12 @@
 a {
     color: map_get($theme, accent-color);
 }
+
+header .title {
+    transition: opacity 280ms ui-easing('deceleration');
+
+    &.hidden {
+        opacity: 0;
+    }
+}
+

@@ -6,7 +6,7 @@
         <img src="http://smn.com.br/content/img/logotipo/dark-lying.svg"
              alt="">
     </a>
-    <span class="title" *ngIf="!menuOpen">{{title}}</span>
+    <span class="title" [class.hidden]="menuOpen">{{title}}</span>
     <div class="align-right">
         <button class="ui-button flat icon" uiRipple [uiMenuTrigger]="menuLanguage" align="right">
             <i class="material-icons">language</i>

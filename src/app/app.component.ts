@@ -14,12 +14,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     title: String;
     menuOpen: boolean;
 
-    constructor(private toolbarService: UiToolbarService, public element: ElementRef, private titleService: Title,
-                private cd: ChangeDetectorRef) {
-        this.toolbarService.change.subscribe(title => {
-            this.title = title;
-            this.cd.detectChanges();
-        });
+    constructor(private toolbarService: UiToolbarService, public element: ElementRef, private titleService: Title) {
+        this.toolbarService.change.subscribe(title => this.title = title);
     }
 
     ngOnInit() {
@@ -39,4 +35,3 @@ export class AppComponent implements OnInit, AfterViewInit {
     ngAfterViewInit() {
     }
 }
-/**/
