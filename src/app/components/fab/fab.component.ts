@@ -1,18 +1,25 @@
-import {Component, AfterViewInit} from '@angular/core';
+import {Component, AfterViewInit, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 import {UiToolbarService} from 'ng-smn-ui';
+import {RegionService} from '../../core/region.service';
 
 @Component({
     selector: 'app-fab',
     templateUrl: './fab.component.html',
     styleUrls: ['../../home/home.component.scss', './fab.component.scss']
 })
-export class FabComponent implements AfterViewInit {
+export class FabComponent implements AfterViewInit, OnInit {
     codes: any[];
+    region: any;
 
-    constructor(private toolbarService: UiToolbarService, private titleService: Title) {
+    constructor(private toolbarService: UiToolbarService, private titleService: Title, private regionService: RegionService) {
+        this.regionService.change.subscribe(region => this.region = region);
         this.codes = [];
+    }
+
+    ngOnInit() {
+        this.region = this.regionService.get();
         this.codes[0] = `<button class="ui-button primary fab" uiRipple>
                     <i class="material-icons">add</i>
                 </button>`;

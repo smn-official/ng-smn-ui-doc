@@ -1,24 +1,25 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Button <a href="https://material.io/guidelines/components/buttons.html"><i class="material-icons">link</i></a></h1>
+        <h1>Button <a href="https://material.io/guidelines/components/buttons.html"><i
+            class="material-icons">link</i></a></h1>
         <br>
-        <div class="a harator">
-            <h3>Padrão</h3>
+        <div class="separator">
+            <h3>{{region.button.default}}</h3>
             <p>
-                <button class="ui-button">Padrão</button>
+                <button class="ui-button">{{region.button.default}}</button>
             </p>
             <pre>
-                {{codes[0]}}
-            </pre>
+    {{codes[0]}}
+</pre>
         </div>
         <div class="separator">
-            <h3>Com ripple</h3>
+            <h3>{{region.button.withRipple}}</h3>
             <p>
-                <button class="ui-button" uiRipple>Com ripple</button>
+                <button class="ui-button" uiRipple>{{region.button.withRipple}}</button>
             </p>
             <pre>
-                {{codes[1]}}
-            </pre>
+    {{codes[1]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Raised</h3>
@@ -26,8 +27,8 @@
                 <button class="ui-button raised" uiRipple>Raised</button>
             </p>
             <pre>
-                {{codes[2]}}
-            </pre>
+    {{codes[2]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Flat</h3>
@@ -35,8 +36,8 @@
                 <button class="ui-button flat" uiRipple>Flat</button>
             </p>
             <pre>
-                {{codes[3]}}
-            </pre>
+    {{codes[3]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Icon</h3>
@@ -46,11 +47,11 @@
                 </button>
             </p>
             <pre>
-                {{codes[9]}}
-            </pre>
+    {{codes[9]}}
+</pre>
         </div>
         <div class="separator">
-            <h3>Icon com badge</h3>
+            <h3>{{region.button.iconWithBadge}}</h3>
             <p>
                 <button class="ui-button flat icon" uiRipple>
                     <i class="material-icons">notifications</i>
@@ -58,8 +59,8 @@
                 </button>
             </p>
             <pre>
-                {{codes[10]}}
-            </pre>
+    {{codes[10]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Full</h3>
@@ -67,61 +68,61 @@
                 <button class="ui-button full" uiRipple>Full</button>
             </p>
             <pre>
-                {{codes[4]}}
-            </pre>
+    {{codes[4]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Primary</h3>
-            <p>Acompanha a cor <b>primary</b> do tema do projeto.</p>
+            <p [innerHtml]="region.button.primary"></p>
             <p>
                 <button class="ui-button primary" uiRipple>Primary</button>
             </p>
             <pre>
-                {{codes[5]}}
-            </pre>
+    {{codes[5]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Accent</h3>
-            <p>Acompanha a cor <b>accent</b> do tema do projeto.</p>
+            <p [innerHtml]="region.button.accent"></p>
             <p>
                 <button class="ui-button accent" uiRipple>Accent</button>
             </p>
             <pre>
-                {{codes[6]}}
-            </pre>
+    {{codes[6]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Success</h3>
-            <p>É sempre a cor <b>green</b> para identificar sucesso.</p>
+            <p [innerHtml]="region.button.success"></p>
             <p>
                 <button class="ui-button success" uiRipple>Success</button>
             </p>
             <pre>
-                {{codes[11]}}
-            </pre>
+    {{codes[11]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Warning</h3>
-            <p>É sempre a cor <b>orange</b> para identificar aviso.</p>
+            <p [innerHtml]="region.button.warning"></p>
             <p>
                 <button class="ui-button warning" uiRipple>Warning</button>
             </p>
             <pre>
-                {{codes[7]}}
-            </pre>
+    {{codes[7]}}
+</pre>
         </div>
         <div class="separator">
             <h3>Error</h3>
-            <p>É sempre a cor <b>red</b> para identificar erro.</p>
+            <p [innerHtml]="region.button.error"></p>
             <p>
                 <button class="ui-button error" uiRipple>Error</button>
             </p>
             <pre>
-                {{codes[8]}}
-            </pre>
+    {{codes[8]}}
+</pre>
         </div>
         <div class="separator">
-            <h3>Demos</h3><br>
+            <h3>Demo</h3><br>
             <div class="ui-button-container">
                 <button class="ui-button" uiRipple>Default</button>
                 <button class="ui-button primary" uiRipple>Primary</button>

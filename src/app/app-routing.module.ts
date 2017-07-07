@@ -6,6 +6,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {ButtonComponent} from './components/button/button.component';
 import {CardComponent} from './components/card/card.component';
 import {FabComponent} from './components/fab/fab.component';
+import {InputComponent} from './components/input/input.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'button', component: ButtonComponent},
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},
+    {path: 'input', component: InputComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 

@@ -11,6 +11,8 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {ButtonComponent} from './components/button/button.component';
 import {CardComponent} from './components/card/card.component';
 import {FabComponent} from './components/fab/fab.component';
+import {InputComponent} from './components/input/input.component';
+import {RegionService} from './core/region.service';
 
 @NgModule({
     declarations: [
@@ -19,14 +21,15 @@ import {FabComponent} from './components/fab/fab.component';
         NotFoundComponent,
         ButtonComponent,
         CardComponent,
-        FabComponent
+        FabComponent,
+        InputComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         SMNUIModule
     ],
-    providers: [UiToolbarService],
+    providers: [UiToolbarService, RegionService],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
