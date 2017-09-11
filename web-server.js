@@ -29,7 +29,7 @@ function loadServer() {
 }
 
 if (cluster.isMaster) {
-    let cpuCount = os.cpus().length;
+    let cpuCount = process.env.CPU_COUNT || os.cpus().length;
 
     for (let i = 0; i < cpuCount; i++) {
         cluster.fork();
