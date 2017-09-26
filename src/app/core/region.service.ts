@@ -16,8 +16,8 @@ const regions = {
             primary: 'Acompanha a cor <b>primary</b> do tema do projeto.',
             accent: 'Acompanha a cor <b>accent</b> do tema do projeto.',
             success: 'É sempre a cor <b>green</b> para identificar sucesso.',
-            warning: 'É sempre a cor <b>orange</b> para identificar sucesso.',
-            error: 'É sempre a cor <b>red</b> para identificar sucesso.'
+            warning: 'É sempre a cor <b>orange</b> para identificar aviso.',
+            error: 'É sempre a cor <b>red</b> para identificar erro.'
         },
         card: {
             simple: 'Simples',
@@ -57,8 +57,8 @@ const regions = {
             primary: 'Follow the <b>primary</b> color of the project\'s theme.',
             accent: 'Follow the <b>accent</b> color of the project\'s theme.',
             success: 'It\'s always the color <b>green</b> to identify success.',
-            warning: 'It\'s always the color <b>orange</b> to identify success.',
-            error: 'It\'s always the color <b>red</b> to identify success.'
+            warning: 'It\'s always the color <b>orange</b> to identify warning.',
+            error: 'It\'s always the color <b>red</b> to identify error.'
         },
         card: {
             simple: 'Simple',
