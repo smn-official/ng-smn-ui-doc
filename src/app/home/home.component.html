@@ -1,5 +1,6 @@
 <div class="container">
     <div class="ui-s960">
+        <ui-card class="elevate-on-toolbar">
         <h1>SMN UI</h1><br>
         <div *ngIf="region.language === 'pt-br'">
             <h3>Introdução</h3>
@@ -33,34 +34,56 @@
                 comando:
             </p>
             <pre>
-    npm install ng-smn-ui --save
-</pre>
+npm install ng-smn-ui --save
+            </pre>
+
             <p>
-                2. Abra o arquivo <b>*.module.ts</b> do seu projeto e importe o SMN UI.
+                2. Importe o SMN-UI e o CUSTOM_ELEMENTS_SCHEMA ao seu modulo principal.
             </p>
             <pre>
-    import {{'{'}}SMNUIModule{{'}'}} from 'ng-smn-ui';
-</pre>
+import &#x0007B; SMNUIModule &#x0007D; from 'ng-smn-ui';
+...
+    imports: [
+        ...
+        SMNUIModule
+    ]
+...
+  schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ]
+...
+            </pre>
             <p>
-                3. Ainda no arquivo <b>*.module.ts</b> do seu projeto, injete o SMN UI dentro do seu módulo na seção
-                <b>imports</b>.
+                3. Insira os dados sobre o tema a ser utilizado seu arquivo styles.scss.
             </p>
             <pre>
-    ...
-        ],
-        imports: [
-            BrowserModule,
-            SMNUIModule
-        ],
-        providers: [
-    ...
-</pre>
+@import "~ng-smn-ui/core/core"
+@import "~ng-smn-ui/core/theme"
+
+$primary: (color: 'blue', hue: '500')
+$accent: (color: 'green', hue: '50')
+
+$theme: ui-theme($primary, $accent)
+$theme-dark: ui-theme($primary, $accent, true)
+
+@include ui-core()
+
+@include ui-build-theme($theme)
+            </pre>
             <p>
-                4. Pronto. O SMN UI já está disponível para ser utilizado no seu projeto.
+                4. No seu head do seu arquivo 'index.html' insera as fontes Roboto e Material Icons.
             </p>
+            <pre>
+&lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/&gt;
+            </pre>
+            <p>
+                4. Pronto. Agora você pode utilizar o SMN-UI no seu projeto.
+            </p>
+            <br><br><br><br><br>
         </div>
         <div *ngIf="region.language === 'en-us'">
-            <h3>Introduction</h3>
+            <h3>Introduction(Em construção)</h3>
             <p>
                 After a long time of dedication from several collaborators it was developed this module for Angular.
             </p>
@@ -84,7 +107,6 @@
                     Developed by <a href="http://smn.com.br/">SMN</a>.<br>
                 </i>
             </p>
-
             <h3>Installation</h3>
             <p>
                 1. Open the directory of your project Angular through CMD or GitBash and type the following command
@@ -118,6 +140,7 @@
                 4. Done. The SMN UI is already available to be used on your project.
             </p>
         </div>
+        </ui-card>
     </div>
 </div>
 <!---->

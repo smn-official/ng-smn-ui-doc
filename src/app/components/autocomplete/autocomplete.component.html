@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Autocomplete <a href="https://material.io/guidelines/components/buttons.html"><i
+            class="material-icons">link</i></a></h1>
+        <br>
+        <div class="separator">
+            <h3>
+                Atributos
+            </h3><br>
+            <pre>
+    modelValue: Pega o valor selecionado.
+
+    list: Lista de opções para o select.
+
+    loading: Utilizado para controlar a barra de carregamento do select.
+
+    select: Dispara um evento após a seleção de um item.
+            </pre>
+        </div>
+        <div class="separator">
+            <h3>Simples</h3>
+            <p>
+                HTML
+            </p>
+            <pre>
+    &lt;ui-input-container>
+      &lt;input type="text"
+             [(ngModel)]="searchTeams"
+             [(modelValue)]="teste"
+             uiInput
+             uiAutocomplete
+             (input)="search()"
+             (focus)="search()"
+             [list]="teamsFiltrados"
+             [loading]="loading"
+             [select]="finish.bind(this)">
+      &lt;label>Clubes&lt;/label>
+    &lt;/ui-input-container>
+            </pre>
+        </div>
+        <div class="separator">
+            <p>
+                JS
+            </p>
+            <pre>
+    search() &#x0007B;
+        clearInterval(this.timing);
+        this.loading = true;
+        this.timing = setTimeout(() => &#x0007B;
+          this.loading = false;
+          if (!this.searchTeams) &#x0007B;
+            this.teamsFiltrados = this.teams;
+            return;
+          &#x0007D;
+          this.teamsFiltrados = this.teams.filter(item => &#x0007B;
+            return (item.indexOf(this.searchTeams) !== -1);
+          &#x0007D;);
+        &#x0007D;, 300);
+      &#x0007D;
+
+    finish(item) &#x0007B;
+        console.log(item); // Mostra o item selecionado
+    &#x0007D;
+            </pre>
+        </div>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+        </div>
+    </div>

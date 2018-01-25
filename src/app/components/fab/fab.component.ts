@@ -13,7 +13,9 @@ export class FabComponent implements AfterViewInit, OnInit {
     codes: any[];
     region: any;
 
-    constructor(private toolbarService: UiToolbarService, private titleService: Title, private regionService: RegionService) {
+    constructor(private toolbarService: UiToolbarService,
+                private titleService: Title,
+                private regionService: RegionService) {
         this.regionService.change.subscribe(region => this.region = region);
         this.codes = [];
     }

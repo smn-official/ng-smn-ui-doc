@@ -7,6 +7,7 @@ import {ButtonComponent} from './components/button/button.component';
 import {CardComponent} from './components/card/card.component';
 import {FabComponent} from './components/fab/fab.component';
 import {InputComponent} from './components/input/input.component';
+import {AutocompleteComponent} from "./components/autocomplete/autocomplete.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},
     {path: 'input', component: InputComponent},
+    {path: 'autocomplete', component: AutocompleteComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 

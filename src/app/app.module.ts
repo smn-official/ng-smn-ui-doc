@@ -13,6 +13,8 @@ import {CardComponent} from './components/card/card.component';
 import {FabComponent} from './components/fab/fab.component';
 import {InputComponent} from './components/input/input.component';
 import {RegionService} from './core/region.service';
+import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -22,7 +24,8 @@ import {RegionService} from './core/region.service';
         ButtonComponent,
         CardComponent,
         FabComponent,
-        InputComponent
+        InputComponent,
+        AutocompleteComponent
     ],
     imports: [
         BrowserModule,

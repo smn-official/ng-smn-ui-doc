@@ -13,7 +13,9 @@ import {RegionService} from '../core/region.service';
 export class HomeComponent implements AfterViewInit, OnInit {
     region: any;
 
-    constructor(private toolbarService: UiToolbarService, private titleService: Title, private regionService: RegionService) {
+    constructor(private toolbarService: UiToolbarService,
+                private titleService: Title,
+                private regionService: RegionService) {
         this.regionService.change.subscribe(region => this.region = region);
     }
 
