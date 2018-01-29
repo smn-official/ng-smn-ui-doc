@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { HttpModule } from "@angular/http";
 
 import {SMNUIModule, UiToolbarService} from 'ng-smn-ui';
 
@@ -14,10 +15,12 @@ import {FabComponent} from './components/fab/fab.component';
 import {InputComponent} from './components/input/input.component';
 import {RegionService} from './core/region.service';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
+import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 
 @NgModule({
     declarations: [
+        CodeGitsComponent,
         AppComponent,
         HomeComponent,
         NotFoundComponent,
@@ -29,8 +32,10 @@ import {FormsModule} from "@angular/forms";
     ],
     imports: [
         BrowserModule,
+        HttpModule,
         AppRoutingModule,
-        SMNUIModule
+        FormsModule,
+        SMNUIModule,
     ],
     providers: [UiToolbarService, RegionService],
     bootstrap: [AppComponent],
