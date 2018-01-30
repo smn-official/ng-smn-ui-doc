@@ -1,4 +1,6 @@
 import {AfterViewInit, Component, OnInit, ElementRef} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import { UiToolbarService } from 'ng-smn-ui';
 
 @Component({
     selector: 'app-autocomplete',
@@ -33,7 +35,10 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
     timing3;
 
 
-    constructor(private elementRef: ElementRef) {
+    constructor(private titleService: Title,
+                private toolbarService: UiToolbarService) {
+
+
         // DEMO 1
         this.teams = ['Santos', 'São Paulo', 'Palmeiras'];
         this.teamsFiltrados = this.teams;
@@ -55,6 +60,8 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
+        this.titleService.setTitle('Autocomplete');
+        this.toolbarService.set('Autocomplete');
     }
 
     // DEMO 1
