@@ -30,68 +30,95 @@
         </div> <!-- Atributos -->
 
         <div class="separator">
-            <p>HTML</p>
-            <code-gits id="GabrielFerreir/dd086285497c3f7ccbd140f84c09eefc"></code-gits>
+            <div class="separator">
+                <p>HTML</p>
+                <code-gits id="GabrielFerreir/dd086285497c3f7ccbd140f84c09eefc"></code-gits>
+            </div> <!-- HTML -->
+            <div class="separator">
+                <p>
+                    JS
+                </p>
+                <code-gits id="GabrielFerreir/7116cc670c434841a8f977493f11ca80"></code-gits> <!-- JS -->
+            </div> <!-- JS -->
+            <div class="separator">
+                <p>
+                    DEMO
+                </p>
+                <ui-input-container>
+                    <input type="text"
+                           [(ngModel)]="searchTeams"
+                           [(modelValue)]="valueTeam"
+                           uiInput
+                           uiAutocomplete
+                           (input)="search()"
+                           (focus)="search()"
+                           [list]="teamsFiltrados"
+                           [loading]="loading"
+                           [select]="finish.bind(this)">
+                    <label>Clubes</label>
+                </ui-input-container>
+            </div> <!-- DEMO -->
+        </div> <!-- DEMO 01 -->
+
+        <div class="separator">
+            <div class="separator">
+                <h3>Com dois atributos</h3>
+                <p>HTML</p>
+                <code-gits id="GabrielFerreir/8c99c0aea8f0a44a9272d0a338e91537"></code-gits>
+            </div> <!-- HTML -->
+            <div class="separator">
+                <p>JS</p>
+                <code-gits id="GabrielFerreir/9bd63a4176311d190507983c6e7e569d"></code-gits>
+            </div> <!-- JS -->
+            <div class="separator">
+                <p>DEMO</p>
+                <ui-input-container>
+                    <input type="text"
+                           [(ngModel)]="searchActors"
+                           [modelValue]="selectValue"
+                           uiInput
+                           class="accent"
+                           uiAutocomplete
+                           (input)="searchActor()"
+                           (focus)="searchActor()"
+                           [primary]="'actor'"
+                           [secondary]="'character'"
+                           theme-class="dark"
+                           [list]="actorsFiltred"
+                           [loading]="loading2">
+                    <label>Personagens</label>
+                </ui-input-container>
+            </div> <!-- DEMO -->
+        </div> <!-- DEMO 02 -->
+
+        <div class="separator">
+            <h3>Com loadmore</h3>
+            <div class="separator">
+                <p>HTML</p>
+                <code-gits id="GabrielFerreir/d0c92388e5d5bf5e898f4b5e2ce7b50f"></code-gits>
+            </div>
+
+            <div class="separator">
+                <p>JS</p>
+                <code-gits id="GabrielFerreir/49cae5976ba4a7cb1f57b7cf8efb70f0"></code-gits>
+            </div>
+
+            <div class="separator">
+                <p>DEMO</p>
+                <ui-input-container>
+                    <input type="text"
+                           [(ngModel)]="searchObject"
+                           [modelValue]="objectValue"
+                           uiInput
+                           uiAutocomplete
+                           class="accent"
+                           (input)="searchObjects()"
+                           (focus)="searchObjects()"
+                           (loadMore)="loadMoreObjects()"
+                           [list]="objectsFiltred"
+                           [loading]="loading3"
+                    >
+                </ui-input-container>
+            </div>
         </div>
-        <div class="separator">
-            <p>
-                JS
-            </p>
-            <code-gits id="GabrielFerreir/7116cc670c434841a8f977493f11ca80"></code-gits> <!-- JS -->
-        <div class="separator">
-            <p>
-                DEMO
-            </p>
-            <ui-input-container>
-                <input type="text"
-                       [(ngModel)]="searchTeams"
-                       [(modelValue)]="valueTeam"
-                       uiInput
-                       uiAutocomplete
-                       (input)="search()"
-                       (focus)="search()"
-                       [list]="teamsFiltrados"
-                       [loading]="loading"
-                       [select]="finish.bind(this)">
-                <label>Clubes</label>
-            </ui-input-container>
-        </div> <!-- DEMO -->
-
-        <div class="separator">
-            <h3>Com dois atributos</h3>
-            <p>HTML</p>
-            <code-gits id="GabrielFerreir/8c99c0aea8f0a44a9272d0a338e91537"></code-gits>
-        </div> <!-- HTML -->
-        <div class="separator">
-            <p>JS</p>
-            <code-gits id="GabrielFerreir/9bd63a4176311d190507983c6e7e569d"></code-gits>
-        </div> <!-- JS -->
-        <div class="separator">
-            <p>DEMO</p>
-            <ui-input-container>
-                <input type="text"
-                       [(ngModel)]="searchActors"
-                       [modelValue]="selectValue"
-                       uiInput
-                       class="accent"
-                       uiAutocomplete
-                       (input)="searchActor()"
-                       (focus)="searchActor()"
-                       [primary]="'actor'"
-                       [secondary]="'character'"
-                       theme-class="dark"
-                       [list]="actorsFiltred"
-                       [loading]="loading2">
-                <label>Personagens</label>
-            </ui-input-container>
-        </div> <!-- DEMO -->
-
-
-
-        <br><br><br><br><br>
-        <br><br><br><br><br>
-
-
-
     </div>
-</div>

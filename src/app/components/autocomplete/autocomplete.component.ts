@@ -24,6 +24,14 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
     timing2;
     selectValue;
 
+    // DEMO 3
+    searchObject;
+    objectValue;
+    objects: any[];
+    objectsFiltred: any[];
+    loading3;
+    timing3;
+
 
     constructor(private elementRef: ElementRef) {
         // DEMO 1
@@ -37,6 +45,10 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
             {actor: 'Professor Girafales', character: 'Seu Madruga'},
             {actor: 'Frederico Mátalas', character: 'Quico'}];
         this.actorsFiltred = this.actors;
+
+        // DEMO 3
+        this.objects = ['Luz', 'Lapis', 'Borracha', 'Garrafa', 'Apontador', 'Lixo', 'Caixa', 'Livro', 'Fone'];
+        this.objectsFiltred = this.objects;
     }
 
     ngOnInit() {
@@ -66,7 +78,6 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
     }
 
     // DEMO 2
-
     searchActor() {
         clearInterval(this.timing2);
         this.loading = true;
@@ -80,6 +91,28 @@ export class AutocompleteComponent implements OnInit, AfterViewInit {
                 return (item.actor.indexOf(this.searchActors) !== -1);
             });
         }, 300);
+    }
+
+    // DEMO 3
+
+    searchObjects() {
+        clearInterval(this.timing3);
+        this.loading = true;
+        this.timing3 = setTimeout(() => {
+            this.loading = false;
+            if (!this.searchObject) {
+                this.objectsFiltred = this.objects;
+                return;
+            }
+            this.objectsFiltred = this.objects.filter(item => {
+                return (item.indexOf(this.searchObject) !== -1);
+            });
+        }, 300);
+    }
+
+    loadMoreObjects() {
+        this.objectsFiltred = [...this.objects, ...['Novo item', 'Novo item', 'Novo item', 'Novo item']];
+        this.objects = [...this.objects, ...['Novo item', 'Novo item', 'Novo item', 'Novo item']];
     }
 
 }
