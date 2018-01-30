@@ -17,6 +17,7 @@ import {RegionService} from './core/region.service';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import {FormsModule} from '@angular/forms';
 import {CodeGitsComponent} from './core/code-gits/code-gits.component';
+import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import {CodeGitsComponent} from './core/code-gits/code-gits.component';
         CardComponent,
         FabComponent,
         InputComponent,
-        AutocompleteComponent
+        AutocompleteComponent,
+        BottomSheetsComponent
     ],
     imports: [
         BrowserModule,

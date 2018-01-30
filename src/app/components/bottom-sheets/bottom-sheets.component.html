@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Bottom sheets <a href="#"><i
+            class="material-icons">link</i></a></h1>
+        <br>
+
+        <!--<div class="separator">-->
+            <!--<h3>Atributos</h3><br>-->
+            <!--<pre>-->
+    <!--uiBottomSheetTrigger-->
+    <!--card-size-->
+            <!--</pre>-->
+        <!--</div> &lt;!&ndash; Atributos &ndash;&gt;-->
+        <!--<div class="separator">-->
+            <!--<h3>Classes</h3><br>-->
+            <!--<pre>-->
+    <!--ui-list-->
+    <!--header-->
+
+    <!--col-2 ao col-4-->
+
+            <!--</pre>-->
+        <!--</div> &lt;!&ndash; Classes &ndash;&gt;-->
+        <div class="separator">
+            <h3>Com lista</h3>
+            <code-gits id="GabrielFerreir/b45bea45dab456276e02eca601e3985e"></code-gits>
+        </div> <!-- HTML -->
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="listBottomSheet" uiRipple>Abrir como lista</button>
+        </div> <!-- DEMO -->
+
+        <div class="separator">
+            <h3>Com cabeçalho</h3>
+            <code-gits id="GabrielFerreir/f2acf8d26e12351d0880a91a070a4474"></code-gits>
+        </div>
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="headerBottomSheet" uiRipple>Abrir como lista e com cabecalho</button>
+        </div>
+    </div>
+</div>
+
+<!-- DEMO 01 -->
+<ui-bottom-sheet #listBottomSheet card-size="480">
+    <ul class="ui-list" (click)="listBottomSheet.close()">
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">share</i>
+            </div>
+            Compartilhar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">content_copy</i>
+            </div>
+            Copiar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">print</i>
+            </div>
+            Imprimir
+        </li>
+    </ul>
+</ui-bottom-sheet>
+
+<!-- DEMO 02 -->
+<ui-bottom-sheet #headerBottomSheet card-size="480">
+    <h2 class="header">Criar</h2>
+    <ul class="ui-list" (click)="headerBottomSheet.close()">
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">insert_drive_file</i>
+            </div>
+            Documento
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">assignment</i>
+            </div>
+            Planilha
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">folder</i>
+            </div>
+            Pasta
+        </li>
+        <li class="ui-divider"></li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">photo_camera</i>
+            </div>
+            Usar a câmera
+        </li>
+    </ul>
+</ui-bottom-sheet>
