@@ -1,34 +1,7 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Autocomplete <a href="#"><i
-            class="material-icons">link</i></a></h1>
+        <h1>Autocomplete</h1>
         <br>
-
-        <div class="separator">
-            <h3>
-                Atributos
-            </h3><br>
-            <pre>
-    modelValue: Pega o valor selecionado.
-
-    list: Lista de opções para o select (pode ser um array de strings ou um array de objetos).
-
-    loading: Utilizado para controlar a barra de carregamento do select.
-
-    select: Dispara um evento após a seleção de um item.
-
-    loadMore: Evento disparado quando o scroll do autocomplete chega perto do final da barra de rolagem.
-
-    theme-class: Usado para definir o tema.
-
-    primary*: Utilizado para definir o item principal do autocomplete.
-
-    secondary*: Utilizado para definir o item secundario do autocomplete.
-
-    *list deve ser um array de objetos
-            </pre>
-        </div> <!-- Atributos -->
-
         <div class="separator">
             <h3>Simples</h3>
             <div class="separator">
@@ -53,7 +26,7 @@
                 </ui-input-container>
             </div> <!-- DEMO -->
         </div> <!-- DEMO 01 -->
-
+        <div class="ui-divider"></div>
         <div class="separator">
             <h3>Com dois atributos</h3>
             <div class="separator">
@@ -81,7 +54,7 @@
                 </ui-input-container>
             </div> <!-- DEMO -->
         </div> <!-- DEMO 02 -->
-
+        <div class="ui-divider"></div>
         <div class="separator">
             <h3>Com loadmore</h3>
             <div class="separator">
@@ -108,4 +81,56 @@
                 </ui-input-container>
             </div>
         </div> <!-- DEMO 03 -->
+        <div class="ui-divider"></div>
+        <ui-data-table>
+            <tbody>
+            <tr>
+                <th>
+                    Atributo
+                </th>
+                <th>
+                    Função
+                </th>
+            </tr>
+            <tr>
+                <td>Atributo modelValue</td>
+                <td>Guarda o valor do item selecionado</td>
+            </tr>
+            <tr>
+                <td>Atributo list</td>
+                <td>Array ou array de objetos que contem as opções do select</td>
+            </tr>
+            <tr>
+                <td>loading</td>
+                <td>Utilizado para controlar a barra de carregamento do select</td>
+            </tr>
+            <tr>
+                <td>Atributo select</td>
+                <td>Dispara um evento após a seleção de um item.</td>
+            </tr>
+            <tr>
+                <td>Atributo loadMore</td>
+                <td>Evento disparado quando o scroll do autocomplete chega perto do final da barra de rolagem</td>
+            </tr>
+            <tr>
+                <td>Atributo theme-class</td>
+                <td>Utilizado para definir o tema do autocomplete</td>
+            </tr>
+            <tr>
+                <td>Atributo primary*</td>
+                <td>Utilizado para definir o item principal do autocomplete</td>
+            </tr>
+            <tr>
+                <td>secondary*</td>
+                <td>Utilizado para definir o item secundario do autocomplete</td>
+            </tr>
+            <tr>
+                <td class="align-right">*</td>
+                <td>O atributo list deve ser um array de objetos</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </ui-data-table>
+        <br><br><br><br><br>
     </div>
