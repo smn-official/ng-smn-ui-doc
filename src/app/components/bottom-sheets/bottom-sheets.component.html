@@ -1,43 +1,108 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Bottom sheets <a href="#"><i
+        <h1>Bottom sheets <a
+            href="https://material.io/guidelines/components/bottom-sheets.html#bottom-sheets-modal-bottom-sheets"
+            target="_blank"><i
             class="material-icons">link</i></a></h1>
         <br>
-
-        <!--<div class="separator">-->
-            <!--<h3>Atributos</h3><br>-->
-            <!--<pre>-->
-    <!--uiBottomSheetTrigger-->
-    <!--card-size-->
-            <!--</pre>-->
-        <!--</div> &lt;!&ndash; Atributos &ndash;&gt;-->
-        <!--<div class="separator">-->
-            <!--<h3>Classes</h3><br>-->
-            <!--<pre>-->
-    <!--ui-list-->
-    <!--header-->
-
-    <!--col-2 ao col-4-->
-
-            <!--</pre>-->
-        <!--</div> &lt;!&ndash; Classes &ndash;&gt;-->
         <div class="separator">
             <h3>Com lista</h3>
             <code-gits id="GabrielFerreir/b45bea45dab456276e02eca601e3985e"></code-gits>
         </div> <!-- HTML -->
         <div class="separator">
-            <button class="ui-button raised accent" [uiBottomSheetTrigger]="listBottomSheet" uiRipple>Abrir como lista</button>
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="listBottomSheet" uiRipple>Abrir como lista
+            </button>
         </div> <!-- DEMO -->
-
+        <div class="ui-divider"></div>
         <div class="separator">
             <h3>Com cabeçalho</h3>
             <code-gits id="GabrielFerreir/f2acf8d26e12351d0880a91a070a4474"></code-gits>
         </div>
         <div class="separator">
-            <button class="ui-button raised accent" [uiBottomSheetTrigger]="headerBottomSheet" uiRipple>Abrir como lista e com cabecalho</button>
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="headerBottomSheet" uiRipple>Abrir como lista
+                e com cabecalho
+            </button>
         </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Com tema</h3>
+            <code-gits id="GabrielFerreir/1cea4e703d3f07ad2e1d918d5c232701"></code-gits>
+        </div>
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="headerBottomSheet" uiRipple
+                    theme-class="dark">Abrir com tema
+            </button>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Overlay transparente</h3>
+            <code-gits id="GabrielFerreir/f758a55b7e4919453bce42f16ed257ff"></code-gits>
+        </div>
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="headerBottomSheet" uiRipple
+                    transparent-overlay="true">
+                Abrir com o overlay transparente
+            </button>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Elementos em grade</h3>
+            <code-gits id="GabrielFerreir/da79a962abfb3537c33deb00900fc361"></code-gits>
+        </div>
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="gridBottomSheet" uiRipple>
+                Abrir em grade
+            </button>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Grade com lista</h3>
+            <code-gits id="GabrielFerreir/b590e1f1b90b6f6b3037ad1b112c4c50"></code-gits>
+        </div>
+        <div class="separator">
+            <button class="ui-button raised accent" [uiBottomSheetTrigger]="gridListBottomSheet" uiRipple>
+                Abrir em grade e em lista
+            </button>
+        </div>
+        <ui-data-table>
+            <tbody>
+            <tr>
+                <th>
+                    Atributo
+                </th>
+                <th>
+                    Função
+                </th>
+            </tr>
+            <tr>
+                <td>Class ui-list</td>
+                <td>Classe utilizada para definir que os bottom sheets seram do tipo lista</td>
+            </tr>
+            <tr>
+                <td>Class grid</td>
+                <td>Classe utilizada para definir que os bottom sheets seram do tipo grade</td>
+            </tr>
+            <tr>
+                <td>
+                    Class col-*
+                </td>
+                <td>
+                    Classe utilizada para definir quantos elementos a grade deve ter em cada linha.
+                    Vária de col-2 á col-4.
+                </td>
+            </tr>
+            <tr>
+                <td>Atributo card-size</td>
+                <td>Utilizado para definir o tamanho total do component bottom sheets</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </ui-data-table>
+        <br><br><br><br><br>
     </div>
 </div>
+
 
 <!-- DEMO 01 -->
 <ui-bottom-sheet #listBottomSheet card-size="480">
@@ -69,7 +134,7 @@
     </ul>
 </ui-bottom-sheet>
 
-<!-- DEMO 02 -->
+<!-- DEMO 02-04 -->
 <ui-bottom-sheet #headerBottomSheet card-size="480">
     <h2 class="header">Criar</h2>
     <ul class="ui-list" (click)="headerBottomSheet.close()">
@@ -103,6 +168,80 @@
                 <i class="material-icons">photo_camera</i>
             </div>
             Usar a câmera
+        </li>
+    </ul>
+</ui-bottom-sheet>
+
+<!-- DEMO 05 -->
+<ui-bottom-sheet class="grid" #gridBottomSheet card-size="480">
+    <ul class="col-2">
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">assignment</i>
+            </div>
+            Planilhas
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">folder</i>
+            </div>
+            Pastas
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li class="ui-divider"></li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">photo_camera</i>
+            </div>
+            Camêra
+        </li>
+    </ul>
+</ui-bottom-sheet>
+
+<!-- DEMO 06 -->
+<ui-bottom-sheet class="grid" #gridListBottomSheet card-size="480">
+    <ul class="ui-list col-2">
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">assignment</i>
+            </div>
+            Planilhas
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">folder</i>
+            </div>
+            Pastas
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li class="ui-divider"></li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">cloud_upload</i>
+            </div>
+            Enviar
+        </li>
+        <li uiRipple>
+            <div class="icon">
+                <i class="material-icons">photo_camera</i>
+            </div>
+            Câmera
         </li>
     </ul>
 </ui-bottom-sheet>
