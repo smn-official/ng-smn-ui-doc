@@ -18,6 +18,7 @@ import { AutocompleteComponent } from './components/autocomplete/autocomplete.co
 import {FormsModule} from '@angular/forms';
 import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.component';
+import { ChipsComponent } from './components/chips/chips.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.
         FabComponent,
         InputComponent,
         AutocompleteComponent,
-        BottomSheetsComponent
+        BottomSheetsComponent,
+        ChipsComponent
     ],
     imports: [
         BrowserModule,

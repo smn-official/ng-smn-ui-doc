@@ -7,8 +7,9 @@ import {ButtonComponent} from './components/button/button.component';
 import {CardComponent} from './components/card/card.component';
 import {FabComponent} from './components/fab/fab.component';
 import {InputComponent} from './components/input/input.component';
-import {AutocompleteComponent} from "./components/autocomplete/autocomplete.component";
-import {BottomSheetsComponent} from "./components/bottom-sheets/bottom-sheets.component";
+import {AutocompleteComponent} from './components/autocomplete/autocomplete.component';
+import {BottomSheetsComponent} from './components/bottom-sheets/bottom-sheets.component';
+import {ChipsComponent} from './components/chips/chips.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'input', component: InputComponent},
     {path: 'autocomplete', component: AutocompleteComponent},
     {path: 'bottom-sheets', component: BottomSheetsComponent},
+    {path: 'chips', component: ChipsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 
