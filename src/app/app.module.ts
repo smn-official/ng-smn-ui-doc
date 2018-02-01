@@ -20,6 +20,7 @@ import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.component';
 import { ChipsComponent } from './components/chips/chips.component';
 import { ClockComponent } from './components/clock/clock.component';
+import { ColorPickersComponent } from './components/color-pickers/color-pickers.component';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { ClockComponent } from './components/clock/clock.component';
         AutocompleteComponent,
         BottomSheetsComponent,
         ChipsComponent,
-        ClockComponent
+        ClockComponent,
+        ColorPickersComponent
     ],
     imports: [
         BrowserModule,

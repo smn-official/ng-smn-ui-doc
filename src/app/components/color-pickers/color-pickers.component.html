@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Color pickers <a
+            href="https://material.io/guidelines/components/pickers.html"
+            target="_blank"><i
+            class="material-icons">link</i></a></h1>
+        <p>Componente que fornece cores do padrão do Material Designer e retorna o codigo RGB</p><br>
+
+        <div class="separator">
+            <code-gits id="GabrielFerreir/eb9910f916cfd7c735131b57c81bb600"></code-gits>
+        </div>
+
+        <div class="separator">
+                    <ui-input-container>
+                        <input type="text" name="color" [(ngModel)]="color" uiInput uiColorPicker required>
+                        <label>Color</label>
+                    </ui-input-container>
+                    {{color}}
+        </div>
+    </div>
+</div>

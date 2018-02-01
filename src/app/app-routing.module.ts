@@ -11,6 +11,7 @@ import {AutocompleteComponent} from './components/autocomplete/autocomplete.comp
 import {BottomSheetsComponent} from './components/bottom-sheets/bottom-sheets.component';
 import {ChipsComponent} from './components/chips/chips.component';
 import {ClockComponent} from "./components/clock/clock.component";
+import {ColorPickersComponent} from "./components/color-pickers/color-pickers.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path: 'bottom-sheets', component: BottomSheetsComponent},
     {path: 'chips', component: ChipsComponent},
     {path: 'clock', component: ClockComponent},
+    {path: 'color-pickers', component: ColorPickersComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 
