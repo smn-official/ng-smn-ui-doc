@@ -19,6 +19,7 @@ import {FormsModule} from '@angular/forms';
 import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.component';
 import { ChipsComponent } from './components/chips/chips.component';
+import { ClockComponent } from './components/clock/clock.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { ChipsComponent } from './components/chips/chips.component';
         InputComponent,
         AutocompleteComponent,
         BottomSheetsComponent,
-        ChipsComponent
+        ChipsComponent,
+        ClockComponent
     ],
     imports: [
         BrowserModule,

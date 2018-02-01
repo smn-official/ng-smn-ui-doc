@@ -10,6 +10,7 @@ import {InputComponent} from './components/input/input.component';
 import {AutocompleteComponent} from './components/autocomplete/autocomplete.component';
 import {BottomSheetsComponent} from './components/bottom-sheets/bottom-sheets.component';
 import {ChipsComponent} from './components/chips/chips.component';
+import {ClockComponent} from "./components/clock/clock.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
     {path: 'autocomplete', component: AutocompleteComponent},
     {path: 'bottom-sheets', component: BottomSheetsComponent},
     {path: 'chips', component: ChipsComponent},
+    {path: 'clock', component: ClockComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 
