@@ -4,6 +4,121 @@
             href="https://material.io/guidelines/components/chips.html"
             target="_blank"><i
             class="material-icons">link</i></a></h1>
-        <p>Os chips representam entidades complexas em pequenos blocos, como um contato.</p>
+        <p>Os chips representam entidades complexas em pequenos blocos, como um contato.</p><br>
+        <div class="separator">
+            <h3>Chip simples</h3>
+            <code-gits id="GabrielFerreir/01951ff3a225beb99f3b3a20e9992c0e"></code-gits>
+        </div>
+        <div class="separator">
+            <div>
+                <div class="ui-chip">Test 1</div>
+                <div class="ui-chip">Test 2</div>
+                <div class="ui-chip">Test 3</div>
+            </div>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Chip com ícone</h3>
+            <code-gits id="GabrielFerreir/c59ddd7b58bbf1a951e0dd2a06a03340"></code-gits>
+        </div>
+        <div class="separator">
+            <div>
+                <div class="ui-chip">
+                    <div class="icon">
+                        <i class="material-icons">favorite</i>
+                    </div>
+                    Test 1
+                </div>
+                <div class="ui-chip">
+                    <div class="icon">
+                        <i class="material-icons">favorite</i>
+                    </div>
+                    Test 2
+                </div>
+                <div class="ui-chip">
+                    <div class="icon">
+                        <i class="material-icons">favorite</i>
+                    </div>
+                    Test 3
+                </div>
+            </div>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Chip com imagem</h3>
+            <code-gits id="GabrielFerreir/e5803cbdb2116680c2aff8371e55348f"></code-gits>
+        </div>
+        <div class="separator">
+            <div>
+                <div class="ui-chip">
+                    <div class="icon"
+                         [style.background-image]="'url(https://image.prntscr.com/image/hwJOA9cxT_OKrQ3sFujTlQ.png)'">
+                    </div>
+                    Test 1
+                </div>
+                <div class="ui-chip">
+                    <div class="icon"
+                         [style.background-image]="'url(https://image.prntscr.com/image/hwJOA9cxT_OKrQ3sFujTlQ.png)'">
+                    </div>
+                    Test 2
+                </div>
+                <div class="ui-chip">
+                    <div class="icon"
+                         [style.background-image]="'url(https://image.prntscr.com/image/hwJOA9cxT_OKrQ3sFujTlQ.png)'">
+                    </div>
+                    Test 3
+                </div>
+            </div>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Chip com ícone de fechamento</h3>
+            <code-gits id="GabrielFerreir/d8d085deb8e2b78ed020e3586871dc64"></code-gits>
+        </div>
+        <div class="separator">
+            <div>
+                <div class="ui-chip">
+                    Test 1
+                    <div class="close ripple-rounded" uiRipple><i class="material-icons">add_circle</i></div>
+                </div>
+                <div class="ui-chip">
+                    Test 2
+                    <div class="close ripple-rounded" uiRipple><i class="material-icons">add_circle</i></div>
+                </div>
+                <div class="ui-chip">
+                    Test 3
+                    <div class="close ripple-rounded" uiRipple><i class="material-icons">add_circle</i></div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Chips dinâmicos</h3>
+            <code-gits id="GabrielFerreir/249715540889ee6422ac985f366cbba7"></code-gits>
+            <code-gits id="GabrielFerreir/2b308219fc15a00a4476076bb1286e88"></code-gits>
+        </div>
+        <div class="separator">
+            <ui-chips>
+                <div *ngFor="let selectedChip of selectedChips" class="ui-chip">
+                    {{selectedChip.name}}
+                    <div class="close ripple-rounded" uiRipple (click)="removeChip(selectedChip)"><i
+                        class="material-icons">add_circle</i></div>
+                </div>
+                <ui-input-container>
+                    <input type="text"
+                           [(ngModel)]="chips.searchState"
+                           uiInput
+                           uiAutocomplete
+                           (input)="loadChips()"
+                           (focus)="loadChips()"
+                           [list]="chips"
+                           [primary]="'name'"
+                           [loading]="chips.loading"
+                           [select]="chipSelect.bind(this)">
+                    <label>Teste</label>
+                </ui-input-container>
+            </ui-chips>
+            <br><br><br><br><br>
+        </div>
     </div>
 </div>
