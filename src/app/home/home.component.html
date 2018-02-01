@@ -56,18 +56,18 @@ import &#x0007B; SMNUIModule &#x0007D; from 'ng-smn-ui';
                 3. Insira os dados sobre o tema a ser utilizado seu arquivo styles.scss.
             </p>
             <pre>
-@import "~ng-smn-ui/core/core"
-@import "~ng-smn-ui/core/theme"
+@import "~ng-smn-ui/core/core";
+@import "~ng-smn-ui/core/theme";
 
-$primary: (color: 'blue', hue: '500')
-$accent: (color: 'green', hue: '50')
+$primary: (color: 'blue', hue: '500');
+$accent: (color: 'green', hue: '50');
 
-$theme: ui-theme($primary, $accent)
-$theme-dark: ui-theme($primary, $accent, true)
+$theme: ui-theme($primary, $accent);
+$theme-dark: ui-theme($primary, $accent, true);
 
-@include ui-core()
+@include ui-core();
 
-@include ui-build-theme($theme)
+@include ui-build-theme($theme);
             </pre>
             <p>
                 4. No seu head do seu arquivo 'index.html' insera as fontes Roboto e Material Icons.
