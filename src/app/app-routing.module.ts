@@ -12,6 +12,7 @@ import {BottomSheetsComponent} from './components/bottom-sheets/bottom-sheets.co
 import {ChipsComponent} from './components/chips/chips.component';
 import {ClockComponent} from "./components/clock/clock.component";
 import {ColorPickersComponent} from "./components/color-pickers/color-pickers.component";
+import {DataTablesComponent} from "./components/data-tables/data-tables.component";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: 'chips', component: ChipsComponent},
     {path: 'clock', component: ClockComponent},
     {path: 'color-pickers', component: ColorPickersComponent},
+    {path: 'data-tables', component: DataTablesComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 

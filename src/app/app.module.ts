@@ -21,6 +21,7 @@ import { BottomSheetsComponent } from './components/bottom-sheets/bottom-sheets.
 import { ChipsComponent } from './components/chips/chips.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { ColorPickersComponent } from './components/color-pickers/color-pickers.component';
+import { DataTablesComponent } from './components/data-tables/data-tables.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import { ColorPickersComponent } from './components/color-pickers/color-pickers.
         BottomSheetsComponent,
         ChipsComponent,
         ClockComponent,
-        ColorPickersComponent
+        ColorPickersComponent,
+        DataTablesComponent
     ],
     imports: [
         BrowserModule,
