@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../home/home.component.scss', './clock.component.scss']
 })
 export class ClockComponent implements OnInit {
+    time;
 
   constructor() { }
 

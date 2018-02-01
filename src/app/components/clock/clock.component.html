@@ -5,5 +5,68 @@
             target="_blank"><i
             class="material-icons">link</i></a></h1>
         <p>Um componente semelhante a um relógio utilizado para selecionar uma determinada hora.</p><br>
+        <div class="separator">
+            <h3>Clock simples</h3>
+            <code-gits id="GabrielFerreir/796f796cc247425a8fc5f3a61f1523cc"></code-gits>
+        </div>
+        <div class="separator">
+            <ui-clock [(ngModel)]="time" ngDefaultControl></ui-clock>
+            <div>Model: {{time}}</div>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Clock simples vertical</h3>
+            <code-gits id="GabrielFerreir/8fafdc46bf3a60e7d1895edc2d7d0717"></code-gits>
+        </div>
+        <div class="separator">
+            <ui-clock [(ngModel)]="time" class="portrait-only" ngDefaultControl></ui-clock>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Clock com confirmação</h3>
+            <code-gits id="GabrielFerreir/03dc1106de61039fbb5f6785782d8c7c"></code-gits>
+        </div>
+        <div class="separator">
+            <ui-clock [confirm-selection]="true"  [(ngModel)]="time" ngDefaultControl></ui-clock>
+        </div>
+        <div class="ui-divider"></div>
+        <div class="separator">
+            <h3>Clock dark</h3>
+            <code-gits id="GabrielFerreir/ea3fb228905827a89eb746a849c95660"></code-gits>
+        </div>
+        <div class="separator">
+            <div class="dark">
+                        <ui-clock [(ngModel)]="time" class="portrait-only" ngDefaultControl></ui-clock>
+                        <div>Model: {{time}}</div>
+            </div>
+        </div>
+        <div class="ui-divider"></div>
+        <ui-data-table>
+            <tbody>
+            <tr>
+                <th>
+                    Atributo
+                </th>
+                <th>
+                    Função
+                </th>
+            </tr>
+            <tr>
+                <td>Atributo ngDefaultControl</td>
+                <td>Atributo nativo da Angular adicionado para que possamos utilizar o ngModel em um componente.</td>
+            </tr>
+            <tr >
+                <td>Atributo confirm-selection</td>
+                <td>Utilizado para definir se o clock precisara de confirmação</td>
+            </tr>
+            <tr>
+                <td>Classe portrait-only</td>
+                <td>Utilizado para definir que o clock será vertical</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </ui-data-table>
+        <br><br><br><br><br>
     </div>
 </div>
