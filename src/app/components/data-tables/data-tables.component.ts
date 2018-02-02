@@ -64,8 +64,8 @@ export class DataTablesComponent implements OnInit, AfterViewInit {
   }
 
 ngAfterViewInit() {
-    this.titleService.setTitle('Color pickers');
-    this.toolbarService.set('Color pickers');
+    this.titleService.setTitle('Data tables');
+    this.toolbarService.set('Data tables');
 }
 
     toggleSearch() {
