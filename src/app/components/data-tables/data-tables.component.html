@@ -38,13 +38,13 @@
                     <tr>
                         <th class="picture">
                         </th>
-                        <th uiDataTableOrderBy>
+                        <th uiDataTableOrderBy (click)="toggleOrderBy('nome')">
                             Nome
                         </th>
-                        <th uiDataTableOrderBy>
+                        <th uiDataTableOrderBy (click)="toggleOrderBy('sobrenome')">
                             Sobrenome
                         </th>
-                        <th uiDataTableOrderBy class="align-right">
+                        <th uiDataTableOrderBy (click)="toggleOrderBy('idade')" class="align-right">
                             Idade
                         </th>
                     </tr>
@@ -100,7 +100,15 @@
             </tr>
             <tr>
                 <td>Função toggleSearch</td>
-                <td>Utilizado para definir que o item de coluna possui ordenação</td>
+                <td>Utilizado para minimizar e maximizar o campo de pesquisa</td>
+            </tr>
+            <tr>
+                <td>Função toggleOrderBy</td>
+                <td>Utilizado para criar a ordenação da tabela</td>
+            </tr>
+            <tr>
+                <td>Atributo data-title</td>
+                <td>Utilizado para exibir o nome da coluna quando está funcionando para mobile </td>
             </tr>
             </tbody>
             <tfoot>
