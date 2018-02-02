@@ -18,12 +18,13 @@ export class ChipsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+      this.loadChips();
   }
 
   ngAfterViewInit() {
       this.titleService.setTitle('Chips');
       this.toolbarService.set('Chips');
-      this.loadChips();
+
   }
   loadChips() {
       const chips = [
