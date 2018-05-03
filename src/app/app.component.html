@@ -43,21 +43,106 @@
                [routerLinkActiveOptions]="{ exact: true }">{{region.menu.index}}</a>
             <div class="ui-list-item" uiRipple [uiListItem]="componentes">
                 {{region.menu.components}}
-                <span class="arrow"><i class="material-icons">keyboard_arrow_right</i></span>
+                <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
             </div>
             <div class="ui-list-item-group" #componentes>
-                <a class="ui-list-item" uiRipple routerLink="/button" [routerLinkActive]="['active']">Button</a>
-                <a class="ui-list-item" uiRipple routerLink="/card" [routerLinkActive]="['active']">Card</a>
-                <a class="ui-list-item" uiRipple routerLink="/fab" [routerLinkActive]="['active']">Floating Action Button</a>
                 <a class="ui-list-item" uiRipple routerLink="/autocomplete" [routerLinkActive]="['active']">Autocomplete</a>
+                <a class="ui-list-item" uiRipple routerLink="/avatar" [routerLinkActive]="['active']">Avatar(To do)</a>
                 <a class="ui-list-item" uiRipple routerLink="/bottom-sheets" [routerLinkActive]="['active']">Bottom sheets</a>
-                <a class="ui-list-item" uiRipple routerLink="/chips" [routerLinkActive]="['active']">Chip</a>
-                <a class="ui-list-item" uiRipple routerLink="/clock" [routerLinkActive]="['active']">Clock</a>
+                <div class="ui-list-item" uiRipple [uiListItem]="buttons">
+                    Buttons
+                    <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+                </div>
+                <div class="ui-list-item-group" #buttons>
+                    <a class="ui-list-item" uiRipple routerLink="/button" [routerLinkActive]="['active']">Buttons</a>
+                    <a class="ui-list-item" uiRipple routerLink="/fab" [routerLinkActive]="['active']">Floating Action Button</a>
+                </div>
+                <a class="ui-list-item" uiRipple routerLink="/card" [routerLinkActive]="['active']">Cards</a>
+                <a class="ui-list-item" uiRipple routerLink="/chips" [routerLinkActive]="['active']">Chips</a>
+                <a class="ui-list-item" uiRipple routerLink="/clock" [routerLinkActive]="['active']">Clocks</a>
                 <a class="ui-list-item" uiRipple routerLink="/color-pickers" [routerLinkActive]="['active']">Color pickers</a>
                 <a class="ui-list-item" uiRipple routerLink="/data-tables" [routerLinkActive]="['active']">Data tables</a>
+                <a class="ui-list-item" uiRipple routerLink="/dialog" [routerLinkActive]="['active']">Dialog(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/dividers" [routerLinkActive]="['active']">Dividers(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/infinite-load" [routerLinkActive]="['active']">Infinite load(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/files" [routerLinkActive]="['active']">Input files(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/flex-container" [routerLinkActive]="['active']">Flex container(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/inputs" [routerLinkActive]="['active']">Inputs(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/list" [routerLinkActive]="['active']">List(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/navigation-drawer" [routerLinkActive]="['active']">Navigation drawer(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/progress-activity" [routerLinkActive]="['active']">Progress & activity(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/selection-controls" [routerLinkActive]="['active']">Selection controls(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/selects" [routerLinkActive]="['active']">Selects(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/sliders" [routerLinkActive]="['active']">Sliders(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/smart-list" [routerLinkActive]="['active']">Smart list(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/snackbars-toasts" [routerLinkActive]="['active']">Snackbars & toasts(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/subheaders" [routerLinkActive]="['active']">Subheaders(To do)</a>
+                <div>
+                    <div class="ui-list-item" uiRipple [uiListItem]="tabsPages">
+                        Tabs / Pages(To do)
+                        <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+                    </div>
+                    <div class="ui-list-item-group" #tabsPages>
+                        <a class="ui-list-item" uiRipple routerLink="/tabs" [routerLinkActive]="['active']">Tabs</a>
+                        <a class="ui-list-item" uiRipple routerLink="/pages" [routerLinkActive]="['active']">
+                            Pages
+                        </a>
+                        <a class="ui-list-item" uiRipple routerLink="/tabs-pages" [routerLinkActive]="['active']">
+                            Tabs & Pages
+                        </a>
+                    </div>
+                </div>
+                <a class="ui-list-item" uiRipple routerLink="/time-pickers" [routerLinkActive]="['active']">Time pirckers(To do)</a>
+                <a class="ui-list-item" uiRipple routerLink="/toolbars" [routerLinkActive]="['active']">Toolbars(To do)</a>
+
+            </div>
+            <a class="ui-list-item" uiRipple routerLink="/scss" [routerLinkActive]="['active']">SCSS(To do)</a>
+            <div class="ui-list-item" uiRipple [uiListItem]="masks">
+                Masks (To do)
+                <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+            </div>
+            <div class="ui-list-item-group" #masks>
+                <a class="ui-list-item" uiRipple routerLink="/mask-cep" [routerLinkActive]="['active']">CEP</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-cnpj" [routerLinkActive]="['active']">CNPJ</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-cpf" [routerLinkActive]="['active']">CPF</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-currency" [routerLinkActive]="['active']">Currency</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-date" [routerLinkActive]="['active']">Date</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-float" [routerLinkActive]="['active']">Float</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-integer" [routerLinkActive]="['active']">Integer</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-phone" [routerLinkActive]="['active']">Phone</a>
+                <a class="ui-list-item" uiRipple routerLink="/mask-time" [routerLinkActive]="['active']">Time</a>
+            </div>
+            <div class="ui-list-item" uiRipple [uiListItem]="pipe">
+                Pipes (To do)
+                <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+            </div>
+            <div class="ui-list-item-group" #pipe>
+                <a class="ui-list-item" uiRipple routerLink="/pipe-capitalize" [routerLinkActive]="['active']">Capitalize</a>
+                <a class="ui-list-item" uiRipple routerLink="/pipe-filter" [routerLinkActive]="['active']">Filter</a>
+                <a class="ui-list-item" uiRipple routerLink="/pipe-time-ago" [routerLinkActive]="['active']">Time ago</a>
+            </div>
+            <div class="ui-list-item" uiRipple [uiListItem]="providers">
+                Providers (To do)
+                <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+            </div>
+            <div class="ui-list-item-group" #providers>
+                <a class="ui-list-item" uiRipple routerLink="/provider-color" [routerLinkActive]="['active']">Color</a>
+                <a class="ui-list-item" uiRipple routerLink="/provider-cookie" [routerLinkActive]="['active']">Cookie</a>
+                <a class="ui-list-item" uiRipple routerLink="/provider-element" [routerLinkActive]="['active']">Element</a>
+                <a class="ui-list-item" uiRipple routerLink="/provider-element-ref" [routerLinkActive]="['active']">Element ref</a>
+                <a class="ui-list-item" uiRipple routerLink="/provider-window" [routerLinkActive]="['active']">Window</a>
+            </div>
+            <div class="ui-list-item" uiRipple [uiListItem]="validators">
+                Validators (To do)
+                <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
+            </div>
+            <div class="ui-list-item-group" #validators>
+                <a class="ui-list-item" uiRipple routerLink="/provider-color" [routerLinkActive]="['active']">Maxlength</a>
+                <a class="ui-list-item" uiRipple routerLink="/provider-cookie" [routerLinkActive]="['active']">Required</a>
             </div>
         </div>
     </div>
+    <!---->
 </ui-nav-drawer>
 
 <router-outlet></router-outlet>
