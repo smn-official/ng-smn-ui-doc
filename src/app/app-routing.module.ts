@@ -13,10 +13,12 @@ import {ChipsComponent} from './components/chips/chips.component';
 import {ClockComponent} from './components/clock/clock.component';
 import {ColorPickersComponent} from './components/color-pickers/color-pickers.component';
 import {DataTablesComponent} from './components/data-tables/data-tables.component';
+import {AvatarComponent} from './components/avatar/avatar.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'not-found', component: NotFoundComponent},
+    {path: 'avatar', component: AvatarComponent},
     {path: 'button', component: ButtonComponent},
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},

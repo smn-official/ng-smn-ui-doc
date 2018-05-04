@@ -22,6 +22,8 @@ import { ChipsComponent } from './components/chips/chips.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { ColorPickersComponent } from './components/color-pickers/color-pickers.component';
 import { DataTablesComponent } from './components/data-tables/data-tables.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +40,9 @@ import { DataTablesComponent } from './components/data-tables/data-tables.compon
         ChipsComponent,
         ClockComponent,
         ColorPickersComponent,
-        DataTablesComponent
+        DataTablesComponent,
+        AvatarComponent,
+        JsfiddleComponent
     ],
     imports: [
         BrowserModule,
