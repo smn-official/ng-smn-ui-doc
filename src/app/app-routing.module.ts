@@ -22,7 +22,7 @@ const routes: Routes = [
     {path: 'button', component: ButtonComponent},
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},
-    {path: 'input', component: InputComponent},
+    {path: 'inputs', component: InputComponent},
     {path: 'autocomplete', component: AutocompleteComponent},
     {path: 'bottom-sheets', component: BottomSheetsComponent},
     {path: 'chips', component: ChipsComponent},
