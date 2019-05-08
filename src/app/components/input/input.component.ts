@@ -10,36 +10,21 @@ import {RegionService} from '../../core/region.service';
     styleUrls: ['../../home/home.component.scss', './input.component.scss']
 })
 export class InputComponent implements AfterViewInit, OnInit {
-    codes: any[];
-    region: any;
+    nome:String = 'Mário';
+    icons:String = '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>';
 
     constructor(private toolbarService: UiToolbarService, private titleService: Title,
                 private regionService: RegionService) {
-        /*this.regionService.change.subscribe(region => {
-            this.region = region;
-            this.ngOnInit();
-        });
-        this.codes = [];*/
+        
     }
 
+
     ngOnInit() {
-        /*this.region = this.regionService.get();
-        this.codes[0] = `<ui-input-container>
-        <input type="text" [(ngModel)]="simple" uiInput>
-        <label>${this.region.input.simple}</label>
-    </ui-input-container>`;
-        this.codes[1] = `<ui-input-container>
-        <input type="text" [(ngModel)]="accent" uiInput class="accent">
-        <label>Accent</label>
-    </ui-input-container>`;
-        this.codes[2] = `<ui-input-container>
-        <input type="text" [(ngModel)]="placeholder" uiInput placeholder="Lorem ipsum">
-        <label>Placeholder</label>
-    </ui-input-container>`;*/
+    
     }
 
     ngAfterViewInit() {
-        /*this.titleService.setTitle('Input');
-        this.toolbarService.set('Input');*/
+        this.titleService.setTitle('Input');
+        this.toolbarService.set('Input');
     }
 }

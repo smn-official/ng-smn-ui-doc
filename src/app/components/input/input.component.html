@@ -1,46 +1,110 @@
-<!--
 <div class="container">
     <div class="ui-s960">
-        <h1>Input <a href="https://material.io/guidelines/components/buttons.html"><i
-            class="material-icons">link</i></a></h1>
-        <br>
+        <h1>Inputs</h1>
+        <p>Inputs são elementos que possibilitam a entrada de dados do usuário.</p>
+        <br/>
+        <h3>Simples</h3>
         <div class="separator">
-            <h3>{{region.input.simple}}</h3>
-            <p>
-                <ui-input-container>
-                    <input type="text" [(ngModel)]="simple" uiInput>
-                    <label>{{region.input.simple}}</label>
-                </ui-input-container>
-            </p>
-            <pre>
-    {{codes[0]}}
-</pre>
+            <code-gits id="oTrolado/5a901c99026dcc441c465a69da8a7c67"></code-gits> <!-- HTML -->
+            <ui-input-container>
+                <input type="text" uiInput name="demo-input" placeholder="Preencha-me ;)">
+                <label for="demo-input">Input Simples</label>
+            </ui-input-container>
+            <ui-input-container>
+                <input type="password" uiInput name="demo-password">
+                <label for="demo-password">Senha</label>
+            </ui-input-container>
+            <ui-input-container>
+                <input type="email" uiInput name="demo-email" required>
+                <label for="demo-email">Email</label>
+            </ui-input-container>
+            <ui-input-container>
+                <textarea uiInput name="demo-textarea" rows="4"></textarea>
+                <label for="demo-textarea">Textarea</label>
+            </ui-input-container>
         </div>
+
+        <br/>
+        <h3>Usando Data Binding</h3>
         <div class="separator">
-            <h3>Accent</h3>
-            <p [innerHtml]="region.input.accent"></p>
-            <p>
-                <ui-input-container>
-                    <input type="text" [(ngModel)]="accent" uiInput class="accent">
-                    <label>Accent</label>
-                </ui-input-container>
-            </p>
-            <pre>
-    {{codes[1]}}
-</pre>
+            <code-gits id="oTrolado/ef61e99886c592f3ab9049a177982778"></code-gits> <!-- HTML -->
+            <ui-input-container>
+                <input type="text" uiInput [(ngModel)]="nome" theme-class="dark">
+                <label>Input Simples</label>
+            </ui-input-container>
+            <ui-input-container>
+                <input type="text" uiInput value="{{ nome }}" disabled>
+                <label>Desabilitado</label>
+            </ui-input-container>
         </div>
-        <div class="separator">
-            <h3>Placeholder</h3>
-            <p>
-                <ui-input-container>
-                    <input type="text" [(ngModel)]="placeholder" uiInput placeholder="Lorem ipsum">
-                    <label>Placeholder</label>
-                </ui-input-container>
-            </p>
-            <pre>
-    {{codes[2]}}
-</pre>
-        </div>
+    
+
+    <br/>
+    <h3>Accent</h3>
+    <div class="separator">
+        <code-gits id="oTrolado/3e15dee10b87ab07c9e8b96111a440de"></code-gits> <!-- HTML -->
+        <ui-input-container>
+            <input type="text" uiInput class="accent">
+            <label>Accent</label>
+        </ui-input-container>
+    </div>
+
+    <br/>
+    <h3>Input com icones</h3>
+    <div class="separator">
+        <p>Usando a class icon</p>
+        <code-gits id="oTrolado/768c29ce45b1a78cdaa79b4c521ff2bb"></code-gits> <!-- HTML -->
+        <ui-input-container>
+            <input type="text" uiInput class="accent">
+            <label>Endereço </label>
+            <div class="icon"><i class="material-icons">home</i></div>
+        </ui-input-container>
+        <br />
+        <p>Criando css personalisado</p>
+        <code-gits id="oTrolado/989801eabeacb33448b719ccbfacc7e0"></code-gits> <!-- HTML -->
+        <code-gits id="oTrolado/ffe04a5d6a2371e8c2a70d8b6bcbf6bf"></code-gits> <!-- CSS -->
+        <ui-input-container>
+                <input type="text" uiInput class="accent">
+                <label>Endereço <i class="material-icons input-icon">home</i></label>
+        </ui-input-container>
+        <p>*Nota: voce deve importar o Material Icons na sua index: {{ icons }}</p>
+    </div>
+
+    <div class="ui-divider"></div>
+        <ui-data-table>
+            <tbody>
+            <tr>
+                <th>
+                    Atributo
+                </th>
+                <th>
+                    Função
+                </th>
+            </tr>
+            <tr>
+                <td>Atributo type</td>
+                <td>Informa o tipo do input</td>
+            </tr>
+            <tr>
+                <td>Atributo required</td>
+                <td>Informa que o input é origatório</td>
+            </tr>
+            <tr>
+                <td>Atributo value</td>
+                <td>Informa um valor ao input, ou captura valor digitado.</td>
+            </tr>
+            <tr>
+                <td>Atributo placeholder</td>
+                <td>Informa um texto de auxilio que ira aparecer no input quando selecionado.</td>
+            </tr>
+            <tr>
+                <td>Atributo name</td>
+                <td>Atribui uma identificação ao input.</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </ui-data-table>
+        <br><br><br><br><br>
     </div>
 </div>
--->
