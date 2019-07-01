@@ -24,6 +24,7 @@ import { ColorPickersComponent } from './components/color-pickers/color-pickers.
 import { DataTablesComponent } from './components/data-tables/data-tables.component';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
+import { ToolbarsComponent } from './components/toolbars/toolbars.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
         ColorPickersComponent,
         DataTablesComponent,
         AvatarComponent,
-        JsfiddleComponent
+        JsfiddleComponent,
+        ToolbarsComponent
     ],
     imports: [
         BrowserModule,

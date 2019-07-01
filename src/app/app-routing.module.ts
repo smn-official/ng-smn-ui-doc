@@ -14,6 +14,7 @@ import {ClockComponent} from './components/clock/clock.component';
 import {ColorPickersComponent} from './components/color-pickers/color-pickers.component';
 import {DataTablesComponent} from './components/data-tables/data-tables.component';
 import {AvatarComponent} from './components/avatar/avatar.component';
+import {ToolbarsComponent} from './components/toolbars/toolbars.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
     {path: 'clock', component: ClockComponent},
     {path: 'color-pickers', component: ColorPickersComponent},
     {path: 'data-tables', component: DataTablesComponent},
+    {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
 
