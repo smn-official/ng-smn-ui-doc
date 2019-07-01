@@ -25,6 +25,7 @@ import { DataTablesComponent } from './components/data-tables/data-tables.compon
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ToolbarsComponent } from './components/toolbars/toolbars.component';
+import { DialogsComponent } from './components/dialogs/dialogs.component';
 
 @NgModule({
     declarations: [
@@ -44,7 +45,8 @@ import { ToolbarsComponent } from './components/toolbars/toolbars.component';
         DataTablesComponent,
         AvatarComponent,
         JsfiddleComponent,
-        ToolbarsComponent
+        ToolbarsComponent,
+        DialogsComponent
     ],
     imports: [
         BrowserModule,
