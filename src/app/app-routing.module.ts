@@ -16,6 +16,7 @@ import {DataTablesComponent} from './components/data-tables/data-tables.componen
 import {AvatarComponent} from './components/avatar/avatar.component';
 import {ToolbarsComponent} from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
+import { DividersComponent } from './components/dividers/dividers.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
     {path: 'color-pickers', component: ColorPickersComponent},
     {path: 'data-tables', component: DataTablesComponent},
     {path: 'dialogs', component: DialogsComponent},
+    {path: 'dividers', component: DividersComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];

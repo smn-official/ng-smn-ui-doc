@@ -26,6 +26,7 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ToolbarsComponent } from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
+import { DividersComponent } from './components/dividers/dividers.component';
 
 @NgModule({
     declarations: [
@@ -46,7 +47,8 @@ import { DialogsComponent } from './components/dialogs/dialogs.component';
         AvatarComponent,
         JsfiddleComponent,
         ToolbarsComponent,
-        DialogsComponent
+        DialogsComponent,
+        DividersComponent
     ],
     imports: [
         BrowserModule,
