@@ -17,6 +17,7 @@ import {AvatarComponent} from './components/avatar/avatar.component';
 import {ToolbarsComponent} from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
 import { DividersComponent } from './components/dividers/dividers.component';
+import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},
     {path: 'inputs', component: InputComponent},
+    {path: 'infinite-load', component: InfiniteLoadComponent},
     {path: 'autocomplete', component: AutocompleteComponent},
     {path: 'bottom-sheets', component: BottomSheetsComponent},
     {path: 'chips', component: ChipsComponent},

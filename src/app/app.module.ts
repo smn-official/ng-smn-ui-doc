@@ -27,6 +27,7 @@ import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ToolbarsComponent } from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
 import { DividersComponent } from './components/dividers/dividers.component';
+import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
 
 @NgModule({
     declarations: [
@@ -48,7 +49,8 @@ import { DividersComponent } from './components/dividers/dividers.component';
         JsfiddleComponent,
         ToolbarsComponent,
         DialogsComponent,
-        DividersComponent
+        DividersComponent,
+        InfiniteLoadComponent
     ],
     imports: [
         BrowserModule,
