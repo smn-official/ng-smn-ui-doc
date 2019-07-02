@@ -19,6 +19,7 @@ import { DialogsComponent } from './components/dialogs/dialogs.component';
 import { DividersComponent } from './components/dividers/dividers.component';
 import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
 import { FlexContainerComponent } from './components/flex-container/flex-container.component';
+import { InputFilesComponent } from './components/input-files/input-files.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
     {path: 'card', component: CardComponent},
     {path: 'fab', component: FabComponent},
     {path: 'inputs', component: InputComponent},
+    {path: 'files', component: InputFilesComponent},
     {path: 'infinite-load', component: InfiniteLoadComponent},
     {path: 'autocomplete', component: AutocompleteComponent},
     {path: 'bottom-sheets', component: BottomSheetsComponent},
