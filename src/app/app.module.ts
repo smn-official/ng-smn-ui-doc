@@ -28,6 +28,7 @@ import { ToolbarsComponent } from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
 import { DividersComponent } from './components/dividers/dividers.component';
 import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
+import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 
 @NgModule({
     declarations: [
@@ -50,7 +51,8 @@ import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.
         ToolbarsComponent,
         DialogsComponent,
         DividersComponent,
-        InfiniteLoadComponent
+        InfiniteLoadComponent,
+        FlexContainerComponent
     ],
     imports: [
         BrowserModule,

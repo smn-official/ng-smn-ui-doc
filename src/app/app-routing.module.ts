@@ -18,6 +18,7 @@ import {ToolbarsComponent} from './components/toolbars/toolbars.component';
 import { DialogsComponent } from './components/dialogs/dialogs.component';
 import { DividersComponent } from './components/dividers/dividers.component';
 import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
+import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -36,6 +37,7 @@ const routes: Routes = [
     {path: 'data-tables', component: DataTablesComponent},
     {path: 'dialogs', component: DialogsComponent},
     {path: 'dividers', component: DividersComponent},
+    {path: 'flex-container', component: FlexContainerComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
