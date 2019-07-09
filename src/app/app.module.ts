@@ -30,6 +30,7 @@ import { DividersComponent } from './components/dividers/dividers.component';
 import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
 import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 import { InputFilesComponent } from './components/input-files/input-files.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
     declarations: [
@@ -54,7 +55,8 @@ import { InputFilesComponent } from './components/input-files/input-files.compon
         DividersComponent,
         InfiniteLoadComponent,
         FlexContainerComponent,
-        InputFilesComponent
+        InputFilesComponent,
+        ListComponent
     ],
     imports: [
         BrowserModule,

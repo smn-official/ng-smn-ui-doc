@@ -1,0 +1,129 @@
+<div class="container">
+    <article class="ui-s960">
+        <h1>Lists</h1>
+        <p>Listas são uma organização vertical continua de textos ou imagens.</p>
+
+        <h3>Dinamica:</h3>
+        <p>É necessario informar a fonte de dados da lista através do atributo "list", e também um modelo de item,
+            através do atributo "item-model"</p>
+        <section class="separator">
+            <code-gits id="oTrolado/54d76fd6f20626d0afc19fc8915ffe7a"></code-gits> <!-- TS -->
+            <code-gits id="oTrolado/140e99bafb4e3eed1edfccfe84abde83"></code-gits> <!-- HTML -->
+            <ui-list [list]="menuList" [item-model]="itemModel">
+            </ui-list>
+        </section>
+
+        <h3>Mista:</h3>
+        <p>É possivel criar uma lista com itens estáticos e dinamicos.</p>
+        <section class="separator">
+            <code-gits id="oTrolado/d366078b75aa4d4048c7ce0c3ba7a07a"></code-gits> <!-- HTML -->
+            <ui-list [list]="menuList" [item-model]="itemModel">
+                <a class="ui-list-item" uiRipple routerLink="/"><span class="icon"><i
+                            class="material-icons">home</i></span>Home</a>
+                <li>
+                    <span class="avatar"><i class="material-icons">home</i></span>Avatar and single line
+                </li>
+                <li class="multi-line">
+                    <div class="avatar"><i class="material-icons">home</i></div>
+                    <div class="lines">
+                        <div class="primary">
+                            Avatar and two line (info)
+                        </div>
+                        <div class="secondary">
+                            Secondary text
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button class="ui-button flat icon" uiRipple>
+                            <i class="material-icons">info</i>
+                        </button>
+                    </div>
+                </li>
+                <div class="ui-list-item multi-line">
+                    <div class="avatar"><i class="material-icons">home</i></div>
+                    <div class="lines">
+                        <div class="primary">
+                            Avatar and two line (checkbox)
+                        </div>
+                        <div class="secondary">
+                            Secondary text
+                        </div>
+                    </div>
+                    <div class="action">
+                        <ui-option>
+                            <input type="checkbox" [(ngModel)]="checkboxTest" [checked]="checkboxTest">
+                        </ui-option>
+                    </div>
+                </div>
+                <div class="ui-list-item multi-line">
+                    <div class="avatar"><i class="material-icons">home</i></div>
+                    <div class="lines">
+                        <div class="primary">
+                            Avatar and two line (switch)
+                        </div>
+                        <div class="secondary">
+                            Secondary text
+                        </div>
+                    </div>
+                    <div class="action">
+                        <ui-switch class="action">
+                            <input type="checkbox" name="switchTest" [checked]="switchTest == 'S'"
+                                (change)="switchTest=$event.target.checked ? 'S':'N'">
+                        </ui-switch>
+                    </div>
+                </div>
+                <li class="multi-line">
+                    <div class="avatar"><i class="material-icons">home</i></div>
+                    <div class="lines">
+                        <div class="primary">
+                            Avatar and three line
+                        </div>
+                        <div class="secondary">
+                            Secondary text<br>third line
+                        </div>
+                    </div>
+                </li>
+            </ui-list>
+        </section>
+
+        <div class="ui-divider"></div>
+
+        <section>
+            <h3>Propriedades de lista</h3>
+            <ui-data-table>
+                <tbody>
+                    <tr>
+                        <th>
+                            Atributo
+                        </th>
+                        <th>
+                            Função
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td>Idenficador unico do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>parentId</td>
+                        <td>Caso preenchido, informa um item "Pai" ao registro.</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Informa o texto a ser exibido na lista.</td>
+                    </tr>
+                    <tr>
+                        <td>url</td>
+                        <td>Caso informado, cria um link no item para a url de destino.</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>Objeto com as informações do icone a ser exibido.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </ui-data-table>
+        </section>
+    </article>
+</div>

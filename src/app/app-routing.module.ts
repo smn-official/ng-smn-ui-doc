@@ -20,6 +20,7 @@ import { DividersComponent } from './components/dividers/dividers.component';
 import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.component';
 import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 import { InputFilesComponent } from './components/input-files/input-files.component';
+import { ListComponent } from './components/list/list.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -40,6 +41,7 @@ const routes: Routes = [
     {path: 'dialogs', component: DialogsComponent},
     {path: 'dividers', component: DividersComponent},
     {path: 'flex-container', component: FlexContainerComponent},
+    {path: 'lists', component: ListComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];

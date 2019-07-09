@@ -6,7 +6,7 @@ import { UiToolbarService } from 'ng-smn-ui';
 @Component({
   selector: 'app-toolbars',
   templateUrl: './toolbars.component.html',
-  styleUrls: ['../../home/home.component.scss','./toolbars.component.scss']
+  styleUrls: ['../../home/home.component.scss', './toolbars.component.scss']
 })
 export class ToolbarsComponent implements OnInit, AfterViewInit {
 
