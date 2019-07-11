@@ -21,6 +21,7 @@ import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.
 import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 import { InputFilesComponent } from './components/input-files/input-files.component';
 import { ListComponent } from './components/list/list.component';
+import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -42,6 +43,7 @@ const routes: Routes = [
     {path: 'dividers', component: DividersComponent},
     {path: 'flex-container', component: FlexContainerComponent},
     {path: 'lists', component: ListComponent},
+    {path: 'navigation-drawer', component: NavDrawerComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];

@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import { HttpModule } from "@angular/http";
+import { HttpModule } from '@angular/http';
 
 import {SMNUIModule, UiToolbarService} from 'ng-smn-ui';
 
@@ -31,6 +31,7 @@ import { InfiniteLoadComponent } from './components/infinite-load/infinite-load.
 import { FlexContainerComponent } from './components/flex-container/flex-container.component';
 import { InputFilesComponent } from './components/input-files/input-files.component';
 import { ListComponent } from './components/list/list.component';
+import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 
 @NgModule({
     declarations: [
@@ -56,7 +57,8 @@ import { ListComponent } from './components/list/list.component';
         InfiniteLoadComponent,
         FlexContainerComponent,
         InputFilesComponent,
-        ListComponent
+        ListComponent,
+        NavDrawerComponent
     ],
     imports: [
         BrowserModule,
