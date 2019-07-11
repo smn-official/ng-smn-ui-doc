@@ -22,6 +22,7 @@ import { FlexContainerComponent } from './components/flex-container/flex-contain
 import { InputFilesComponent } from './components/input-files/input-files.component';
 import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -44,6 +45,7 @@ const routes: Routes = [
     {path: 'flex-container', component: FlexContainerComponent},
     {path: 'lists', component: ListComponent},
     {path: 'navigation-drawer', component: NavDrawerComponent},
+    {path: 'progress', component: ProgressComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];

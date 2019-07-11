@@ -32,6 +32,7 @@ import { FlexContainerComponent } from './components/flex-container/flex-contain
 import { InputFilesComponent } from './components/input-files/input-files.component';
 import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 @NgModule({
     declarations: [
@@ -58,7 +59,8 @@ import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component
         FlexContainerComponent,
         InputFilesComponent,
         ListComponent,
-        NavDrawerComponent
+        NavDrawerComponent,
+        ProgressComponent
     ],
     imports: [
         BrowserModule,
