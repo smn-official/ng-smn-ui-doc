@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Selects</h1>
+        <p>
+            Permitem que os usuários selecionem um valor de uma uma lista de opções.
+        </p>
+
+        <h3>Exemplo:</h3>
+        <section class="separator">
+            <code-gits id="oTrolado/759fd7b79e946aecdc2013e581a7d8f2"></code-gits> <!-- HTML -->
+            <ui-input-container>
+                <select name="option" [(ngModel)]="option" uiInput>
+                    <option *ngFor="let item of list">{{item}}</option>
+                </select>
+            </ui-input-container>
+
+            <ui-input-container>
+                <select name="option" [(ngModel)]="option" class="accent" uiInput>
+                    <option *ngFor="let item of list">{{item}}</option>
+                </select>
+            </ui-input-container>
+            Option: {{ option }}
+        </section>
+    </div>
+</div>

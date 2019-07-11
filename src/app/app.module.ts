@@ -34,6 +34,8 @@ import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
+import { SelectsComponent } from './components/selects/selects.component';
+import { SlidersComponent } from './components/sliders/sliders.component';
 
 @NgModule({
     declarations: [
@@ -62,7 +64,9 @@ import { SelectionControlsComponent } from './components/selection-controls/sele
         ListComponent,
         NavDrawerComponent,
         ProgressComponent,
-        SelectionControlsComponent
+        SelectionControlsComponent,
+        SelectsComponent,
+        SlidersComponent
     ],
     imports: [
         BrowserModule,

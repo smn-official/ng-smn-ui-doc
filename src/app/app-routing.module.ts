@@ -24,6 +24,8 @@ import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
+import { SelectsComponent } from './components/selects/selects.component';
+import { SlidersComponent } from './components/sliders/sliders.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -47,7 +49,9 @@ const routes: Routes = [
     {path: 'lists', component: ListComponent},
     {path: 'navigation-drawer', component: NavDrawerComponent},
     {path: 'progress', component: ProgressComponent},
+    {path: 'selects', component: SelectsComponent},
     {path: 'selection-controls', component: SelectionControlsComponent},
+    {path: 'sliders', component: SlidersComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];

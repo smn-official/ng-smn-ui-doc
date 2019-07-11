@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Sliders</h1>
+        <p>
+            Permitem que os usuários selecionem um valor a partir de um range.
+        </p>
+
+        <h3>Exemplo:</h3>
+        <section class="separator">
+            <code-gits id="oTrolado/7cad12ca3a33f6a7cc37231c70d8cb4b"></code-gits> <!-- HTML -->
+            <code-gits id="oTrolado/b60bd984d763f812869294cabb63f4b6"></code-gits> <!-- TS -->
+            <ui-card>
+                <!--ui-card-content>
+                    <ui-option-container class="v-space-4 b-space-16">
+                        <ui-option>
+                            <input type="checkbox" [(ngModel)]="checkbox" [checked]="checkbox">
+                            <span>Disabled: {{!!checkbox}}; Begin: {{begin}}; End: {{end}}</span>
+                        </ui-option>
+                        <ui-option>
+                            <input type="checkbox" [(ngModel)]="ballon" [checked]="ballon">
+                            <span>Show balloon: {{!ballon}}</span>
+                        </ui-option>
+                    </ui-option-container>
+                    <ui-slider [range]="range" [(begin)]="begin" [(end)]="end" [disabled]="checkbox" [hideBalloon]="ballon"></ui-slider>
+                </ui-card-content-->
+            
+                <ui-card-content>
+                    <ui-option-container class="v-space-4 b-space-16">
+                        <ui-option>
+                            <input type="checkbox" [(ngModel)]="checkbox" [checked]="checkbox">
+                            <span>Disabled: {{!!checkbox}}; Value: {{value}}</span>
+                        </ui-option>
+                        <ui-option>
+                            <input type="checkbox" [(ngModel)]="ballon" [checked]="ballon">
+                            <span>Show balloon: {{!ballon}}</span>
+                        </ui-option>
+                    </ui-option-container>
+                    <ui-slider [range]="range" [(value)]="value" [disabled]="checkbox" [hideBalloon]="ballon" class="accent"></ui-slider>
+                </ui-card-content>
+            </ui-card>
+            
+            <div class="dark">
+                <ui-card>
+                    <!--ui-card-content>
+                        <ui-option-container class="v-space-4 b-space-16">
+                            <ui-option>
+                                <input type="checkbox" [(ngModel)]="checkboxDark" [checked]="checkboxDark">
+                                <span>Disabled: {{!!checkboxDark}}; Begin: {{begin}}; End: {{end}}</span>
+                            </ui-option>
+                            <ui-option>
+                                <input type="checkbox" [(ngModel)]="ballonDark" [checked]="ballonDark">
+                                <span>Show balloon: {{!ballonDark}}</span>
+                            </ui-option>
+                        </ui-option-container>
+                        <ui-slider [range]="range" [(begin)]="begin" [(end)]="end" [disabled]="checkboxDark" [hideBalloon]="ballonDark"></ui-slider>
+                    </ui-card-content-->
+            
+                    <ui-card-content>
+                        <ui-option-container class="v-space-4 b-space-16">
+                            <ui-option>
+                                <input type="checkbox" [(ngModel)]="checkboxDark" [checked]="checkboxDark">
+                                <span>Disabled: {{!!checkboxDark}}; Value: {{value}}</span>
+                            </ui-option>
+                            <ui-option>
+                                <input type="checkbox" [(ngModel)]="ballonDark" [checked]="ballonDark">
+                                <span>Show balloon: {{!ballonDark}}</span>
+                            </ui-option>
+                        </ui-option-container>
+                        <ui-slider [range]="range" [(value)]="value" [disabled]="checkboxDark" [hideBalloon]="ballonDark" class="accent"></ui-slider>
+                    </ui-card-content>
+                </ui-card>
+            </div>            
+        </section>
+
+        <section>
+            <h3>Propriedades do slider</h3>
+            <ui-data-table>
+                <tbody>
+                    <tr>
+                        <th>
+                            Atributo
+                        </th>
+                        <th>
+                            Função
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>range</td>
+                        <td>Array númerico, que determina a gama de valores.</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>A variável que receberá o valor escolhido.</td>
+                    </tr>
+                    <tr>
+                        <td>disabled</td>
+                        <td>Boolean que desabilita ou não o slider.</td>
+                    </tr>
+                    <tr>
+                        <td>hideBalloon</td>
+                        <td>Boolean que desabilita o balão ou não.</td>
+                    </tr>
+                    <tr>
+                        <td>begin</td>
+                        <td>Number, valor inicial do slider.</td>
+                    </tr>
+                    <tr>
+                        <td>end</td>
+                        <td>Number, valor final do slider.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </ui-data-table>
+        </section>
+    </div>
+</div>
