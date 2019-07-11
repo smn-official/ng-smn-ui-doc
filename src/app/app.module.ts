@@ -33,6 +33,7 @@ import { InputFilesComponent } from './components/input-files/input-files.compon
 import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
 
 @NgModule({
     declarations: [
@@ -60,7 +61,8 @@ import { ProgressComponent } from './components/progress/progress.component';
         InputFilesComponent,
         ListComponent,
         NavDrawerComponent,
-        ProgressComponent
+        ProgressComponent,
+        SelectionControlsComponent
     ],
     imports: [
         BrowserModule,

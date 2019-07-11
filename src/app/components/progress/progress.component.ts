@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { Title } from '@angular/platform-browser';
 import { UiToolbarService } from 'ng-smn-ui';
 @Component({
-  selector: 'app-progress',
-  templateUrl: './progress.component.html',
-  styleUrls: ['./progress.component.scss']
+    selector: 'app-progress',
+    templateUrl: './progress.component.html',
+    styleUrls: ['./progress.component.scss']
 })
-export class ProgressComponent implements OnInit {
+export class ProgressComponent implements OnInit, AfterViewInit {
 
-  constructor(
-    private titleService: Title,
-    private toolbarService: UiToolbarService
-) { }
+    constructor(
+        private titleService: Title,
+        private toolbarService: UiToolbarService
+    ) { }
 
-ngOnInit() {
-}
+    ngOnInit() {
+    }
 
-ngAfterViewInit() {
-    this.titleService.setTitle('Progress & Activity');
-    this.toolbarService.set('Progress & Activity');
-}
+    ngAfterViewInit() {
+        this.titleService.setTitle('Progress & Activity');
+        this.toolbarService.set('Progress & Activity');
+    }
 
 }

@@ -23,6 +23,7 @@ import { InputFilesComponent } from './components/input-files/input-files.compon
 import { ListComponent } from './components/list/list.component';
 import { NavDrawerComponent } from './components/nav-drawer/nav-drawer.component';
 import { ProgressComponent } from './components/progress/progress.component';
+import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
     {path: 'lists', component: ListComponent},
     {path: 'navigation-drawer', component: NavDrawerComponent},
     {path: 'progress', component: ProgressComponent},
+    {path: 'selection-controls', component: SelectionControlsComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
