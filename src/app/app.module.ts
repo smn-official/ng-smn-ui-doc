@@ -37,6 +37,7 @@ import { SelectionControlsComponent } from './components/selection-controls/sele
 import { SelectsComponent } from './components/selects/selects.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
 import { SmartListComponent } from './components/smart-list/smart-list.component';
+import { SnackbarComponent } from './components/snackbar/snackbar.component';
 
 @NgModule({
     declarations: [
@@ -68,7 +69,8 @@ import { SmartListComponent } from './components/smart-list/smart-list.component
         SelectionControlsComponent,
         SelectsComponent,
         SlidersComponent,
-        SmartListComponent
+        SmartListComponent,
+        SnackbarComponent
     ],
     imports: [
         BrowserModule,

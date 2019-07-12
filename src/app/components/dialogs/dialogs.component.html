@@ -46,15 +46,6 @@
 
         <ui-dialog class="teste" #testDialog card-size="400">
             <ui-card-title>Test dialog</ui-card-title>
-            <ui-card-content>
-                <ui-input-container>
-                    <input type="text" [(ngModel)]="searchAllState" [modelValue]="teste2" uiInput class="accent"
-                        uiAutocomplete (input)="searchAll()" (focus)="searchAll()" (loadMore)="loadMore()"
-                        [primary]="'name'" theme-class="dark" [secondary]="'country'" [list]="allStatesFiltered"
-                        [loading]="loading" [select]="select">
-                    <label>States</label>
-                </ui-input-container>
-            </ui-card-content>
             <iframe height="315" src="https://www.youtube.com/embed/B3eW06vMSw8" frameborder="0"
                 allowfullscreen></iframe>
             <div class="ui-button-container cover">

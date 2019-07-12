@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Snackbars & toasts</h1>
+        <p>
+            Barras de progresso indicam aos usuários o progresso de uma tarefa, ou que uma ação de duração inderminada
+            esta sendo performada.
+        </p>
+
+        <h3>Exemplo:</h3>
+        <p>*Drawers persistentes ocupam um espaço da pagina e se mantem abertos mesmo no click fora do elemento.</p>
+        <section class="separator">
+            <code-gits id="oTrolado/b5240ff91946428a4ab858665ec510fa"></code-gits> <!-- HTML -->
+            <div style="max-width: 608px; width: 100%; margin: 0 auto">
+                <ui-card>
+                    <ui-card-title>Snackbars & Toats</ui-card-title>
+                    <ui-card-content>
+                        <div class="ui-button-container">
+                            <button class="ui-button" uiRipple (click)="showSnack()">
+                                Simples
+                            </button>
+                            <button class="ui-button" uiRipple (click)="showSnack(true)">
+                                Simple align center
+                            </button>
+                            <button class="ui-button" uiRipple (click)="showSnackInfinity()">
+                                Infinity
+                            </button>
+                            <button class="ui-button" uiRipple (click)="showSnackWithAction()">
+                                Action
+                            </button>
+                            <button class="ui-button" uiRipple (click)="closeSnack()">
+                                Close snack
+                            </button>
+                        </div>
+                    </ui-card-content>
+                </ui-card>
+            </div>
+            <div class="ui-fab-container">
+                <button class="ui-button primary fab" uiRipple>
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+        </section>
+    </div>
+</div>
