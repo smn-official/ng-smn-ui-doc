@@ -36,6 +36,7 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
 import { SelectsComponent } from './components/selects/selects.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
+import { SmartListComponent } from './components/smart-list/smart-list.component';
 
 @NgModule({
     declarations: [
@@ -66,7 +67,8 @@ import { SlidersComponent } from './components/sliders/sliders.component';
         ProgressComponent,
         SelectionControlsComponent,
         SelectsComponent,
-        SlidersComponent
+        SlidersComponent,
+        SmartListComponent
     ],
     imports: [
         BrowserModule,

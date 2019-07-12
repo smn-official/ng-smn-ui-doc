@@ -26,6 +26,7 @@ import { ProgressComponent } from './components/progress/progress.component';
 import { SelectionControlsComponent } from './components/selection-controls/selection-controls.component';
 import { SelectsComponent } from './components/selects/selects.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
+import { SmartListComponent } from './components/smart-list/smart-list.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -52,6 +53,7 @@ const routes: Routes = [
     {path: 'selects', component: SelectsComponent},
     {path: 'selection-controls', component: SelectionControlsComponent},
     {path: 'sliders', component: SlidersComponent},
+    {path: 'smart-list', component: SmartListComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
