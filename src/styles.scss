@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 section { margin-bottom: 50px; }
 
-@import "~ng-smn-ui/core/core";
-@import "~ng-smn-ui/core/theme";
+@import "../node_modules/ng-smn-ui/lib/core/core";
+@import "../node_modules/ng-smn-ui/lib/core/theme";
+
 
 $primary: (color: 'blue-grey', hue: '900');
 $accent: (color: 'blue', hue: '500');

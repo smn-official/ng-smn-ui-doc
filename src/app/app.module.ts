@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {SMNUIModule, UiToolbarService} from 'ng-smn-ui';
 
@@ -78,6 +79,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
         AppRoutingModule,
         FormsModule,
         SMNUIModule,
+        BrowserAnimationsModule
     ],
     providers: [UiToolbarService, RegionService],
     bootstrap: [AppComponent],

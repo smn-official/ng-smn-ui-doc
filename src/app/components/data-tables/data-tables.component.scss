@@ -1,9 +1,9 @@
-@import "~ng-smn-ui/core/variables";
+@import "../../../../node_modules/ng-smn-ui/lib/core/variables.scss";
 :host {
     ui-card {
         position: relative;
     }
-    /deep/ form[name="searchForm"] {
+    form[name="searchForm"]::ng-deep {
         transition: all 280ms ui-easing('deceleration');
         position: absolute;
         right: 60px;
