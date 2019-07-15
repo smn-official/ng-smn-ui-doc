@@ -1,4 +1,4 @@
-@import 'app.theme';
+@import '../styles.scss';
 
 a {
     color: map_get($theme, accent-color);
