@@ -42,6 +42,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SubheadersComponent } from './components/subheaders/subheaders.component';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 @NgModule({
     declarations: [
@@ -75,7 +76,8 @@ import { SubheadersComponent } from './components/subheaders/subheaders.componen
         SlidersComponent,
         SmartListComponent,
         SnackbarComponent,
-        SubheadersComponent
+        SubheadersComponent,
+        TabsComponent
     ],
     imports: [
         BrowserModule,

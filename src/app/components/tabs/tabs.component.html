@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Tabs</h1>
+        <p>
+            As tabs(guias) organizam conteudo em paginas, podem ser usadas para separar tipos de dados e informações.
+        </p>
+
+        <h3>Estatica:</h3>
+        <section class="separator">
+            <code-gits id="oTrolado/ea66242639caf1f544db7cbbac88bf05"></code-gits> <!-- HTML -->
+            <ui-card>
+                <div>
+                    <ui-tabs class="no-padding primary" #tabs>
+                        <div class="tab selected" uiRipple (click)="tabsPages.pagesGoToPage(1)">
+                            Informações
+                        </div>
+                        <div class="tab" uiRipple (click)="tabsPages.pagesGoToPage(2)">
+                            Opções de Acesso
+                        </div>
+                    </ui-tabs>
+                </div>
+                <div>
+                    <ui-tabs-pages #tabsPages [tabs]="tabs">
+                        <div class="page">
+                            <div>
+                                <ui-card-content>
+                                    Página 1<br>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores
+                                    consequatur
+                                    ducimus eveniet expedita facilis id inventore mollitia nihil optio praesentium
+                                    quasi sint
+                                    sit,
+                                    sunt veniam vitae voluptatum? Perspiciatis, quam?
+                                </ui-card-content>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <ui-card-content>
+                                Página 2<br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores
+                                consequatur
+                                ducimus eveniet expedita facilis id inventore mollitia nihil optio praesentium quasi
+                                sint sit,
+                                sunt veniam vitae voluptatum? Perspiciatis, quam?
+                            </ui-card-content>
+                        </div>
+                    </ui-tabs-pages>
+                </div>
+            </ui-card>
+        </section>
+
+        <h3>Dinâmica:</h3>
+        <section class="separator">
+            <code-gits id="oTrolado/5a48983fe3fdd1055984ae86abb55648"></code-gits> <!-- HTML -->
+            <code-gits id="oTrolado/c432ada86b18b01262bde3b1bdc6804e"></code-gits> <!-- TS -->
+            <ui-card>
+                <div>
+                    <ui-tabs class="primary scrollable" #tabsList>
+                        <div class="tab" uiRipple *ngFor="let item of list; index as i"
+                            (click)="tabsListPages.pagesGoToPage(i + 1)">
+                            {{item.id}}
+                        </div>
+                    </ui-tabs>
+                </div>
+                <div>
+                    <ui-tabs-pages #tabsListPages [tabs]="tabsList">
+                        <div class="page" *ngFor="let item of list">
+                            <div>
+                                <ui-card-content>
+                                    {{ item.content }}
+                                </ui-card-content>
+                            </div>
+                        </div>
+                    </ui-tabs-pages>
+                </div>
+            </ui-card>
+        </section>
+    </div>
+</div>
