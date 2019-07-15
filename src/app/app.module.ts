@@ -43,6 +43,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SubheadersComponent } from './components/subheaders/subheaders.component';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { TimePickersComponent } from './components/time-pickers/time-pickers.component';
 
 @NgModule({
     declarations: [
@@ -77,7 +78,8 @@ import { TabsComponent } from './components/tabs/tabs.component';
         SmartListComponent,
         SnackbarComponent,
         SubheadersComponent,
-        TabsComponent
+        TabsComponent,
+        TimePickersComponent
     ],
     imports: [
         BrowserModule,

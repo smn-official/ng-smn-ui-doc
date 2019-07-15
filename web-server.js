@@ -10,7 +10,7 @@ function loadServer() {
     const app = express();
     let filesPath;
 
-    filesPath = require('path').join(__dirname, '/dist');
+    filesPath = require('path').join(__dirname, '/dist/ng-smn-ui-doc');
 
     app.use(compression());
     app.use(express.static(filesPath));
