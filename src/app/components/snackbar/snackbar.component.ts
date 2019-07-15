@@ -19,14 +19,15 @@ export class SnackbarComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.titleService.setTitle('Snackbars & toasts');
-        this.toolbarService.set('Snackbars & toasts');
+        this.titleService.setTitle('Snackbars');
+        this.toolbarService.set('Snackbars');
     }
 
-    showSnack() {
+    showSnack(center = false) {
         UiSnackbar.hide();
         UiSnackbar.show({
-            text: 'SMN UI compilado com sucesso'
+            text: 'SMN UI compilado com sucesso',
+            center
         });
     }
 

@@ -1,38 +1,35 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Snackbars & toasts</h1>
+        <h1>Snackbars</h1>
         <p>
             Barras de progresso indicam aos usuários o progresso de uma tarefa, ou que uma ação de duração inderminada
             esta sendo performada.
         </p>
 
-        <h3>Exemplo:</h3>
-        <p>*Drawers persistentes ocupam um espaço da pagina e se mantem abertos mesmo no click fora do elemento.</p>
+        <h3>Exemplos:</h3>
+        <p>*É necessario colocar a tag do componente ui-snackbar-container na página onde a snackbar sera usada.</p>
         <section class="separator">
-            <code-gits id="oTrolado/b5240ff91946428a4ab858665ec510fa"></code-gits> <!-- HTML -->
-            <div style="max-width: 608px; width: 100%; margin: 0 auto">
-                <ui-card>
-                    <ui-card-title>Snackbars & Toats</ui-card-title>
-                    <ui-card-content>
-                        <div class="ui-button-container">
-                            <button class="ui-button" uiRipple (click)="showSnack()">
-                                Simples
-                            </button>
-                            <button class="ui-button" uiRipple (click)="showSnack()">
-                                Simple align center
-                            </button>
-                            <button class="ui-button" uiRipple (click)="showSnackInfinity()">
-                                Infinity
-                            </button>
-                            <button class="ui-button" uiRipple (click)="showSnackWithAction()">
-                                Action
-                            </button>
-                            <button class="ui-button" uiRipple (click)="closeSnack()">
-                                Close snack
-                            </button>
-                        </div>
-                    </ui-card-content>
-                </ui-card>
+            <code-gits id="oTrolado/d5de20beb33ae7ca6b4efc5ac1422fe0"></code-gits> <!-- HTML -->
+            <code-gits id="oTrolado/45edf6e955ec590cc1ee6ecfc1ef2088"></code-gits> <!-- TS -->
+            <div>
+                <div class="ui-button-container">
+                    <button class="ui-button" uiRipple (click)="showSnack()">
+                        Simples
+                    </button>
+                    <button class="ui-button" uiRipple (click)="showSnack(true)">
+                        Simples centralizada
+                    </button>
+                    <button class="ui-button" uiRipple (click)="showSnackInfinity()">
+                        Infinita
+                    </button>
+                    <button class="ui-button" uiRipple (click)="showSnackWithAction()">
+                        Ação
+                    </button>
+                    <button class="ui-button" uiRipple (click)="closeSnack()">
+                        Fechar snack
+                    </button>
+                </div>
+                <ui-snackbar-container></ui-snackbar-container>
             </div>
             <div class="ui-fab-container">
                 <button class="ui-button primary fab" uiRipple>
