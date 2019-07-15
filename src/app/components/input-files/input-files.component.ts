@@ -10,6 +10,10 @@ import { UiToolbarService } from 'ng-smn-ui';
 })
 export class InputFilesComponent implements OnInit {
 
+    teste: any;
+    files: any;
+    data: any;
+
     constructor(
         private titleService: Title,
         private toolbarService: UiToolbarService
@@ -27,7 +31,7 @@ export class InputFilesComponent implements OnInit {
         console.log(item, index);
     }
 
-    changeFile(listFile: FileList, invalid) {
+    changeFile(listFile: FileList, invalid?) {
         // console.log(listFile, invalid);
     }
 

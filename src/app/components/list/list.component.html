@@ -51,7 +51,7 @@
                     </div>
                     <div class="action">
                         <ui-option>
-                            <input type="checkbox" [(ngModel)]="checkboxTest" [checked]="checkboxTest">
+                            <input type="checkbox">
                         </ui-option>
                     </div>
                 </div>
@@ -67,8 +67,7 @@
                     </div>
                     <div class="action">
                         <ui-switch class="action">
-                            <input type="checkbox" name="switchTest" [checked]="switchTest == 'S'"
-                                (change)="switchTest=$event.target.checked ? 'S':'N'">
+                            <input type="checkbox" name="switchTest">
                         </ui-switch>
                     </div>
                 </div>

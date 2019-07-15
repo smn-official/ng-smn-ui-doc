@@ -39,6 +39,8 @@ import { SelectsComponent } from './components/selects/selects.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
 import { SmartListComponent } from './components/smart-list/smart-list.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -79,7 +81,8 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
         AppRoutingModule,
         FormsModule,
         SMNUIModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [UiToolbarService, RegionService],
     bootstrap: [AppComponent],
