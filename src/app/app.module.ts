@@ -41,6 +41,7 @@ import { SmartListComponent } from './components/smart-list/smart-list.component
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SubheadersComponent } from './components/subheaders/subheaders.component';
 
 @NgModule({
     declarations: [
@@ -73,7 +74,8 @@ import { environment } from '../environments/environment';
         SelectsComponent,
         SlidersComponent,
         SmartListComponent,
-        SnackbarComponent
+        SnackbarComponent,
+        SubheadersComponent
     ],
     imports: [
         BrowserModule,

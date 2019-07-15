@@ -28,6 +28,7 @@ import { SelectsComponent } from './components/selects/selects.component';
 import { SlidersComponent } from './components/sliders/sliders.component';
 import { SmartListComponent } from './components/smart-list/smart-list.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { SubheadersComponent } from './components/subheaders/subheaders.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path: 'sliders', component: SlidersComponent},
     {path: 'smart-list', component: SmartListComponent},
     {path: 'snackbars', component: SnackbarComponent},
+    {path: 'subheaders', component: SubheadersComponent},
     {path: 'toolbars', component: ToolbarsComponent},
     {path: '**', redirectTo: 'not-found'}
 ];
