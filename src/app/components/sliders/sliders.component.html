@@ -18,7 +18,7 @@
                         </ui-option>
                         <ui-option>
                             <input type="checkbox" [(ngModel)]="ballon" [checked]="ballon">
-                            <span>Show balloon: {{!ballon}}</span>
+                            <span>Esconder balão: {{!ballon}}</span>
                         </ui-option>
                     </ui-option-container>
                     <ui-slider [range]="range" [(begin)]="begin" [(end)]="end" [disabled]="checkbox" [hideBalloon]="ballon"></ui-slider>
@@ -32,7 +32,7 @@
                         </ui-option>
                         <ui-option>
                             <input type="checkbox" [(ngModel)]="ballon" [checked]="ballon">
-                            <span>Show balloon: {{!ballon}}</span>
+                            <span>Esconder balão: {{ballon}}</span>
                         </ui-option>
                     </ui-option-container>
                     <ui-slider [range]="range" [(value)]="value" [disabled]="checkbox" [hideBalloon]="ballon" class="accent"></ui-slider>
@@ -49,7 +49,7 @@
                             </ui-option>
                             <ui-option>
                                 <input type="checkbox" [(ngModel)]="ballonDark" [checked]="ballonDark">
-                                <span>Show balloon: {{!ballonDark}}</span>
+                                <span>Esconder balão: {{!ballonDark}}</span>
                             </ui-option>
                         </ui-option-container>
                         <ui-slider [range]="range" [(begin)]="begin" [(end)]="end" [disabled]="checkboxDark" [hideBalloon]="ballonDark"></ui-slider>
@@ -63,7 +63,7 @@
                             </ui-option>
                             <ui-option>
                                 <input type="checkbox" [(ngModel)]="ballonDark" [checked]="ballonDark">
-                                <span>Show balloon: {{!ballonDark}}</span>
+                                <span>Esconder balão: {{ballonDark}}</span>
                             </ui-option>
                         </ui-option-container>
                         <ui-slider [range]="range" [(value)]="value" [disabled]="checkboxDark" [hideBalloon]="ballonDark" class="accent"></ui-slider>
