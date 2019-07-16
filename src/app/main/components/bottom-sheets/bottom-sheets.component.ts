@@ -5,7 +5,7 @@ import { UiToolbarService } from 'ng-smn-ui';
 @Component({
   selector: 'app-bottom-sheets',
   templateUrl: './bottom-sheets.component.html',
-  styleUrls: ['../../home/home.component.scss', './bottom-sheets.component.scss']
+  styleUrls: ['../../../home/home.component.scss', './bottom-sheets.component.scss']
 })
 export class BottomSheetsComponent implements OnInit, AfterViewInit {
 

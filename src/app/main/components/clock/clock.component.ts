@@ -5,7 +5,7 @@ import { UiToolbarService } from 'ng-smn-ui';
 @Component({
   selector: 'app-clock',
   templateUrl: './clock.component.html',
-  styleUrls: ['../../home/home.component.scss', './clock.component.scss']
+  styleUrls: ['../../../home/home.component.scss', './clock.component.scss']
 })
 export class ClockComponent implements OnInit, AfterViewInit {
     time;

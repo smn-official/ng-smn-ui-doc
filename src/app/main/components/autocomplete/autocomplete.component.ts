@@ -5,7 +5,7 @@ import { UiToolbarService } from 'ng-smn-ui';
 @Component({
     selector: 'app-autocomplete',
     templateUrl: './autocomplete.component.html',
-    styleUrls: ['../../home/home.component.scss', './autocomplete.component.scss']
+    styleUrls: ['../../../home/home.component.scss', './autocomplete.component.scss']
 })
 export class AutocompleteComponent implements OnInit, AfterViewInit {
     codes: any[];

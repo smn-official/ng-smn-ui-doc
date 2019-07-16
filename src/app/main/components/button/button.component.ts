@@ -3,12 +3,12 @@ import {Title} from '@angular/platform-browser';
 
 import {UiToolbarService} from 'ng-smn-ui';
 
-import {RegionService} from '../../core/region.service';
+import {RegionService} from '../../../core/region.service';
 
 @Component({
     selector: 'app-button',
     templateUrl: './button.component.html',
-    styleUrls: ['../../home/home.component.scss', './button.component.scss']
+    styleUrls: ['../../../home/home.component.scss', './button.component.scss']
 })
 export class ButtonComponent implements AfterViewInit, OnInit {
     region: any;

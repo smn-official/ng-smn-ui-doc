@@ -2,12 +2,12 @@ import {Component, AfterViewInit, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 
 import {UiToolbarService} from 'ng-smn-ui';
-import {RegionService} from '../../core/region.service';
+import {RegionService} from '../../../core/region.service';
 
 @Component({
     selector: 'app-card',
     templateUrl: './card.component.html',
-    styleUrls: ['../../home/home.component.scss', './card.component.scss']
+    styleUrls: ['../../../home/home.component.scss', './card.component.scss']
 })
 export class CardComponent implements AfterViewInit, OnInit {
     region: any;

@@ -5,7 +5,7 @@ import {Title} from '@angular/platform-browser';
 @Component({
   selector: 'app-data-tables',
   templateUrl: './data-tables.component.html',
-  styleUrls: ['../../home/home.component.scss', './data-tables.component.scss']
+  styleUrls: ['../../../home/home.component.scss', './data-tables.component.scss']
 })
 export class DataTablesComponent implements OnInit, AfterViewInit {
     list: Array<any>;

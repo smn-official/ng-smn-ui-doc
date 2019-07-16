@@ -2,12 +2,12 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { UiToolbarService } from 'ng-smn-ui';
-import { RegionService } from '../../core/region.service';
+import { RegionService } from '../../../core/region.service';
 
 @Component({
     selector: 'app-input',
     templateUrl: './input.component.html',
-    styleUrls: ['../../home/home.component.scss', './input.component.scss']
+    styleUrls: ['../../../home/home.component.scss', './input.component.scss']
 })
 export class InputComponent implements AfterViewInit, OnInit {
     nome: String = 'Mário';

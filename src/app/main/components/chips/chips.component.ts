@@ -5,7 +5,7 @@ import { UiToolbarService } from 'ng-smn-ui';
 @Component({
   selector: 'app-chips',
   templateUrl: './chips.component.html',
-  styleUrls: ['../../home/home.component.scss', './chips.component.scss']
+  styleUrls: ['../../../home/home.component.scss', './chips.component.scss']
 })
 export class ChipsComponent implements OnInit, AfterViewInit {
     chips;
