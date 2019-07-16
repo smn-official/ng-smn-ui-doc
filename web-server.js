@@ -1,44 +1,13 @@
 const express = require('express');
-const cluster = require('cluster');
-const fs = require('fs');
-const compression = require('compression');
-const os = require("os");
+const path = require('path');
 
-const port = 3000;
+const app = express();
 
-function loadServer() {
-    const app = express();
-    let filesPath;
+app.use(express.static('./dist/ng-smn-ui-doc'));
 
-    filesPath = require('path').join(__dirname, '/dist/ng-smn-ui-doc');
+app.get('/**', function(req,res) {
+    
+res.sendFile(path.join(__dirname,'/dist/ng-smn-ui-doc/index.html'));
+});
 
-    app.use(compression());
-    app.use(express.static(filesPath));
-
-    app.set('views', filesPath);
-
-    app.get('/*', (req, res) => {
-        fs.readFile(`${filesPath}/index.html`, 'utf8', (err, text) => {
-            res.send(text);
-        });
-    });
-
-    app.listen(port, () => {
-        console.log(`[${new Date()}]: Web server listening on port ${port}`);
-    });
-}
-
-if (cluster.isMaster) {
-    let cpuCount = process.env.CPU_COUNT || os.cpus().length;
-
-    for (let i = 0; i < cpuCount; i++) {
-        cluster.fork();
-    }
-
-    cluster.on('exit', (worker) => {
-        console.log(`[${new Date()}]: Worker ${worker.id} died`);
-        cluster.fork();
-    });
-} else {
-    loadServer();
-}
+app.listen(process.env.PORT || 8080);

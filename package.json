@@ -3,13 +3,14 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --port 4001",
-        "serve": "node ./web-server.js",
+        "serve": "ng serve --port 4001",
+        "start": "node web-server.js",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "prod": "ng build --prod && node web-server"
+        "prod": "ng build --prod && node web-server",
+        "postinstall": "ng build — aot — prod"
     },
     "private": true,
     "dependencies": {
@@ -31,6 +32,7 @@
         "fs": "0.0.1-security",
         "ng-smn-ui": "^2.9.6",
         "os": "^0.1.1",
+        "path": "^0.12.7",
         "rxjs": "~6.4.0",
         "tslib": "^1.9.0",
         "zone.js": "~0.9.1"
@@ -55,5 +57,9 @@
         "ts-node": "~7.0.0",
         "tslint": "~5.15.0",
         "typescript": "~3.4.3"
+    },
+    "engines": {
+        "node": "10.15.3",
+        "npm": "6.4.1"
     }
 }
