@@ -10,25 +10,11 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import {CardComponent} from './main/components/card/card.component';
-import {FabComponent} from './main/components/fab/fab.component';
-import {InputComponent} from './main/components/input/input.component';
 import {RegionService} from './core/region.service';
 import {FormsModule} from '@angular/forms';
 import {CodeGitsComponent} from './core/code-gits/code-gits.component';
-import { ChipsComponent } from './main/components/chips/chips.component';
-import { ClockComponent } from './main/components/clock/clock.component';
-import { ColorPickersComponent } from './main/components/color-pickers/color-pickers.component';
-import { DataTablesComponent } from './main/components/data-tables/data-tables.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ToolbarsComponent } from './main/components/toolbars/toolbars.component';
-import { DialogsComponent } from './main/components/dialogs/dialogs.component';
-import { DividersComponent } from './main/components/dividers/dividers.component';
-import { InfiniteLoadComponent } from './main/components/infinite-load/infinite-load.component';
-import { FlexContainerComponent } from './main/components/flex-container/flex-container.component';
-import { InputFilesComponent } from './main/components/input-files/input-files.component';
-import { ListComponent } from './main/components/list/list.component';
-import { NavDrawerComponent } from './main/components/nav-drawer/nav-drawer.component';
 import { ProgressComponent } from './main/components/progress/progress.component';
 import { SelectionControlsComponent } from './main/components/selection-controls/selection-controls.component';
 import { SelectsComponent } from './main/components/selects/selects.component';
@@ -47,22 +33,8 @@ import { TimePickersComponent } from './main/components/time-pickers/time-picker
         AppComponent,
         HomeComponent,
         NotFoundComponent,
-        CardComponent,
-        FabComponent,
-        InputComponent,
-        ChipsComponent,
-        ClockComponent,
-        ColorPickersComponent,
-        DataTablesComponent,
         JsfiddleComponent,
         ToolbarsComponent,
-        DialogsComponent,
-        DividersComponent,
-        InfiniteLoadComponent,
-        FlexContainerComponent,
-        InputFilesComponent,
-        ListComponent,
-        NavDrawerComponent,
         ProgressComponent,
         SelectionControlsComponent,
         SelectsComponent,

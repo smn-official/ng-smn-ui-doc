@@ -37,22 +37,7 @@ import { TimePickersComponent } from './main/components/time-pickers/time-picker
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'not-found', component: NotFoundComponent},
-    ...MAIN_ROUTES
-    // {path: 'card', component: CardComponent},
-    // {path: 'fab', component: FabComponent},
-    // {path: 'inputs', component: InputComponent},
-    // {path: 'files', component: InputFilesComponent},
-    // {path: 'infinite-load', component: InfiniteLoadComponent},
-    // {path: 'autocomplete', component: AutocompleteComponent},
-    // {path: 'chips', component: ChipsComponent},
-    // {path: 'clock', component: ClockComponent},
-    // {path: 'color-pickers', component: ColorPickersComponent},
-    // {path: 'data-tables', component: DataTablesComponent},
-    // {path: 'dialogs', component: DialogsComponent},
-    // {path: 'dividers', component: DividersComponent},
-    // {path: 'flex-container', component: FlexContainerComponent},
-    // {path: 'lists', component: ListComponent},
-    // {path: 'navigation-drawer', component: NavDrawerComponent},
+    ...MAIN_ROUTES,
     // {path: 'progress', component: ProgressComponent},
     // {path: 'selects', component: SelectsComponent},
     // {path: 'selection-controls', component: SelectionControlsComponent},
@@ -63,7 +48,7 @@ const routes: Routes = [
     // {path: 'tabs', component: TabsComponent},
     // {path: 'time-pickers', component: TimePickersComponent},
     // {path: 'toolbars', component: ToolbarsComponent},
-    // {path: '**', redirectTo: 'not-found'}
+    {path: '**', redirectTo: 'not-found'}
 ];
 
 @NgModule({

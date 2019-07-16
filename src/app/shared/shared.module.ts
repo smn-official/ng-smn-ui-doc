@@ -9,7 +9,8 @@ import {SMNUIModule} from 'ng-smn-ui';
   declarations: [],
   exports: [
     SMNUIModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   imports: [
     CommonModule,
