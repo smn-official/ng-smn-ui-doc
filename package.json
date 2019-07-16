@@ -4,13 +4,11 @@
     "scripts": {
         "ng": "ng",
         "serve": "ng serve --port 4001",
-        "start": "node web-server.js",
-        "build": "ng build",
+        "start": "node ./web-server.js",
+        "build": "ng build --aot --prod",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "prod": "ng build --prod && node web-server",
-        "postinstall": "ng build --aot --prod"
+        "e2e": "ng e2e"
     },
     "private": true,
     "dependencies": {
@@ -30,6 +28,7 @@
         "core-js": "^3.1.4",
         "express": "^4.17.1",
         "fs": "0.0.1-security",
+        "http": "0.0.0",
         "ng-smn-ui": "^2.9.6",
         "os": "^0.1.1",
         "path": "^0.12.7",
