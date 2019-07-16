@@ -10,7 +10,6 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import {ButtonComponent} from './main/components/button/button.component';
 import {CardComponent} from './main/components/card/card.component';
 import {FabComponent} from './main/components/fab/fab.component';
 import {InputComponent} from './main/components/input/input.component';
@@ -48,7 +47,6 @@ import { TimePickersComponent } from './main/components/time-pickers/time-picker
         AppComponent,
         HomeComponent,
         NotFoundComponent,
-        ButtonComponent,
         CardComponent,
         FabComponent,
         InputComponent,

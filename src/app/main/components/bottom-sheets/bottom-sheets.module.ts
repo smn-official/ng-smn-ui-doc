@@ -11,6 +11,6 @@ import { BottomSheetsComponent } from './bottom-sheets.component';
     BottomSheetsRoutingModule,
     SharedModule
   ],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class BottomSheetsModule { }

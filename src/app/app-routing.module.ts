@@ -38,7 +38,6 @@ const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'not-found', component: NotFoundComponent},
     ...MAIN_ROUTES
-    // {path: 'button', component: ButtonComponent},
     // {path: 'card', component: CardComponent},
     // {path: 'fab', component: FabComponent},
     // {path: 'inputs', component: InputComponent},
