@@ -14,18 +14,8 @@ import {RegionService} from './core/region.service';
 import {FormsModule} from '@angular/forms';
 import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
-import { ToolbarsComponent } from './main/components/toolbars/toolbars.component';
-import { ProgressComponent } from './main/components/progress/progress.component';
-import { SelectionControlsComponent } from './main/components/selection-controls/selection-controls.component';
-import { SelectsComponent } from './main/components/selects/selects.component';
-import { SlidersComponent } from './main/components/sliders/sliders.component';
-import { SmartListComponent } from './main/components/smart-list/smart-list.component';
-import { SnackbarComponent } from './main/components/snackbar/snackbar.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { SubheadersComponent } from './main/components/subheaders/subheaders.component';
-import { TabsComponent } from './main/components/tabs/tabs.component';
-import { TimePickersComponent } from './main/components/time-pickers/time-pickers.component';
 
 @NgModule({
     declarations: [
@@ -34,16 +24,6 @@ import { TimePickersComponent } from './main/components/time-pickers/time-picker
         HomeComponent,
         NotFoundComponent,
         JsfiddleComponent,
-        ToolbarsComponent,
-        ProgressComponent,
-        SelectionControlsComponent,
-        SelectsComponent,
-        SlidersComponent,
-        SmartListComponent,
-        SnackbarComponent,
-        SubheadersComponent,
-        TabsComponent,
-        TimePickersComponent
     ],
     imports: [
         BrowserModule,

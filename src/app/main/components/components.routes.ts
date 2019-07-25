@@ -18,6 +18,16 @@ import { INPUTS } from './input/input.routes';
 import { FILES } from './input-files/input-files.routes';
 import { LISTS } from './list/list.routes';
 import { NAV_DRAWER } from './nav-drawer/nav-drawer.routes';
+import { PROGRESS } from './progress/progress.routes';
+import { SELECTION_CONTROLS } from './selection-controls/selection-controls.routes';
+import { SELECTS } from './selects/selects.routes';
+import { SLIDERS } from './sliders/sliders.routes';
+import { SMART_LIST } from './smart-list/smart-list.routes';
+import { SNACKBAR } from './snackbar/snackbar.routes';
+import { SUBHEADERS } from './subheaders/subheaders.routes';
+import { TABS } from './tabs/tabs.routes';
+import { TIME_PICKERS } from './time-pickers/time-pickers.routes';
+import { TOOLBARS } from './toolbars/toolbars.routes';
 
 export const COMPONENTS_ROUTES: Routes = [
     ...AUTOCOMPLETE,
@@ -37,5 +47,15 @@ export const COMPONENTS_ROUTES: Routes = [
     ...INPUTS,
     ...FILES,
     ...LISTS,
-    ...NAV_DRAWER
+    ...NAV_DRAWER,
+    ...PROGRESS,
+    ...SELECTION_CONTROLS,
+    ...SELECTS,
+    ...SLIDERS,
+    ...SMART_LIST,
+    ...SNACKBAR,
+    ...SUBHEADERS,
+    ...TABS,
+    ...TIME_PICKERS,
+    ...TOOLBARS
 ];
