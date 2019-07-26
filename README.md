@@ -1,8 +1,6 @@
 # NgSmnUiDoc
 
-Para executar o projeto local rode o `npm serve`, o comando `npm start` foi modificado para levantar a api da demo.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+User npm start para levantar o servidor na porta 4001
 
 ## Development server
 
