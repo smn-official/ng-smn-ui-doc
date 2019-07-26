@@ -13,7 +13,13 @@
                 <label>Time</label>
             </ui-input-container>
 
-            {{ time }}
+            <p>
+                Normal: {{ time }}
+            </p>
+
+            <p>
+                Pipe: {{ time | uiTime }}
+            </p>
         </div>
     </div>
 </div>

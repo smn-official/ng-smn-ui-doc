@@ -12,7 +12,13 @@
                 <label>Credit Card</label>
             </ui-input-container>
 
-            {{ card }}
+            <p>
+                Normal: {{ card }}
+            </p>
+
+            <p>
+                Pipe: {{ card | uiCreditCard }}
+            </p>
         </div>
     </div>
 </div>

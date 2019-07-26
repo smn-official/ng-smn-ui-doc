@@ -12,7 +12,13 @@
                 <label>CPF</label>
             </ui-input-container>
 
-            {{ cpf }}
+            <p>
+                Normal: {{ cpf }}
+            </p>
+
+            <p>
+                Pipe: {{ cpf | uiCpf }}
+            </p>
         </div>
     </div>
 </div>

@@ -13,7 +13,13 @@
                 <label>CNPJ</label>
             </ui-input-container>
 
-            {{ cnpj }}
+            <p>
+                Normal: {{ cnpj }}
+            </p>
+
+            <p>
+                Pipe: {{ cnpj | uiCnpj }}
+            </p>
         </div>
     </div>
 </div>

@@ -12,7 +12,13 @@
                 <label>CEP</label>
             </ui-input-container>
             
-            {{ cep }}
+            <p>
+                Normal: {{ cep }}
+            </p>
+
+            <p>
+                Pipe: {{ cep | uiCep}}
+            </p>
         </div>
     </div>
 </div>

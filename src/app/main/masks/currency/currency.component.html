@@ -13,7 +13,13 @@
                 <label>Currency</label>
             </ui-input-container>
 
-            {{ currency }}
+            <p>
+                Normal: {{ currency }}
+            </p>
+
+            <p>
+                Pipe: {{ currency | uiCurrency }}
+            </p>
         </div>
     </div>
 </div>
