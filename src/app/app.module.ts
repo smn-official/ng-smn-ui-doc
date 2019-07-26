@@ -12,14 +12,12 @@ import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {RegionService} from './core/region.service';
 import {FormsModule} from '@angular/forms';
-import {CodeGitsComponent} from './core/code-gits/code-gits.component';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
-        CodeGitsComponent,
         AppComponent,
         HomeComponent,
         NotFoundComponent,

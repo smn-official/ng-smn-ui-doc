@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Currency Mask</h1>
+        <p>Adiciona máscara monetária ao campo no formato BRL, a saida é exibida no formato americano.</p>
+
+        <h3>Exemplo</h3>
+        <p>Pode receber [min] e [max] como parâmetros limitadores de valor mínimo e máximo.</p>
+        <div class="separator">
+            <code-gits id="oTrolado/95fd7e06af6c47e94dd902d3d83bbad5"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskCurrency [(ngModel)]="currency" [min]="3" [max]="100" required>
+                <label>Currency</label>
+            </ui-input-container>
+
+            {{ currency }}
+        </div>
+    </div>
+</div>

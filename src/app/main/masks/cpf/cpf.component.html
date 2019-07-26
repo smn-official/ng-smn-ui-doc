@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>CPF Mask</h1>
+        <p>Adiciona uma máscara no formato cpf ao campo: 111.111.111-11, porem a saida do input vem apenas com os caracteres numericos. </p>
+
+        <h3>Exemplo</h3>
+        <div class="separator">
+            <code-gits id="oTrolado/78b781c67ef0e2c636961f34eca093df"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskCpf [(ngModel)]="cpf">
+                <label>CPF</label>
+            </ui-input-container>
+
+            {{ cpf }}
+        </div>
+    </div>
+</div>

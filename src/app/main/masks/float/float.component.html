@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Float Mask</h1>
+        <p>Adiciona máscara que só aceita números e pontos(.)</p>
+
+        <h3>Exemplo</h3>
+        <p>Pode receber [min] e [max] como parâmetros limitadores de valor mínimo e máximo.</p>
+        <div class="separator">
+            <code-gits id="oTrolado/9b0b272333f24bb7bd5bf93b11b5401b"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskFloat [(ngModel)]="float" [min]="3" [max]="100" required>
+                <label>Float</label>
+            </ui-input-container>
+
+            {{ float }}
+        </div>
+    </div>
+</div>

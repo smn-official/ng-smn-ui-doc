@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Integer Mask</h1>
+        <p>Adiciona máscara que só aceita números.</p>
+
+        <h3>Exemplo</h3>
+        <p>Pode receber [min] e [max] como parâmetros limitadores de valor mínimo e máximo.</p>
+        <div class="separator">
+            <code-gits id="oTrolado/e282fc514076b4416eb281d0b41c6b1e"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskInteger [(ngModel)]="integer" [min]="3" [max]="100" required>
+                <label>Integer</label>
+            </ui-input-container>
+
+            {{ integer }}
+        </div>
+    </div>
+</div>

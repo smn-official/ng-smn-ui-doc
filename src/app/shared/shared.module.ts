@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {SMNUIModule} from 'ng-smn-ui';
 
+import {CodeGitsComponent} from '../core/code-gits/code-gits.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CodeGitsComponent],
   exports: [
     SMNUIModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    CodeGitsComponent
   ],
   imports: [
     CommonModule,

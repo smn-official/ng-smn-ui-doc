@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Phone Mask</h1>
+        <p>Adiciona máscara de telefone no formato (11)11111-1111 que só aceita números.</p>
+
+        <h3>Exemplo</h3>
+        <div class="separator">
+            <code-gits id="oTrolado/e282fc514076b4416eb281d0b41c6b1e"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskPhone [(ngModel)]="phone">
+                <label>Phone</label>
+            </ui-input-container>
+
+            {{ phone }}
+        </div>
+    </div>
+</div>
