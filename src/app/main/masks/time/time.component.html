@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Time Mask</h1>
+        <p>Adiciona máscara de horário ao campo no formato 11:11, nó aceita números.</p>
+
+        <h3>Exemplo</h3>
+        Pode receber [minTime] e [maxTime] como parâmetros limitadores de valor mínimo e máximo.
+        <div class="separator">
+            <code-gits id="gabriel-Oak/4adbc8cf063b0ab6e61b64b64341b602"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskTime [(ngModel)]="time" [minTime]="0600" [maxTime]="2130" required>
+                <label>Time</label>
+            </ui-input-container>
+
+            <p>
+                Normal: {{ time }}
+            </p>
+
+            <p>
+                Pipe: {{ time | uiTime }}
+            </p>
+        </div>
+    </div>
+</div>

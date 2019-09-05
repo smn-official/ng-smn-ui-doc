@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Flex Container</h1>
+        <p>Flex container é uma ferramenta de layout. Utiliza o modelo de flex-box para organizar um conteudo.</p>
+
+        <h3>Exemplo</h3>
+        <div class="separator">
+            <code-gits id="gabriel-Oak/7f79030c05eddeb4a7aea9a28712a4c4"></code-gits> <!-- HTML -->
+            <code-gits id="gabriel-Oak/ef42d872cba0f9054e1684fef0034fb8"></code-gits> <!-- CSS -->
+            <div class="ui-flex-container">
+                <ui-card>
+                    <ui-card-content>
+                        <p>Um flex container toma toda a largura disponivel, se houverem vários containers lado a lado o
+                            espaço é distribuido entre eles.</p>
+                    </ui-card-content>
+                </ui-card>
+            </div>
+
+            <div class="ui-flex-container break-on-s960">
+                <div class="ui-flex-container break-on-s960">
+                    <ui-card>
+                        <ui-card-content>
+                            <p>A classe break-on-s** informa que o container deve tomar todo o espaço possível a partir
+                                de
+                                uma largura da pagina</p>
+                        </ui-card-content>
+                    </ui-card>
+                </div>
+                <div class="ui-flex-container break-on-s600">
+                    <div class="ui-flex-container break-on-s600">
+                        <ui-card>
+                            <ui-card-content>
+                                <p>Redimencione a pagina e veja o que acontece</p>
+                            </ui-card-content>
+                        </ui-card>
+                    </div>
+                    <div class="ui-flex-container break-on-s480">
+                        <ui-card>
+                            <ui-card-content>
+                                <p>Os valores suportados são break-on-s1600, break-on-s1440, break-on-s1280,
+                                    break-on-s960, break-on-s840, break-on-s600 e break-on-s480</p>
+                            </ui-card-content>
+                        </ui-card>
+                    </div>
+                    <div class="ui-flex-container break-on-s480">
+                        <ui-card>
+                            <ui-card-content>
+                                <p>Lorena Ipsum</p>
+                            </ui-card-content>
+                        </ui-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

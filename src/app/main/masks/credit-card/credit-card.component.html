@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Credit Card Mask</h1>
+        <p>Adiciona máscara de cartão de crédito ao campo, que só aceita números.</p>
+
+        <h3>Exemplo</h3>
+        <div class="separator">
+            <code-gits id="gabriel-Oak/dfca7337bb35f585ee5d0098c3490629"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskCreditCard [(ngModel)]="card">
+                <label>Credit Card</label>
+            </ui-input-container>
+
+            <p>
+                Normal: {{ card }}
+            </p>
+
+            <p>
+                Pipe: {{ card | uiCreditCard }}
+            </p>
+        </div>
+    </div>
+</div>

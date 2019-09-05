@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Time pickers</h1>
+        <p>
+            Time pickers, são controles de seleção de horário, funcionam como o ui-clock.
+        </p>
+
+        <h3>Exemplos:</h3>
+        <section class="separator">
+            <code-gits id="gabriel-Oak/762b99d8c1c0394a9548b0bb38fe04b7"></code-gits> <!-- HTML -->
+            <code-gits id="gabriel-Oak/481cd127fa13050ec0b1a51810d65fa0"></code-gits> <!-- TS -->
+            <form #timePickers="ngForm">
+                <ui-card>
+                    <ui-card-title>Versão light</ui-card-title>
+                    <ui-card-content class="ui-validate on-dirty">
+                        <ui-input-container>
+                            <input type="text" uiInput [(ngModel)]="simple" name="time" uiTimePicker="simple" uiMaskTime
+                                #time="ngModel" [minTime]="minTime">
+                            <label>Time</label>
+                            <div class="icon">
+                                <button class="ui-button icon flat" uiTimePickerCaller="simple">
+                                    <i class="material-icons">access_time</i>
+                                </button>
+                            </div>
+                        </ui-input-container>
+                        <ui-input-container>
+                            <input type="text" uiInput [(ngModel)]="confirmSelect" name="confirmSelect"
+                                uiTimePicker="confirmSelect" uiMaskTime [confirmSelection]="true">
+                            <label>Confirmação de seleção</label>
+                            <div class="icon">
+                                <button class="ui-button icon flat" uiTimePickerCaller="confirmSelect">
+                                    <i class="material-icons">access_time</i>
+                                </button>
+                            </div>
+                        </ui-input-container>
+                        <ui-input-container>
+                            <input type="text" uiInput [(ngModel)]="functionSelect" name="functionSelect"
+                                uiTimePicker="functionSelect" uiMaskTime (blur)="execFunctionSelect()">
+                            <label>Execute function select</label>
+                            <div class="icon">
+                                <button class="ui-button icon flat" uiTimePickerCaller="functionSelect">
+                                    <i class="material-icons">access_time</i>
+                                </button>
+                            </div>
+                        </ui-input-container>
+                    </ui-card-content>
+                </ui-card>
+                <div class="dark" style="margin-top: 16px">
+                    <ui-card>
+                        <ui-card-title>Versão dark</ui-card-title>
+                        <ui-card-content>
+                            <ui-input-container>
+                                <input type="text" uiInput [(ngModel)]="timeDark" class="accent" name="timeDark"
+                                    uiTimePicker="timepickerDark" uiMaskTime theme-class="dark">
+                                <label>Time</label>
+                                <div class="icon">
+                                    <button class="ui-button icon flat" uiTimePickerCaller="timepickerDark">
+                                        <i class="material-icons">access_time</i>
+                                    </button>
+                                </div>
+                                <div class="ui-messages">
+                                    <div class="ui-message helper">
+                                        Com mais de um tema é necessário passar o nome da classe thema (theme-class)
+                                    </div>
+                                </div>
+                            </ui-input-container>
+                        </ui-card-content>
+                    </ui-card>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

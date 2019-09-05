@@ -8,7 +8,7 @@ import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@a
 export class CodeGitsComponent implements AfterViewInit {
 
   @Input() id: string;
-  @ViewChild('code') code: ElementRef;
+  @ViewChild('code', null) code: ElementRef;
 
   constructor() {
   }

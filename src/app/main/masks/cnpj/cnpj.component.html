@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>CNPJ Mask</h1>
+        <p>Adiciona uma máscara no formato cnpj ao campo: 11.111.111/1111-11, porem a saida do input vem apenas com os
+            caracteres numericos. </p>
+
+        <h3>Exemplo</h3>
+        <div class="separator">
+            <code-gits id="gabriel-Oak/f0d107efafc07c4b5b1db2eba208f8dd"></code-gits> <!-- HTML -->
+
+            <ui-input-container>
+                <input type="text" uiInput uiMaskCnpj [(ngModel)]="cnpj">
+                <label>CNPJ</label>
+            </ui-input-container>
+
+            <p>
+                Normal: {{ cnpj }}
+            </p>
+
+            <p>
+                Pipe: {{ cnpj | uiCnpj }}
+            </p>
+        </div>
+    </div>
+</div>

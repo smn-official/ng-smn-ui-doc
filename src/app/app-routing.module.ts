@@ -3,32 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
-import {ButtonComponent} from './components/button/button.component';
-import {CardComponent} from './components/card/card.component';
-import {FabComponent} from './components/fab/fab.component';
-import {InputComponent} from './components/input/input.component';
-import {AutocompleteComponent} from './components/autocomplete/autocomplete.component';
-import {BottomSheetsComponent} from './components/bottom-sheets/bottom-sheets.component';
-import {ChipsComponent} from './components/chips/chips.component';
-import {ClockComponent} from './components/clock/clock.component';
-import {ColorPickersComponent} from './components/color-pickers/color-pickers.component';
-import {DataTablesComponent} from './components/data-tables/data-tables.component';
-import {AvatarComponent} from './components/avatar/avatar.component';
+import { MAIN_ROUTES } from './main/main.routes';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'not-found', component: NotFoundComponent},
-    {path: 'avatar', component: AvatarComponent},
-    {path: 'button', component: ButtonComponent},
-    {path: 'card', component: CardComponent},
-    {path: 'fab', component: FabComponent},
-    {path: 'input', component: InputComponent},
-    {path: 'autocomplete', component: AutocompleteComponent},
-    {path: 'bottom-sheets', component: BottomSheetsComponent},
-    {path: 'chips', component: ChipsComponent},
-    {path: 'clock', component: ClockComponent},
-    {path: 'color-pickers', component: ColorPickersComponent},
-    {path: 'data-tables', component: DataTablesComponent},
+    ...MAIN_ROUTES,
     {path: '**', redirectTo: 'not-found'}
 ];
 

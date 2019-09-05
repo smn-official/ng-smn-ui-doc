@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Navigation drawer</h1>
+        <p>Navigation drawers fornecem acesso a destinos e funcionalidades do aplicativo, como a troca de contas. Eles
+            podem estar permanentemente na tela, ou serem controlados por um ícone do menu de navegação.
+        </p>
+
+        <h3>Exemplo:</h3>
+        <p>*Drawers persistentes ocupam um espaço da pagina e se mantem abertos mesmo no click fora do elemento.</p>
+        <section class="separator">
+            <code-gits id="gabriel-Oak/c4cd34e5935ce159e214bb4ae3d60f6f"></code-gits> <!-- HTML -->
+            <code-gits id="gabriel-Oak/7db7a2ae3cabba27372ad82357231ac9"></code-gits> <!-- TS -->
+            <div class="ui-button-container">
+                <button class="ui-button raised primary" (click)="openDrawer()">Abrir Drawer</button>
+                <button class="ui-button raised primary" (click)="closeDrawer()">Fechar Drawer</button>
+                <button class="ui-button raised primary" (click)="openDrawerNormal()">Abrir Drawer Normal</button>
+                <button class="ui-button raised primary" (click)="openDrawerPersistent()">Abrir Drawer Persistente</button>
+            </div>
+
+            <ui-nav-drawer class="right" [(open)]="menuOpen" [ngClass]="{'persistent': persistent}">
+                <ui-toolbar class="flat">
+                    <button (click)="menuOpen = false" class="ui-button flat icon" uiRipple>
+                        <i class="material-icons">arrow_forward</i>
+                    </button>
+                    <span class="title">SMN - UI</span>
+                </ui-toolbar>
+            </ui-nav-drawer>
+        </section>
+    </div>
+</div>
+
+
+

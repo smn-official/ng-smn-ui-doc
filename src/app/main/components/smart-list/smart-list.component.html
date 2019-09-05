@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>Smart list</h1>
+        <p>
+            Lista auto escalavel.
+        </p>
+
+        <h3>Simples:</h3>
+        <section class="separator">
+            <code-gits id="gabriel-Oak/81d98403ed325f1117eca2ed3babab2b"></code-gits> <!-- HTML -->
+            <code-gits id="gabriel-Oak/73db8aa1d4b8acb22c2d70c0fcc4f79b"></code-gits> <!-- TS -->
+            <div class="light">
+                <ui-card>
+                    <ui-card-content>
+                        <form #formTeste="ngForm">
+                            <ui-smart-list #fones [model]="telefones">
+                                <ui-smart-list-item *ngFor="let item of fones.list; index as i;">
+                                    <div class="ui-flex-container">
+                                        <ui-input-container>
+                                            <input #fieldTextarea="ngModel" type="text" [name]="'Fone ' + (1+i)"
+                                                [(ngModel)]="item.fone" uiInput [required]="i < fones.list.length - 1">
+                                            <label>Fone {{1+i}}</label>
+                                        </ui-input-container>
+                                        
+                                        <button *ngIf="i < fones.list.length - 1" (click)="fones.remove(i);"
+                                            class="ui-button icon flat" uiRipple>
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </div>
+                                </ui-smart-list-item>
+                            </ui-smart-list>
+                        </form>
+                    </ui-card-content>
+                </ui-card>
+                <pre>{{telefones | json}}</pre>
+            </div>
+        </section>
+
+        <h3>Multiplos valores:</h3>
+        <section class="separator">
+            <code-gits id="gabriel-Oak/fc3e9f471c1f4cb88bdf26310b7cb070"></code-gits> <!-- HTML -->
+            <div class="light">
+                <ui-card>
+                    <ui-card-content>
+                        <form #formTeste="ngForm" class="ui-validate on-dirty">
+                            <ui-smart-list #teste [model]="lista" [auto-delete-exception]="'ity'">
+                                <ui-smart-list-item *ngFor="let item of teste.list; index as i;">
+                                    <div class="ui-flex-container">
+                                        <ui-input-container>
+                                            <input #fieldTextarea="ngModel" type="text" [name]="i + 'a'"
+                                                [(ngModel)]="item.a" uiInput [required]="i < teste.list.length - 1">
+                                            <label>Teste</label>
+                                            <div class="ui-messages">
+                                                <div *ngIf="fieldTextarea.errors && fieldTextarea.dirty">
+                                                    <div class="ui-message error"
+                                                        [hidden]="!fieldTextarea.pristine && !fieldTextarea.errors.required">
+                                                        Textarea is
+                                                        required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ui-input-container>
+                                        <ui-input-container>
+                                            <input #fieldTextarea2="ngModel" type="text" [name]="i + 'b'"
+                                                [(ngModel)]="item.b" uiInput [required]="i < teste.list.length - 1">
+                                            <label>Teste 2</label>
+                                            <div class="ui-messages">
+                                                <div *ngIf="fieldTextarea2.errors && fieldTextarea2.dirty">
+                                                    <div class="ui-message error"
+                                                        [hidden]="!fieldTextarea2.pristine && !fieldTextarea2.errors.required">
+                                                        Textarea is
+                                                        required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ui-input-container>
+                                        <button *ngIf="i < teste.list.length - 1" (click)="teste.remove(i);"
+                                            class="ui-button icon flat" uiRipple>
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </div>
+                                </ui-smart-list-item>
+                            </ui-smart-list>
+                        </form>
+                    </ui-card-content>
+                </ui-card>
+                <pre>{{lista | json}}</pre>
+            </div>
+        </section>
+    </div>
+</div>
