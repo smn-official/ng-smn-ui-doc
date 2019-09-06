@@ -13,7 +13,7 @@ import {RegionService} from './core/region.service';
     providers: [UiToolbarService]
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    title: String;
+    title: string;
     menuOpen: boolean;
     region: any;
 

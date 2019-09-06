@@ -33,52 +33,21 @@
                 1. Abra a pasta do seu projeto Angular através do CMD ou do GitBash e digite a seguinte linha de
                 comando:
             </p>
-            <pre>
-npm install ng-smn-ui --save
-            </pre>
-
+            <ngx-prism [language]="'bash'">npm install --save ng-smn-ui</ngx-prism>
             <p>
                 2. Importe o SMN-UI e o CUSTOM_ELEMENTS_SCHEMA ao seu modulo principal.
             </p>
-            <pre>
-import &#x0007B; SMNUIModule &#x0007D; from 'ng-smn-ui';
-...
-    imports: [
-        ...
-        SMNUIModule
-    ]
-...
-  schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
-    ]
-...
-            </pre>
+            <ngx-prism [language]="'typescript'">{{getStep2()}}</ngx-prism>
             <p>
                 3. Insira os dados sobre o tema a ser utilizado seu arquivo styles.scss.
             </p>
-            <pre>
-@import "~ng-smn-ui/lib/core/core";
-@import "~ng-smn-ui/lib/core/theme";
-
-$primary: (color: 'blue', hue: '500');
-$accent: (color: 'green', hue: '50');
-
-$theme: ui-theme($primary, $accent);
-$theme-dark: ui-theme($primary, $accent, true);
-
-@include ui-core();
-
-@include ui-build-theme($theme);
-            </pre>
+            <ngx-prism [language]="'scss'">{{getStep3()}}</ngx-prism>
             <p>
                 4. No seu head do seu arquivo 'index.html' insera as fontes Roboto e Material Icons.
             </p>
-            <pre>
-    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/&gt;
-            </pre>
+            <ngx-prism [language]="'html'">{{getStep4()}}</ngx-prism>
             <p>
-                4. Pronto. Agora você pode utilizar o SMN-UI no seu projeto.
+                Pronto. Agora você pode utilizar o SMN-UI no seu projeto.
             </p>
             <br><br><br><br><br>
         </div>

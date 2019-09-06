@@ -2,6 +2,7 @@
 section { margin-bottom: 50px; }
 
 @import "../node_modules/ng-smn-ui/lib/core/core";
+@import "../node_modules/ng-smn-ui/lib/core/variables";
 @import "../node_modules/ng-smn-ui/lib/core/theme";
 
 
@@ -21,4 +22,11 @@ $theme-dark: ui-theme($primary, $accent, true);
 
 .light {
     @include ui-build-theme($theme);
+}
+
+@import '~prismjs/themes/prism-okaidia.css';
+
+// Prims override
+code[class*="language-"], pre[class*="language-"] {
+    background-color: ui-color('blue-grey', '900')
 }
