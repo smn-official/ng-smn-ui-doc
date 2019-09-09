@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { JsfiddleComponent } from './core/jsfiddle/jsfiddle.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -35,9 +36,10 @@ import { environment } from '../environments/environment';
         SMNUIModule,
         BrowserAnimationsModule,
         PrismModule,
-        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+        HttpClientModule
     ],
-    providers: [UiToolbarService, RegionService],
+    providers: [UiToolbarService, RegionService, HttpClient],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

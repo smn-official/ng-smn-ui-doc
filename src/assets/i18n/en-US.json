@@ -1,0 +1,30 @@
+{
+    "language": "en-US",
+    "core": {
+        "english": "English",
+        "portuguese": "Portuguese",
+        "menu": {
+            "components": "Components",
+            "masks": "Masks",
+            "providers": "Providers",
+            "validators": "Validators"
+        }
+    },
+    "home": {
+        "introduction": {
+            "title": "Introduction",
+            "firstParagraph": "We have as objective facilitate the development of systems with Angular and focusing on being used internally on the company of software development <a href=\"http://smn.com.br/\">SMN</a>, but it is also available for the public on its repository at <a href=\"https://github.com/smn-official/ng-smn-ui\">GitHub</a> and on the <a href=\"https://www.npmjs.com/package/ng-smn-ui\">NPM</a> package.",
+            "secondParagraph": "This module contains components following the <a href=\"https://material.io/guidelines\">Material Design</a> guidelines and other utilities (that are used internally and also available for being used externally).",
+            "thirdParagraph": "On this website you can find the documentation and examples of the use of the components and utilities.",
+            "footer": "<i>Developed by <a href=\"http://smn.com.br/\">SMN</a>.<br></i>"
+        },
+        "installation": {
+            "title": "Installation",
+            "firstStep": "1. Open the directory of your project Angular through CMD or GitBash and type the following command line:",
+            "secondStep": "2. Open the file <b>*.module.ts</b> of your project and import the SMN UI.",
+            "thirdStep": "3. Now, you need to set up your theme, so open <b>styles.scss</b> and paste the following code:",
+            "fourthStep": "4. And, import in your <b>index.html</b> Roboto and Material Icons fonts.",
+            "footer": "Done. The SMN UI is already available to be used on your project"
+        }
+    }
+}

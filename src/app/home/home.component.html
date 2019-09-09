@@ -1,115 +1,24 @@
 <div class="container">
     <div class="ui-s960 elevate-on-toolbar">
         <h1>SMN UI</h1><br>
-        <div *ngIf="region.language === 'pt-br'">
-            <h3>Introdução</h3>
-            <p>
-                Depois de bastante tempo dedicado por diversos colaboradores foi desenvolvido este módulo para Angular.
-            </p>
-            <p>
-                Temos como objetivo facilitar o desenvolvimento de sistemas em Angular e como foco ser utilizado
-                internamente na empresa de desenvolvimento de softwares
-                <a href="http://smn.com.br/">SMN</a>, mas disponível também para o público através de seu repositório no
-                <a href="https://github.com/smn-official/ng-smn-ui">GitHub</a> e pacote
-                <a href="https://www.npmjs.com/package/ng-smn-ui">NPM</a>.
-            </p>
-            <p>
-                Este módulo contém componentes seguindo as diretrizes do <a
-                    href="https://material.io/guidelines">Material
-                    Design</a> e outras utilidades (que são usadas internamente e disponíveis para serem usadas
-                externamente).
-            </p>
-            <p>
-                Neste site se encontra a documentação e exemplos do uso dos componentes e utilidades.
-            </p>
-            <p>
-                <i>
-                    Desenvolvido pela <a href="http://smn.com.br/">SMN</a>.<br>
-                </i>
-            </p>
+        <div>
+            <h3>{{translate.introduction.title}}</h3>
+            <p [innerHTML]="translate.introduction.firstParagraph"></p>
+            <p [innerHTML]="translate.introduction.secondParagraph"></p>
+            <p>{{translate.introduction.thirdParagraph}}</p>
+            <p [innerHTML]="translate.introduction.footer"></p>
 
-            <h3>Instalação</h3>
-            <p>
-                1. Abra a pasta do seu projeto Angular através do CMD ou do GitBash e digite a seguinte linha de
-                comando:
-            </p>
+            <h3>{{translate.installation.title}}</h3>
+            <p>{{translate.installation.firstStep}}</p>
             <ngx-prism [language]="'bash'">npm install --save ng-smn-ui</ngx-prism>
-            <p>
-                2. Importe o SMN-UI e o CUSTOM_ELEMENTS_SCHEMA ao seu modulo principal.
-            </p>
+            <p [innerHTML]="translate.installation.secondStep"></p>
             <ngx-prism [language]="'typescript'">{{getStep2()}}</ngx-prism>
-            <p>
-                3. Insira os dados sobre o tema a ser utilizado seu arquivo styles.scss.
-            </p>
+            <p [innerHTML]="translate.installation.thirdStep"></p>
             <ngx-prism [language]="'scss'">{{getStep3()}}</ngx-prism>
-            <p>
-                4. No seu head do seu arquivo 'index.html' insera as fontes Roboto e Material Icons.
-            </p>
+            <p [innerHTML]="translate.installation.fourthStep"></p>
             <ngx-prism [language]="'html'">{{getStep4()}}</ngx-prism>
-            <p>
-                Pronto. Agora você pode utilizar o SMN-UI no seu projeto.
-            </p>
+            <p>{{translate.installation.footer}}</p>
             <br><br><br><br><br>
-        </div>
-        <div *ngIf="region.language === 'en-us'">
-            <h3>Introduction(Em construção)</h3>
-            <p>
-                After a long time of dedication from several collaborators it was developed this module for Angular.
-            </p>
-            <p>
-                We have as objective facilitate the development of systems with Angular and focusing on being used
-                internally on the company of software development
-                <a href="http://smn.com.br/">SMN</a>, but it is also available for the public on its repository at
-                <a href="https://github.com/smn-official/ng-smn-ui">GitHub</a> and on the
-                <a href="https://www.npmjs.com/package/ng-smn-ui">NPM</a> package.
-            </p>
-            <p>
-                This module contains components following the <a href="https://material.io/guidelines">Material
-                    Design</a> guidelines and other utilities (that are used internally and also available for being
-                used
-                externally).
-            </p>
-            <p>
-                On this website you can find the documentation and examples of the use of the components and utilities.
-            </p>
-            <p>
-                <i>
-                    Developed by <a href="http://smn.com.br/">SMN</a>.<br>
-                </i>
-            </p>
-            <h3>Installation</h3>
-            <p>
-                1. Open the directory of your project Angular through CMD or GitBash and type the following command
-                line:
-            </p>
-            <pre>
-    npm install ng-smn-ui --save
-</pre>
-            <p>
-                2. Open the file <b>*.module.ts</b> of your project and import the SMN UI.
-            </p>
-            <pre>
-    import {{'{'}}SMNUIModule{{'}'}} from 'ng-smn-ui';
-</pre>
-            <p>
-                3. Still on the file <b>*.module.ts</b> of your project, inject the SMN UI inside your module on the
-                section
-                <b>imports</b>.
-            </p>
-            <pre>
-    ...
-        ],
-        imports: [
-            BrowserModule,
-            SMNUIModule
-        ],
-        providers: [
-    ...
-</pre>
-            <p>
-                4. Done. The SMN UI is already available to be used on your project.
-            </p>
         </div>
     </div>
 </div>
-<!---->

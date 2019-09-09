@@ -3,8 +3,7 @@
         <i class="material-icons">menu</i>
     </button>
     <a routerLink="/" class="logo">
-        <img src="http://smn.com.br/content/img/logotipo/dark-lying.svg"
-             alt="">
+        <img src="http://smn.com.br/content/img/logotipo/dark-lying.svg" alt="">
     </a>
     <span class="title" [class.hidden]="menuOpen">{{title}}</span>
     <div class="align-right">
@@ -40,9 +39,9 @@
     <div class="ui-nav-drawer-overflow">
         <div class="ui-list">
             <a class="ui-list-item" uiRipple routerLink="/" [routerLinkActive]="['active']"
-               [routerLinkActiveOptions]="{ exact: true }">{{region.menu.index}}</a>
+               [routerLinkActiveOptions]="{ exact: true }">Home</a>
             <div class="ui-list-item" uiRipple [uiListItem]="componentes">
-                {{region.menu.components}}
+                {{translate.menu?.components}}
                 <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
             </div>
             <div class="ui-list-item-group" #componentes>
@@ -82,7 +81,7 @@
                 <a class="ui-list-item" uiRipple routerLink="/time-pickers" [routerLinkActive]="['active']">Time pickers(Doing)</a>
             </div>
             <div class="ui-list-item" uiRipple [uiListItem]="masks">
-                Masks
+                {{translate.menu?.masks}}
                 <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
             </div>
             <div class="ui-list-item-group" #masks>
@@ -107,7 +106,7 @@
                 <a class="ui-list-item" uiRipple routerLink="/pipe-time-ago" [routerLinkActive]="['active']">Time ago</a>
             </div>
             <div class="ui-list-item" uiRipple [uiListItem]="providers">
-                Providers (To do)
+                {{translate.menu?.providers}} (To do)
                 <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
             </div>
             <div class="ui-list-item-group" #providers>
@@ -119,7 +118,7 @@
             </div>
             <a class="ui-list-item" uiRipple routerLink="/scss" [routerLinkActive]="['active']">SCSS(To do)</a>
             <div class="ui-list-item" uiRipple [uiListItem]="validators">
-                Validators (To do)
+                {{translate.menu?.validators}} (To do)
                 <span class="arrow"><i class="material-icons">keyboard_arrow_down</i></span>
             </div>
             <div class="ui-list-item-group" #validators>
@@ -134,14 +133,14 @@
 <router-outlet></router-outlet>
 
 <ui-menu #menuLanguage>
-    <div class="ui-menu-content size-2x">
-        <div class="ui-menu-item" uiRipple (click)="changeRegion('pt-br')">
-            <i class="icon material-icons" [style.visibility]="this.region.language == 'en-us' ? 'hidden' : ''">done</i>
-            {{this.region.languages.portuguese}}
+    <div class="ui-menu-content size-3x">
+        <div class="ui-menu-item" uiRipple (click)="changeRegion('pt-BR')">
+            <i class="icon material-icons" [style.visibility]="language === 'en-US' ? 'hidden' : ''">done</i>
+            {{translate.portuguese}}
         </div>
-        <div class="ui-menu-item" uiRipple (click)="changeRegion('en-us')">
-            <i class="icon material-icons" [style.visibility]="this.region.language == 'pt-br' ? 'hidden' : ''">done</i>
-            {{this.region.languages.english}}
+        <div class="ui-menu-item" uiRipple (click)="changeRegion('en-US')">
+            <i class="icon material-icons" [style.visibility]="language === 'pt-BR' ? 'hidden' : ''">done</i>
+            {{translate.english}}
         </div>
     </div>
 </ui-menu>

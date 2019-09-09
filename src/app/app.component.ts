@@ -3,42 +3,47 @@ import {Title} from '@angular/platform-browser';
 
 import {UiCookie, UiToolbarService} from 'ng-smn-ui';
 
-import {RegionService} from './core/region.service';
+import { TranslateService } from './shared/translate/translate.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    providers: [UiToolbarService]
+    providers: [UiToolbarService, TranslateService]
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit {
     title: string;
     menuOpen: boolean;
-    region: any;
+    language: string;
+    translate: any;
 
-    constructor(private toolbarService: UiToolbarService, public element: ElementRef, private titleService: Title,
-                private regionService: RegionService) {
+    constructor(private toolbarService: UiToolbarService,
+                public element: ElementRef,
+                private titleService: Title,
+                private translateService: TranslateService) {
+        this.translate = {};
+
         this.toolbarService.change.subscribe(title => this.title = title);
-        this.regionService.change.subscribe(region => this.region = region);
+
+        this.translateService.change.subscribe(data => {
+            this.language = data.language;
+            this.translate = data.core;
+        });
     }
 
     ngOnInit() {
-        this.titleService.setTitle('SMN UI Doc');
-        this.toolbarService.set('SMN UI Doc');
+        this.titleService.setTitle('SMN UI');
+        this.toolbarService.set('SMN UI');
+
+        this.translateService.init();
 
         this.menuOpen = UiCookie.get('NavDrawerPersistent') === 'true';
-
-        this.regionService.set(UiCookie.get('Region'));
 
         this.toolbarService.registerMainToolbar(document.getElementById('app-header'));
     }
 
-    ngAfterViewInit() {
-    }
-
     changeRegion(language) {
-        UiCookie.set('Region', language);
-        this.regionService.set(language);
+        this.translateService.setLanguage(language);
     }
 }

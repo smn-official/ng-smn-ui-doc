@@ -4,28 +4,31 @@ import {Title} from '@angular/platform-browser';
 import {UiToolbarService} from 'ng-smn-ui';
 
 import {RegionService} from '../core/region.service';
+import { TranslateService } from '../shared/translate/translate.service';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit, OnInit {
-    region: any;
+export class HomeComponent implements AfterViewInit {
+    translate: any;
 
     constructor(private toolbarService: UiToolbarService,
                 private titleService: Title,
-                private regionService: RegionService) {
-        this.regionService.change.subscribe(region => this.region = region);
-    }
-
-    ngOnInit() {
-        this.region = this.regionService.get();
+                private translateService: TranslateService) {
+        this.translate = {
+          introduction: {},
+          installation: {}
+        };
+        this.translateService.change.subscribe(data => {
+          this.translate = data.home;
+        });
     }
 
     ngAfterViewInit() {
-        this.titleService.setTitle('SMN UI Doc');
-        this.toolbarService.set('SMN UI Doc');
+        this.titleService.setTitle('SMN UI');
+        this.toolbarService.set('SMN UI');
     }
 
     getStep2() {
