@@ -26,9 +26,9 @@ export class AppComponent implements OnInit {
 
         this.toolbarService.change.subscribe(title => this.title = title);
 
-        this.translateService.change.subscribe(data => {
-            this.language = data.language;
-            this.translate = data.core;
+        this.translateService.change.subscribe(async language => {
+            this.language = language;
+            this.translate = await this.translateService.getLanguageData('core');
         });
     }
 

@@ -11,7 +11,7 @@ import { TranslateService } from '../shared/translate/translate.service';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
     translate: any;
 
     constructor(private toolbarService: UiToolbarService,
@@ -21,9 +21,14 @@ export class HomeComponent implements AfterViewInit {
           introduction: {},
           installation: {}
         };
-        this.translateService.change.subscribe(data => {
-          this.translate = data.home;
-        });
+        this.translateService.change.subscribe(async () => {
+          this.translate = await this.translateService.getLanguageData('home');
+      });
+
+    }
+
+    async ngOnInit() {
+      this.translate = await this.translateService.getLanguageData('home');
     }
 
     ngAfterViewInit() {

@@ -2,7 +2,6 @@ import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UiCookie } from 'ng-smn-ui';
 
-const loadedLanguages: any[] = [];
 const supportedLanguages = ['pt-BR', 'en-US', 'pt', 'en'];
 
 @Injectable({
@@ -22,30 +21,26 @@ export class TranslateService {
 
     setLanguage(language: string = 'pt-BR') {
         this.language = language;
-        this.getLanguageData();
         UiCookie.set('language', this.language);
+        this.change.emit(this.language);
     }
 
-    getLanguageData() {
-        const loadedLanguage = this.getLoadedLanguage();
-
-        if (loadedLanguage) {
-            this.change.emit(loadedLanguage.data);
-            return;
-        }
-
-        this.http
-            .get(`assets/i18n/${this.language}.json`)
-            .subscribe(data => {
-                loadedLanguages.push({
-                    name: this.language,
-                    data
+    async getLanguageData(id: string) {
+        return new Promise((resolve) => {
+            this.http
+                .get(`assets/i18n/${this.language}/${id}.json`)
+                .subscribe(data => {
+                    resolve(data);
+                }, error => {
+                    switch (error.status) {
+                        case 404:
+                            // TODO: Redirect to translate error page
+                        break;
+                        default:
+                            // TODO: Redirect to unknown error page
+                        break;
+                    }
                 });
-                this.change.emit(data);
-            });
-    }
-
-    getLoadedLanguage() {
-        return loadedLanguages.filter(language => language.name === this.language)[0];
+        });
     }
 }
