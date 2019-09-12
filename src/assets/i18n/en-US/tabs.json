@@ -32,6 +32,11 @@
         "function": "Tab's index that should be initialized as active",
         "type": "number",
         "default": "0"
+    }, {
+        "attribute": "lazyLoad",
+        "function": "Lazy load to tab content",
+        "type": "boolean",
+        "default": "false"
     }],
     "tab": {
         "attributes": [{

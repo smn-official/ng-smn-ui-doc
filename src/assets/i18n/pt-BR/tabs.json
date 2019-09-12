@@ -32,6 +32,11 @@
         "function": "Index da tab que deve inicializar ativa",
         "type": "number",
         "default": "0"
+    }, {
+        "attribute": "lazyLoad",
+        "function": "Lazy load para os conteúdo das tabs",
+        "type": "boolean",
+        "default": "false"
     }],
     "tab": {
         "attributes": [{
