@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
         this.toolbarService.change.subscribe(title => this.title = title);
 
         this.translateService.change.subscribe(async language => {
+            this.setBodyLanguage(this.language, language);
             this.language = language;
             this.translate = await this.translateService.getLanguageData('core');
         });
@@ -45,5 +46,12 @@ export class AppComponent implements OnInit {
 
     changeRegion(language) {
         this.translateService.setLanguage(language);
+    }
+
+    setBodyLanguage(currentLanguage, newLanguage) {
+        if (currentLanguage) {
+            document.body.classList.remove(currentLanguage.toLowerCase());
+        }
+        document.body.classList.add(newLanguage.toLowerCase());
     }
 }

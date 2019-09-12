@@ -6,6 +6,7 @@ import { SMNUIModule } from 'ng-smn-ui';
 import { CodeGitsComponent } from '../core/code-gits/code-gits.component';
 import { TranslateService } from './translate/translate.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { PrismModule } from '@ngx-prism/core';
 
 
 @NgModule({
@@ -14,13 +15,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     SMNUIModule,
     CommonModule,
     FormsModule,
-    CodeGitsComponent
+    CodeGitsComponent,
+    PrismModule
   ],
   imports: [
     CommonModule,
     FormsModule,
     SMNUIModule,
-    HttpClientModule
+    HttpClientModule,
+    PrismModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [TranslateService, HttpClient]

@@ -1,79 +1,118 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Tabs</h1>
-        <p>
-            As tabs(guias) organizam conteudo em paginas, podem ser usadas para separar tipos de dados e informações.
-        </p>
-
-        <h3>Estática:</h3>
-        <section class="separator">
-            <code-gits id="gabriel-Oak/ea66242639caf1f544db7cbbac88bf05"></code-gits> <!-- HTML -->
-            <ui-card>
-                <div>
-                    <ui-tabs class="no-padding primary" #tabs>
-                        <div class="tab selected" uiRipple (click)="tabsPages.pagesGoToPage(1)">
-                            Informações
-                        </div>
-                        <div class="tab" uiRipple (click)="tabsPages.pagesGoToPage(2)">
-                            Opções de Acesso
-                        </div>
-                    </ui-tabs>
-                </div>
-                <div>
-                    <ui-tabs-pages #tabsPages [tabs]="tabs">
-                        <div class="page">
-                            <div>
-                                <ui-card-content>
-                                    Página 1<br>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores
-                                    consequatur
-                                    ducimus eveniet expedita facilis id inventore mollitia nihil optio praesentium
-                                    quasi sint
-                                    sit,
-                                    sunt veniam vitae voluptatum? Perspiciatis, quam?
-                                </ui-card-content>
-                            </div>
-                        </div>
-                        <div class="page">
-                            <ui-card-content>
-                                Página 2<br>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores
-                                consequatur
-                                ducimus eveniet expedita facilis id inventore mollitia nihil optio praesentium quasi
-                                sint sit,
-                                sunt veniam vitae voluptatum? Perspiciatis, quam?
-                            </ui-card-content>
-                        </div>
-                    </ui-tabs-pages>
-                </div>
-            </ui-card>
-        </section>
-
-        <h3>Dinâmica:</h3>
-        <section class="separator">
-            <code-gits id="gabriel-Oak/5a48983fe3fdd1055984ae86abb55648"></code-gits> <!-- HTML -->
-            <code-gits id="gabriel-Oak/c432ada86b18b01262bde3b1bdc6804e"></code-gits> <!-- TS -->
-            <ui-card>
-                <div>
-                    <ui-tabs class="primary scrollable" #tabsList>
-                        <div class="tab" uiRipple *ngFor="let item of list; index as i"
-                            (click)="tabsListPages.pagesGoToPage(i + 1)">
-                            {{item.id}}
-                        </div>
-                    </ui-tabs>
-                </div>
-                <div>
-                    <ui-tabs-pages #tabsListPages [tabs]="tabsList">
-                        <div class="page" *ngFor="let item of list">
-                            <div>
-                                <ui-card-content>
-                                    {{ item.content }}
-                                </ui-card-content>
-                            </div>
-                        </div>
-                    </ui-tabs-pages>
-                </div>
-            </ui-card>
-        </section>
+        <h1>
+            Tabs
+            <a href="https://material.io/components/tabs/" target="_blank">
+                <i class="material-icons">link</i>
+            </a>
+        </h1>
+        <p>{{translate.introduction}}</p>
+        <ui-card class="demo">
+            <ui-tab-group [accent]="true" class="fixed">
+                <ui-tab label="Demo">
+                    <ui-card-content>
+                        <ui-tab-group [accent]="accent"
+                                    [fillBackground]="fillBackground"
+                                    [themeInkBar]="themeInkBar"
+                                    [ngClass]="{scrollable: scrollable, fixed: fixed}"
+                                    [topIcon]="topIcon">
+                            <ui-tab label="Oliver Queen" [icon]="icon ? 'arrow_right_alt' : false">Arrow</ui-tab>
+                            <ui-tab label="Barry Allen" [icon]="icon ? 'directions_run' : false">Flash</ui-tab>
+                            <ui-tab label="Bruce Wayne" [icon]="icon ? 'directions_car' : false">Batman</ui-tab>
+                        </ui-tab-group>
+                    </ui-card-content>
+                </ui-tab>
+                <ui-tab label="HTML">
+                    <ngx-prism [language]="'html'">{{getHtml()}}</ngx-prism>
+                </ui-tab>
+                <ui-tab label="TS">
+                    <ngx-prism [language]="'typescript'">{{getTypescript()}}</ngx-prism>
+                </ui-tab>
+                <ui-tab label="SCSS">
+                    <ngx-prism [language]="'scss'">/*  You don't need this  */</ngx-prism>
+                </ui-tab>
+            </ui-tab-group>
+            <div class="component-options">
+                <ui-subheader>Classes</ui-subheader>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="scrollable" [checked]="scrollable">
+                    <span>.scrollable</span>
+                </ui-option>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="fixed" [checked]="fixed">
+                    <span>.fixed</span>
+                </ui-option>
+                <ui-subheader>{{translate.labels.options}}</ui-subheader>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="fillBackground" [checked]="fillBackground">
+                    <span>Fill background</span>
+                </ui-option>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="accent" [checked]="accent">
+                    <span>Accent</span>
+                </ui-option>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="themeInkBar" [checked]="themeInkBar">
+                    <span>Theme ink bar</span>
+                </ui-option>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="icon" [checked]="icon">
+                    <span>With icons</span>
+                </ui-option>
+                <ui-option>
+                    <input type="checkbox" [(ngModel)]="topIcon" [checked]="topIcon" [disabled]="!icon">
+                    <span>Top icon</span>
+                </ui-option>
+            </div>
+        </ui-card>
+        <h2>API</h2>
+        <h3>UiTabGroup (ui-tab-group)</h3>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                    <tr>
+                        <th>{{translate.labels.attribute}}</th>
+                        <th>{{translate.labels.function}}</th>
+                        <th>{{translate.labels.type}}</th>
+                        <th>{{translate.labels.default}}</th>
+                    </tr>
+                    <tr class="disabled" *ngFor="let item of translate?.tabGroup">
+                        <td>{{item.attribute}}</td>
+                        <td>{{item.function}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.default}}</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
+        <h3>UiTab (ui-tab)</h3>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                    <tr>
+                        <th>{{translate.labels.attribute}}</th>
+                        <th>{{translate.labels.function}}</th>
+                        <th>{{translate.labels.type}}</th>
+                        <th>{{translate.labels.default}}</th>
+                    </tr>
+                    <tr class="disabled" *ngFor="let item of translate.tab?.attributes">
+                        <td>{{item.attribute}}</td>
+                        <td>{{item.function}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.default}}</td>
+                    </tr>
+                    <tr>
+                        <th>Classes</th>
+                        <th>{{translate.labels.function}}</th>
+                    </tr>
+                    <tr class="disabled" *ngFor="let item of translate.tab?.classes">
+                        <td>{{item.name}}</td>
+                        <td colspan="3">{{item.function}}</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
     </div>
 </div>

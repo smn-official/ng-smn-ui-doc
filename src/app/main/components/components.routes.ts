@@ -25,9 +25,10 @@ import { SLIDERS } from './sliders/sliders.routes';
 import { SMART_LIST } from './smart-list/smart-list.routes';
 import { SNACKBAR } from './snackbar/snackbar.routes';
 import { SUBHEADERS } from './subheaders/subheaders.routes';
-import { TABS } from './tabs/tabs.routes';
+import { TABS_PAGE } from './tabs-page/tabs-page.routes';
 import { TIME_PICKERS } from './time-pickers/time-pickers.routes';
 import { TOOLBARS } from './toolbars/toolbars.routes';
+import { TABS } from './tabs/tabs.routes';
 
 export const COMPONENTS_ROUTES: Routes = [
     ...AUTOCOMPLETE,
@@ -55,6 +56,7 @@ export const COMPONENTS_ROUTES: Routes = [
     ...SMART_LIST,
     ...SNACKBAR,
     ...SUBHEADERS,
+    ...TABS_PAGE,
     ...TABS,
     ...TIME_PICKERS,
     ...TOOLBARS

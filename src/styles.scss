@@ -7,7 +7,7 @@ section { margin-bottom: 50px; }
 
 
 $primary: (color: 'blue-grey', hue: '900');
-$accent: (color: 'blue', hue: '500');
+$accent: (color: 'green', hue: 'A700');
 
 $theme: ui-theme($primary, $accent);
 $theme-dark: ui-theme($primary, $accent, true);
@@ -29,4 +29,94 @@ $theme-dark: ui-theme($primary, $accent, true);
 // Prims override
 code[class*="language-"], pre[class*="language-"] {
     background-color: ui-color('blue-grey', '900')
+}
+
+ui-card pre[class*="language-"] {
+    border-radius: 0 0 2px 2px;
+    margin: 0;
+}
+
+.deprecated {
+    display: inline-flex;
+    align-items: center;
+
+    &::after {
+        content: 'Deprecated';
+        border-radius: 4px;
+        background-color: ui-color('red');
+        color: ui-text-color('red');
+        margin-left: 8px;
+        padding: 4px;
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+    &.ui-list-item::after {
+        font-size: 12px;
+    }
+}
+
+.pt-br {
+    .deprecated::after {
+        content: 'Depreciado';
+    }
+}
+
+.en-us {
+    .deprecated::after {
+        content: 'Deprecated';
+    }
+}
+
+.container {
+    padding: 56px 24px;
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 400;
+
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 16px 0 8px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 16px 0 8px;
+    }
+
+    h2 + h3 {
+        margin-top: 0;
+    }
+}
+
+.demo {
+    display: flex;
+    flex-direction: row;
+
+    > *:not(.component-options) {
+        flex: 1;
+    }
+
+    .component-options {
+        width: 256px;
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        padding: 0 16px 16px;
+        display: flex;
+        flex-direction: column;
+
+        ui-option {
+            display: block;
+
+            + ui-option {
+                margin-top: 12px;
+            }
+        }
+    }
 }

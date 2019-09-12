@@ -1,0 +1,61 @@
+{
+    "introduction": "Tabs organize content in pages, can be used to separate screens, tables, forms and others components.",
+    "labels": {
+        "attribute": "Attribute",
+        "function": "Function",
+        "type": "Type",
+        "default": "Default",
+        "options": "Options"
+    },
+    "tabGroup": [{
+        "attribute": "fillBackground",
+        "function": "Fill the tabs header according the theme",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "accent",
+        "function": "Update theme to accent color",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "themeInkBar",
+        "function": "Pint the tabs bar with opposite theme color, if tabs is using primary color the bar will be with accent color",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "topIcon",
+        "function": "Put the icon on text",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "active",
+        "function": "Tab's index that should be initialized as active",
+        "type": "number",
+        "default": "0"
+    }],
+    "tab": {
+        "attributes": [{
+            "attribute": "label",
+            "function": "Text for the tab",
+            "type": "string",
+            "default": "empty string"
+        }, {
+            "attribute": "icon",
+            "function": "Icon for the tab",
+            "type": "string",
+            "default": "empty string"
+        }, {
+            "attribute": "disabled",
+            "function": "Tab is disabled",
+            "type": "boolean",
+            "default": "false"
+        }],
+        "classes": [{
+            "name": "scrollable",
+            "function": "Add spacing on left of container for dynamic scroll"
+        }, {
+            "name": "fixed",
+            "function": "Tabs fill 100% of your container"
+        }]
+    }
+}
