@@ -1,0 +1,66 @@
+{
+    "introduction": "As tabs organizam conteúdo em páginas, podem ser usadas para separar telas, tabelas, formulários e outros componentes.",
+    "labels": {
+        "attribute": "Atributo",
+        "function": "Função",
+        "type": "Tipo",
+        "default": "Default",
+        "options": "Opções"
+    },
+    "tabGroup": [{
+        "attribute": "fillBackground",
+        "function": "Preenche o header das tabs conforme o tema",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "accent",
+        "function": "Altera o tema para color accent",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "themeInkBar",
+        "function": "Pinta a barra das tabs com a cor oposta do tema, se as tabs estiverem usando a cor primary a barra ficará com a cor accent",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "topIcon",
+        "function": "Coloca o Ícone em cima do texto",
+        "type": "boolean",
+        "default": "false"
+    }, {
+        "attribute": "active",
+        "function": "Index da tab que deve inicializar ativa",
+        "type": "number",
+        "default": "0"
+    }, {
+        "attribute": "lazyLoad",
+        "function": "Lazy load para os conteúdo das tabs",
+        "type": "boolean",
+        "default": "false"
+    }],
+    "tab": {
+        "attributes": [{
+            "attribute": "label",
+            "function": "Texdo da tab",
+            "type": "string",
+            "default": "empty string"
+        }, {
+            "attribute": "icon",
+            "function": "Ícone da tab",
+            "type": "string",
+            "default": "empty string"
+        }, {
+            "attribute": "disabled",
+            "function": "Desabilita a tab",
+            "type": "boolean",
+            "default": "false"
+        }],
+        "classes": [{
+            "name": "scrollable",
+            "function": "Adiciona espaçamento na esquerda das tabs para ter barra de rolagem"
+        }, {
+            "name": "fixed",
+            "function": "Faz as tabs ocupar 100% de seu container"
+        }]
+    }
+}

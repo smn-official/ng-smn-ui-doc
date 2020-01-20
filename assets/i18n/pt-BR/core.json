@@ -1,0 +1,10 @@
+{
+    "english": "Inglês",
+    "portuguese": "Português",
+    "menu": {
+        "components": "Componentes",
+        "masks": "Máscaras",
+        "providers": "Serviços",
+        "validators": "Validações"
+    }
+}
