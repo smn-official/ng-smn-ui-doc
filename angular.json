@@ -121,8 +121,13 @@
               "devServerTarget": "ng-smn-ui-doc:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-smn-ui-doc"
 }
