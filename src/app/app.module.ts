@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SMNUIModule, UiToolbarService } from 'ng-smn-ui';
 import { PrismModule } from '@ngx-prism/core';
+import 'prismjs';
 import 'prismjs/components/prism-scss.min';
 import 'prismjs/components/prism-typescript.min';
 import 'prismjs/components/prism-bash.min';
