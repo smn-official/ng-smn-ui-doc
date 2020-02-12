@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
 
-import { CEP } from './cep/cep.routes';
-import { CNPJ } from './cnpj/cnpj.routes';
-import { CPF } from './cpf/cpf.routes';
-import { CURRENCY } from './currency/currency.routes';
-import { CREDIT_CARD } from './credit-card/credit-card.routes';
-import { DATE } from './date/date.routes';
-import { FLOAT } from './float/float.routes';
-import { INTEGER } from './integer/integer.routes';
-import { PHONE } from './phone/phone.routes';
-import { TIME } from './time/time.routes';
+import { CEP } from './cep/cep-routing.module';
+import { CNPJ } from './cnpj/cnpj-routing.module';
+import { CPF } from './cpf/cpf-routing.module';
+import { CURRENCY } from './currency/currency-routing.module';
+import { CREDIT_CARD } from './credit-card/credit-card-routing.module';
+import { DATE } from './date/date-routing.module';
+import { FLOAT } from './float/float-routing.module';
+import { INTEGER } from './integer/integer-routing.module';
+import { PHONE } from './phone/phone-routing.module';
+import { TIME } from './time/time-routing.module';
 
 export const MASKS_ROUTES: Routes = [
     ...CEP,

@@ -56,11 +56,11 @@ export class TabsComponent implements OnInit, AfterViewInit {
         return `import { Component } from '@angular/core';
 
 @Component({
-  selector: 'example',
-  templateUrl: 'example.component.html',
-  styleUrls: ['example.component.scss'],
+  selector: 'demo-tabs',
+  templateUrl: 'demo-tabs.component.html',
+  styleUrls: ['demo-tabs.component.scss'],
 })
-export class ExampleComponent {
+export class DemoTabsComponent {
   scrollable: boolean;
   fixed: boolean;
   fillBackground: boolean;

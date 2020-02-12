@@ -1,0 +1,51 @@
+{
+    "introduction": "Buttons allow users to perform actions in a practical way.",
+    "labels": {
+        "function": "Function"
+    },
+    "buttonContainer": {
+        "classes": [{
+            "name": "ui-button-container",
+            "function": "Used to enclose a set of buttons."
+        }, {
+            "name": "cover",
+            "function": "Align the buttons to the right, already spaced for the card."
+        }, {
+            "name": "align-right",
+            "function": "Align the buttons to the right without spacing for the card."
+        }, {
+            "name": "align-left",
+            "function": "Align the buttons to the left."
+        }]
+    },
+    "button": {
+        "classes": [{
+            "name": "ui-button",
+            "function": "Adds standard button styles."
+        }, {
+            "name": "primary",
+            "function": "Adds the primary system theme to the button."
+        }, {
+            "name": "accent",
+            "function": "Adds the secondary system theme to the button."
+        }, {
+            "name": "warning",
+            "function": "Adds an alert look to the button."
+        }, {
+            "name": "error",
+            "function": "Adds an error look to the button."
+        }, {
+            "name": "flat",
+            "function": "Removes the background color from the button, leaving only the highlighted text."
+        }, {
+            "name": "raised",
+            "function": "Adds a slight shadow around the button."
+        }, {
+            "name": "full",
+            "function": "Makes the button occupy 100% of the container."
+        }, {
+            "name": "icon",
+            "function": "The button takes on a small circular shape. Must be used in conjunction with an icon."
+        }]
+    }
+}

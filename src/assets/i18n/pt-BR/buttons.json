@@ -1,0 +1,51 @@
+{
+    "introduction": "Os botões permitem aos usuarios realizar ações de forma prática.",
+    "labels": {
+        "function": "Função"
+    },
+    "buttonContainer": {
+        "classes": [{
+            "name": "ui-button-container",
+            "function": "Usado para englobar um conjunto de botões."
+        }, {
+            "name": "cover",
+            "function": "Alinha os botões à direita, já com espaçamento para o card."
+        }, {
+            "name": "align-right",
+            "function": "Alinha os botões à direita sem espaçamento para o card."
+        }, {
+            "name": "align-left",
+            "function": "Alinha os botões à esquerda."
+        }]
+    },
+    "button": {
+        "classes": [{
+            "name": "ui-button",
+            "function": "Adiciona os estilos padrão do botão."
+        }, {
+            "name": "primary",
+            "function": "Adiciona o tema primário do sistema ao botão."
+        }, {
+            "name": "accent",
+            "function": "Adiciona o tema secundário do sistema ao botão."
+        }, {
+            "name": "warning",
+            "function": "Adiciona um visual de alerta ao botão."
+        }, {
+            "name": "error",
+            "function": "Adiciona um visual de erro ao botão."
+        }, {
+            "name": "flat",
+            "function": "Remove a cor de fundo do botao, deixando apenas o texto com destaque."
+        }, {
+            "name": "raised",
+            "function": "Adiciona uma leve sombra em volta do botão."
+        }, {
+            "name": "full",
+            "function": "Faz com que o botão ocupe 100% do container."
+        }, {
+            "name": "icon",
+            "function": "O botão assume um formato circular pequeno. Deve ser usado juntamente com um ícone."
+        }]
+    }
+}
