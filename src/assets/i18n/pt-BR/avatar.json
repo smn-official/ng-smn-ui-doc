@@ -1,0 +1,32 @@
+{
+    "introduction": "Gerencia a mudança e o carremento de fotos do usuários.",
+    "labels": {
+        "attribute": "Atributo",
+        "function": "Função",
+        "type": "Tipo",
+        "default": "Default"
+    },
+    "avatar": {
+        "attributes": [{
+            "attribute": "image",
+            "function": "Imagem a ser mostrada no componente.",
+            "type": "string (url) ou base64",
+            "default": "---"
+        }, {
+            "attribute": "name",
+            "function": "Nome a ser mostrado (Quando não há imagem).",
+            "type": "string",
+            "default": "---"
+        }, {
+            "attribute": "color",
+            "function": "Cor de fundo (Mostrado quando não há imagem).",
+            "type": "string (hex)",
+            "default": "#FFFFFF"
+        }, {
+            "attribute": "size",
+            "function": "Tamanho do componente.",
+            "type": "number",
+            "default": "44"
+        }]
+    }
+}

@@ -7,42 +7,87 @@
             </a>
         </h1>
         <p>Gerencia a mudança e o carrementos de fotos do usuários.</p>
-        <ui-card class="margin-16">
-            <app-jsfiddle id="5kjvLfus/3" tabs="html,js" height="160"></app-jsfiddle>
+
+        <ui-card class="demo">
+            <ui-tab-group [accent]="true" class="fixed">
+                <ui-tab label="Demo">
+                    <ui-card-content>
+                        <div class="ui-flex-container" style="align-items: center">
+                            <ui-avatar [image]="info.image" [name]="info.name" [color]="info.color" [size]="80"></ui-avatar>
+                            <ui-avatar [name]="info.name" [color]="info.color" [size]="50"></ui-avatar>
+                        </div>
+                    </ui-card-content>
+                </ui-tab>
+
+                <ui-tab label="HTML">
+                    <ngx-prism [language]="'html'">{{getHtml()}}</ngx-prism>
+                </ui-tab>
+
+                <ui-tab label="TS">
+                    <ngx-prism [language]="'typescript'">{{getTypescript()}}</ngx-prism>
+                </ui-tab>
+
+                <ui-tab label="SCSS">
+                    <ngx-prism [language]="'scss'">/* You don't need this */</ngx-prism>
+                </ui-tab>
+            </ui-tab-group>
         </ui-card>
-        <ui-avatar class="margin-16" [image]="info.image" [name]="info.name" [color]="info.color" [size]="80"></ui-avatar>
-        <ui-card class="margin-16">
+
+        <h2>API</h2>
+        <ui-card>
             <ui-data-table>
                 <tbody>
                 <tr>
-                    <th>Atributo</th>
-                    <th>Função</th>
-                    <th>Tipo</th>
+                    <th style="width: 140px">{{translate.labels.attribute}}</th>
+                    <th>{{translate.labels.function}}</th>
+                    <th>{{translate.labels.type}}</th>
                 </tr>
-                <tr>
-                    <td>Image</td>
-                    <td>Imagem do usuário</td>
-                    <td>String(url) ou base64</td>
-                </tr>
-                <tr>
-                    <td>Name</td>
-                    <td>Nome do usuário(mostrado quando o usuário não tem imagem)</td>
-                    <td>String</td>
-                </tr>
-                <tr>
-                    <td>Color</td>
-                    <td>Cor do fundo(mostrado quando o usuário não tem imagem)</td>
-                    <td>String(Hex)</td>
-                </tr>
-                <tr>
-                    <td>Size</td>
-                    <td>Tamanho do component</td>
-                    <td>Number</td>
+                <tr class="disabled" *ngFor="let item of translate.avatar?.attributes">
+                    <td>{{item.attribute}}</td>
+                    <td>{{item.function}}</td>
+                    <td>{{item.type}}</td>
                 </tr>
                 </tbody>
                 <tfoot></tfoot>
             </ui-data-table>
         </ui-card>
+
+
+
+
+<!--        <ui-avatar class="margin-16" [image]="info.image" [name]="info.name" [color]="info.color" [size]="80"></ui-avatar>-->
+<!--        <ui-card class="margin-16">-->
+<!--            <ui-data-table>-->
+<!--                <tbody>-->
+<!--                <tr>-->
+<!--                    <th>Atributo</th>-->
+<!--                    <th>Função</th>-->
+<!--                    <th>Tipo</th>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Image</td>-->
+<!--                    <td>Imagem do usuário</td>-->
+<!--                    <td>String(url) ou base64</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Name</td>-->
+<!--                    <td>Nome do usuário(mostrado quando o usuário não tem imagem)</td>-->
+<!--                    <td>String</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Color</td>-->
+<!--                    <td>Cor do fundo(mostrado quando o usuário não tem imagem)</td>-->
+<!--                    <td>String(Hex)</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Size</td>-->
+<!--                    <td>Tamanho do component</td>-->
+<!--                    <td>Number</td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+<!--                <tfoot></tfoot>-->
+<!--            </ui-data-table>-->
+<!--        </ui-card>-->
     </div>
 </div>
 

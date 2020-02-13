@@ -1,0 +1,32 @@
+{
+    "introduction": "Manages the change and upload of user photos.",
+    "labels": {
+        "attribute": "Attribute",
+        "function": "Function",
+        "type": "Type",
+        "default": "Default"
+    },
+    "avatar": {
+        "attributes": [{
+            "attribute": "image",
+            "function": "Image to be shown on the component.",
+            "type": "string (url) or base64",
+            "default": "---"
+        }, {
+            "attribute": "name",
+            "function": "Name to be displayed (When there is no image).",
+            "type": "string",
+            "default": "---"
+        }, {
+            "attribute": "color",
+            "function": "Background color (Shown when there is no image).",
+            "type": "string (hex)",
+            "default": "#FFFFFF"
+        }, {
+            "attribute": "size",
+            "function": "Component size.",
+            "type": "number",
+            "default": "44"
+        }]
+    }
+}
