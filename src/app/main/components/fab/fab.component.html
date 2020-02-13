@@ -1,48 +1,80 @@
 <div class="container">
     <div class="ui-s960">
-        <h1>Floating Action Button <a
-            href="https://material.io/guidelines/components/buttons-floating-action-button.html"><i
-            class="material-icons">link</i></a></h1>
-        <p>Botão flutuante utilizado normalmente para realizar a ação principal da página.</p>
-        <br>
+        <h1>
+            Floating Action Button
+            <a href="https://material.io/components/buttons-floating-action-button/" target="_blank">
+                <i class="material-icons">link</i>
+            </a>
+        </h1>
+        <p>{{translate.introduction}}</p>
 
-        <div class="separator">
-            <h3>Normal</h3>
-            <p>
-                <button class="ui-button primary fab" uiRipple>
-                    <i class="material-icons">add</i>
-                </button>
-            </p>
-            <code-gits id="GabrielFerreir/1fda4c7ec72050420e9c79a1fd4baf4b"></code-gits>
+        <ui-card class="demo">
+            <ui-tab-group [accent]="true" class="fixed">
+                <ui-tab label="Demo">
+                    <ui-card-content>
+                        <div class="ui-flex-container">
+                            <button class="ui-button primary fab" uiRipple>
+                                <i class="material-icons">add</i>
+                            </button>
+                            <button class="ui-button error fab mini" uiRipple>
+                                <i class="material-icons">close</i>
+                            </button>
+                        </div>
 
-        </div>
+                        <span class="helper">
+                            {{translate.helper}}
+                        </span>
+                    </ui-card-content>
+                </ui-tab>
 
-        <div class="separator">
-            <h3>Mini</h3>
-            <p>
-                <button class="ui-button accent fab mini" uiRipple>
-                    <i class="material-icons">check</i>
-                </button>
-            </p>
-            <code-gits id="GabrielFerreir/b165863dfb25a5bd491f177706df3a31"></code-gits>
-        </div>
+                <ui-tab label="HTML">
+                    <ngx-prism [language]="'html'">{{getHtml()}}</ngx-prism>
+                </ui-tab>
 
-        <div class="separator">
-            <h3>{{region.fab.withLoading}}</h3>
-            <p>
-                <button class="ui-button success fab" uiRipple>
-                    <ui-progress-radial class="indeterminate"></ui-progress-radial>
-                    <i class="material-icons">check</i>
-                </button>
-            </p>
-            <code-gits id="GabrielFerreir/68f38b3e3053c153371e51ec4e01848c"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.fab.fixedTitle}}</h3>
-            <p>{{region.fab.fixedSubtitle}}</p>
-            <p></p>
-            <code-gits id="GabrielFerreir/4e363a248d184f374494bd02854818ac"></code-gits>
-        </div>
+                <ui-tab label="TS">
+                    <ngx-prism [language]="'typescript'">// You don't need this</ngx-prism>
+                </ui-tab>
+
+                <ui-tab label="SCSS">
+                    <ngx-prism [language]="'scss'">/* You don't need this */</ngx-prism>
+                </ui-tab>
+            </ui-tab-group>
+        </ui-card>
+
+        <h2>Classes</h2>
+        <h3>ui-fab-container</h3>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                    <tr>
+                        <th style="width: 160px">Classes</th>
+                        <th>{{translate.labels.function}}</th>
+                    </tr>
+                    <tr class="disabled" *ngFor="let item of translate.fabContainer?.classes">
+                        <td>{{item.name}}</td>
+                        <td>{{item.function}}</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
+
+        <h3>ui-button</h3>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                <tr>
+                    <th style="width: 160px">Classes</th>
+                    <th>{{translate.labels.function}}</th>
+                </tr>
+                <tr class="disabled" *ngFor="let item of translate.fab?.classes">
+                    <td>{{item.name}}</td>
+                    <td>{{item.function}}</td>
+                </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
     </div>
 </div>
 

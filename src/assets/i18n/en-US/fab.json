@@ -1,0 +1,37 @@
+{
+    "introduction": "Floating button normally used to perform the main action of the page.",
+    "helper": "*In the lower right corner of the screen there is an example of how to be applied.",
+    "labels": {
+        "function": "Function"
+    },
+    "fabContainer": {
+        "classes": [{
+            "name": "ui-fab-container",
+            "function": "Used to enclose a set of FABs."
+        }]
+    },
+    "fab": {
+        "classes": [{
+            "name": "ui-button",
+            "function": "Adds standard button styles."
+        }, {
+            "name": "fab",
+            "function": "Turns into a standard FAB"
+        }, {
+            "name": "mini",
+            "function": "Turns into a small FAB"
+        }, {
+            "name": "primary",
+            "function": "Adds the primary system theme to the button."
+        }, {
+            "name": "accent",
+            "function": "Adds the secondary system theme to the button."
+        }, {
+            "name": "warning",
+            "function": "Adds an alert look to the button."
+        }, {
+            "name": "error",
+            "function": "Adds an error look to the button."
+        }]
+    }
+}

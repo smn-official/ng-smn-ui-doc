@@ -1,49 +1,56 @@
-import {Component, AfterViewInit, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 
-import {UiToolbarService} from 'ng-smn-ui';
-import {RegionService} from '../../../core/region.service';
+import { Title } from '@angular/platform-browser';
+import { UiToolbarService } from 'ng-smn-ui';
+import { TranslateService } from '@shared/translate/translate.service';
 
 @Component({
     selector: 'app-fab',
     templateUrl: './fab.component.html',
-    styleUrls: ['../../../home/home.component.scss', './fab.component.scss']
+    styleUrls: ['./fab.component.scss']
 })
 export class FabComponent implements AfterViewInit, OnInit {
-    codes: any[];
-    region: any;
-
+    translate: any;
     constructor(private toolbarService: UiToolbarService,
                 private titleService: Title,
-                private regionService: RegionService) {
-        this.regionService.change.subscribe(region => this.region = region);
-        this.codes = [];
+                private translateService: TranslateService) {
+        this.translate = {
+            labels: {}
+        };
+        this.translateService.change.subscribe(async () => {
+            this.translate = await this.translateService.getLanguageData('fab');
+        });
     }
 
-    ngOnInit() {
-        this.region = this.regionService.get();
-        this.codes[0] = `<button class="ui-button primary fab" uiRipple>
-                    <i class="material-icons">add</i>
-                </button>`;
-        this.codes[1] = `<button class="ui-button accent fab mini" uiRipple>
-                    <i class="material-icons">check</i>
-                </button>`;
-        this.codes[2] = `<div class="ui-fab-container">
-                    <button class="ui-button accent fab mini" uiRipple>
-                        <i class="material-icons">check</i>
-                    </button>
-                    <button class="ui-button primary fab" uiRipple>
-                        <i class="material-icons">add</i>
-                    </button>
-                </div>`;
-        this.codes[3] = `<button class="ui-button success fab" uiRipple>
-                    <ui-progress-radial class="indeterminate"></ui-progress-radial>
-                    <i class="material-icons">check</i>
-                </button>`;
+    async ngOnInit() {
+        this.translate = await this.translateService.getLanguageData('fab');
     }
 
     ngAfterViewInit() {
         this.titleService.setTitle('Floating Action Button');
         this.toolbarService.set('FAB');
+    }
+
+    getHtml() {
+        return ` <!-- Normal -->
+<button class="ui-button primary fab" uiRipple>
+    <i class="material-icons">add</i>
+</button>
+
+<!-- Mini -->
+<button class="ui-button error fab mini" uiRipple>
+    <i class="material-icons">close</i>
+</button>
+
+<!-- With ui-fab-container -->
+<div class="ui-fab-container">
+    <button class="ui-button accent fab mini" uiRipple>
+        <i class="material-icons">check</i>
+    </button>
+    <button class="ui-button primary fab" uiRipple>
+        <i class="material-icons">add</i>
+    </button>
+</div>
+`;
     }
 }

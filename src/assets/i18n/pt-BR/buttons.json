@@ -1,7 +1,10 @@
 {
     "introduction": "Os botões permitem aos usuarios realizar ações de forma prática.",
     "labels": {
-        "function": "Função"
+        "attribute": "Atributo",
+        "function": "Função",
+        "type": "Tipo",
+        "default": "Default"
     },
     "buttonContainer": {
         "classes": [{
@@ -19,6 +22,10 @@
         }]
     },
     "button": {
+        "attributes": [{
+            "attribute": "uiRipple",
+            "function": "Adiciona efeito ripple no click do botão."
+        }],
         "classes": [{
             "name": "ui-button",
             "function": "Adiciona os estilos padrão do botão."

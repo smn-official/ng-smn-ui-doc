@@ -19,6 +19,10 @@
         }]
     },
     "button": {
+        "attributes": [{
+            "attribute": "uiRipple",
+            "function": "Adds ripple effect at the click of the button."
+        }],
         "classes": [{
             "name": "ui-button",
             "function": "Adds standard button styles."

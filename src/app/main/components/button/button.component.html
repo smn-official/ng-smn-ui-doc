@@ -87,7 +87,24 @@
         </ui-card>
 
         <h2>API</h2>
-        <h3>UiButtonContainer (ui-button-container)</h3>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                <tr>
+                    <th style="width: 160px">{{translate.labels.attribute}}</th>
+                    <th>{{translate.labels.function}}</th>
+                </tr>
+                <tr class="disabled" *ngFor="let item of translate.button?.attributes">
+                    <td>{{item.attribute}}</td>
+                    <td>{{item.function}}</td>
+                </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
+
+        <h2>Classes</h2>
+        <h3>ui-button-container</h3>
         <ui-card>
             <ui-data-table>
                 <tbody>
@@ -104,7 +121,7 @@
             </ui-data-table>
         </ui-card>
 
-        <h3>UiButton (ui-button)</h3>
+        <h3>ui-button</h3>
         <ui-card>
             <ui-data-table>
                 <tbody>

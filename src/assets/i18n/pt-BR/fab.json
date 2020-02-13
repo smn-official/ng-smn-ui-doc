@@ -1,0 +1,37 @@
+{
+    "introduction": "Botão flutuante utilizado normalmente para realizar a ação principal da página.",
+    "helper": "*No canto inferior direito da tela há um exemplo de como ser aplicado.",
+    "labels": {
+        "function": "Function"
+    },
+    "fabContainer": {
+        "classes": [{
+            "name": "ui-fab-container",
+            "function": "Usado para englobar um conjunto de FABs"
+        }]
+    },
+    "fab": {
+        "classes": [{
+            "name": "ui-button",
+            "function": "Adiciona os estilos padrão do botão."
+        }, {
+            "name": "fab",
+            "function": "Transforma em um FAB padrão"
+        }, {
+            "name": "mini",
+            "function": "Transforma em um FAB pequeno"
+        }, {
+            "name": "primary",
+            "function": "Adiciona o tema primário do sistema ao botão."
+        }, {
+            "name": "accent",
+            "function": "Adiciona o tema secundário do sistema ao botão."
+        }, {
+            "name": "warning",
+            "function": "Adiciona um visual de alerta ao botão."
+        }, {
+            "name": "error",
+            "function": "Adiciona um visual de erro ao botão."
+        }]
+    }
+}
