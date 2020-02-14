@@ -6,6 +6,7 @@ import { BOTTOM_SHEETS } from './bottom-sheets/bottom-sheets-routing.module';
 import { BUTTONS } from './button/button-routing.module';
 import { CARDS } from './card/card-routing.module';
 import { CHIPS } from './chips/chips-routing.module';
+import { CHOSEN } from './chosen/chosen-routing.module';
 import { CLOCK } from './clock/clock-routing.module';
 import { COLOR_PICKERS } from './color-pickers/color-pickers-routing.module';
 import { DATA_TABLES } from './data-tables/data-tables-routing.module';
@@ -37,6 +38,7 @@ export const COMPONENTS_ROUTES: Routes = [
     ...BUTTONS,
     ...CARDS,
     ...CHIPS,
+    ...CHOSEN,
     ...CLOCK,
     ...COLOR_PICKERS,
     ...DATA_TABLES,

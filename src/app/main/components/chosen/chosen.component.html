@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="ui-s960">
+        <h1>
+            Chosen
+        </h1>
+        <p>{{translate.introduction}}</p>
+
+        <ui-card class="demo">
+            <ui-tab-group [accent]="true" class="fixed">
+                <ui-tab label="Demo">
+                    <ui-card-content>
+                        <h3>{{translate.labels.simple}}</h3>
+                        <div class="ui-flex-container">
+                            <ui-input-container>
+                                <ui-chosen name="heroes"
+                                           uiInput
+                                           required
+                                           [(ngModel)]="info.hero">
+                                    <ui-chosen-option *ngFor="let item of heroes"
+                                                      [value]="item.name"
+                                                      [label]="item.name"></ui-chosen-option>
+                                </ui-chosen>
+                                <label>Heroes</label>
+                            </ui-input-container>
+
+                            <div class="hero-selected" *ngIf="info.hero">
+                                <span>Heroi selecionado:</span>
+                                <h4>{{info.hero}}</h4>
+                            </div>
+                        </div>
+
+                        <h3>{{translate.labels.grouped}}</h3>
+                        <div class="ui-flex-container">
+                            <ui-input-container>
+                                <ui-chosen name="heroes"
+                                           uiInput
+                                           required
+                                           [(ngModel)]="info.groupHero"
+                                           [search]="true">
+                                    <ui-chosen-group *ngFor="let group of groupedHeroes" [label]="group.name">
+                                        <ui-chosen-option *ngFor="let hero of group.heroes"
+                                                          [value]="hero.name"
+                                                          [label]="hero.name"></ui-chosen-option>
+                                    </ui-chosen-group>
+                                </ui-chosen>
+                                <label>Heroes</label>
+                            </ui-input-container>
+
+                            <div class="hero-selected" *ngIf="info.groupHero">
+                                <span>Heroi selecionado:</span>
+                                <h4>{{info.groupHero}}</h4>
+                            </div>
+                        </div>
+                    </ui-card-content>
+                </ui-tab>
+
+                <ui-tab label="HTML">
+                    <ngx-prism [language]="'html'">{{getHtml()}}</ngx-prism>
+                </ui-tab>
+
+                <ui-tab label="TS">
+                    <ngx-prism [language]="'typescript'">{{getTypescript()}}</ngx-prism>
+                </ui-tab>
+
+                <ui-tab label="SCSS">
+                    <ngx-prism [language]="'scss'">/* You don't need this */</ngx-prism>
+                </ui-tab>
+            </ui-tab-group>
+        </ui-card>
+
+        <h2>API</h2>
+        <ui-card>
+            <ui-data-table>
+                <tbody>
+                <tr>
+                    <th style="width: 160px">{{translate.labels.attribute}}</th>
+                    <th>{{translate.labels.function}}</th>
+                    <th>{{translate.labels.type}}</th>
+                    <th>{{translate.labels.default}}</th>
+                </tr>
+                <tr class="disabled" *ngFor="let item of translate.chosen?.attributes">
+                    <td>{{item.attribute}}</td>
+                    <td>{{item.function}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.default}}</td>
+                </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </ui-data-table>
+        </ui-card>
+    </div>
+</div>

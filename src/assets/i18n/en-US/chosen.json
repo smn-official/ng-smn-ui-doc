@@ -1,0 +1,24 @@
+{
+    "introduction": "Allows the selection of an item among several options.",
+    "labels": {
+        "attribute": "Atributo",
+        "function": "Função",
+        "type": "Tipo",
+        "default": "Default",
+        "simple": "Simple",
+        "grouped": "Grouped"
+    },
+    "chosen": {
+        "attributes": [{
+            "attribute": "uiInput",
+            "function": "Adds the appearance of input to the component (required).",
+            "type": "---",
+            "default": "---"
+        }, {
+            "attribute": "search",
+            "function": "Allows you to perform a search among the available options.",
+            "type": "boolean",
+            "default": "false"
+        }]
+    }
+}

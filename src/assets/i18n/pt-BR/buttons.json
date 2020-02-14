@@ -1,10 +1,7 @@
 {
     "introduction": "Os botões permitem aos usuarios realizar ações de forma prática.",
     "labels": {
-        "attribute": "Atributo",
-        "function": "Função",
-        "type": "Tipo",
-        "default": "Default"
+        "function": "Função"
     },
     "buttonContainer": {
         "classes": [{
