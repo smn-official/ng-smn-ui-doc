@@ -2,113 +2,126 @@
     <div class="ui-s960">
         <h1>Card <a href="https://material.io/guidelines/components/cards.html"><i class="material-icons">link</i></a>
         </h1>
-        <p>Card é um componente que serve como ponto de entrada para informações mais detalhadas.</p>
+        <p>{{translate.introduction}}</p>
         <br>
         <div class="separator">
-            <h3>{{region.card.simple}}</h3>
-            <p>
-                <ui-card>
-                    <br>
-                    <br>
-                    <br>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/85e2e2ef543a6a7fa768b40fd3edf2a6"></code-gits>
+
+
+            <ui-card class="demo">
+                <ui-tab-group [accent]="true" class="fixed">
+                    <ui-tab label="Demo">
+                        <ui-card-content>
+                            <h3>{{translate.card.simple}}</h3>
+                            <ui-card class="ui-flex-container break-on-s480" style="padding: 16px;">Simple card
+                            </ui-card>
+
+                            <div class="separator">
+                                <h3>{{translate.card.content}}</h3>
+                                <ui-card>
+                                    <ui-card-title>Lorem ipsum</ui-card-title>
+                                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
+                                    <ui-card-content>
+                                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit
+                                        illum, minus
+                                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla
+                                        sint sunt totam?
+                                    </ui-card-content>
+                                </ui-card>
+                            </div>
+
+                            <div class="separator">
+                                <h3>{{translate.card.withButtons}}</h3>
+
+                                <ui-card>
+                                    <ui-card-title>Lorem ipsum</ui-card-title>
+                                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
+                                    <ui-card-content>
+                                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita
+                                        fugit illum, minus
+                                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto
+                                        nulla sint sunt totam?
+                                    </ui-card-content>
+                                    <div class="ui-button-container cover">
+                                        <button class="ui-button flat" uiRipple>Secondary</button>
+                                        <button class="ui-button flat primary" uiRipple>Action</button>
+                                    </div>
+                                </ui-card>
+                            </div>
+
+                            <div class="separator">
+                                <h3>{{translate.card.withButtonsOnLeft}}</h3>
+                                <ui-card>
+                                    <ui-card-title>Lorem ipsum</ui-card-title>
+                                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
+                                    <ui-card-content>
+                                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit
+                                        illum, minus
+                                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla
+                                        sint sunt totam?
+                                    </ui-card-content>
+                                    <div class="ui-button-container cover align-left">
+                                        <button class="ui-button flat primary" uiRipple>Action</button>
+                                        <button class="ui-button flat" uiRipple>Secondary</button>
+                                    </div>
+                                </ui-card>
+                            </div>
+
+                            <div class="separator">
+                                <h3>{{translate.card.withImage}}</h3>
+                                <ui-card>
+                                    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                        class="responsive">
+                                    <ui-card-title>{{region.card.imageActor}}</ui-card-title>
+                                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
+                                    <ui-card-content>
+                                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit
+                                        illum, minus
+                                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla
+                                        sint sunt totam?
+                                    </ui-card-content>
+                                    <div class="ui-button-container cover align-left">
+                                        <button class="ui-button flat primary" uiRipple>Action</button>
+                                        <button class="ui-button flat" uiRipple>Secondary</button>
+                                    </div>
+                                </ui-card>
+                            </div>
+
+                        </ui-card-content>
+                    </ui-tab>
+
+                    <ui-tab label="HTML">
+                        <ngx-prism [language]="'html'">{{getHtml()}}</ngx-prism>
+                    </ui-tab>
+
+                    <ui-tab label="TS">
+                        <ngx-prism [language]="'typescript'">// You don't need this</ngx-prism>
+                    </ui-tab>
+
+                    <ui-tab label="SCSS">
+                        <ngx-prism [language]="'scss'">/* You don't need this */</ngx-prism>
+                    </ui-tab>
+                </ui-tab-group>
+            </ui-card>
+
         </div>
         <div class="separator">
-            <h3>{{region.card.title}}</h3>
-            <p>
-                <ui-card>
-                    <ui-card-title>Lorem ipsum</ui-card-title>
-                    <br>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/8d047911b14fed11515dbb085309b7d3"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.card.subtitle}}</h3>
-            <p>
-                <ui-card>
-                    <ui-card-title>Lorem ipsum</ui-card-title>
-                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
-                    <br>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/55343a13b5cf6468c8ad6b21d0c37d22"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.card.content}}</h3>
-            <p>
-                <ui-card>
-                    <ui-card-title>Lorem ipsum</ui-card-title>
-                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
-                    <ui-card-content>
-                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit illum, minus
-                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla sint sunt totam?
-                    </ui-card-content>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/52c7bdc583c1736948ce1b82e50f5bed"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.card.withButtons}}</h3>
-            <p>
-                <ui-card>
-                    <ui-card-title>Lorem ipsum</ui-card-title>
-                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
-                    <ui-card-content>
-                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit illum, minus
-                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla sint sunt totam?
-                    </ui-card-content>
-                    <div class="ui-button-container cover">
-                        <button class="ui-button flat" uiRipple>Secondary</button>
-                        <button class="ui-button flat primary" uiRipple>Action</button>
-                    </div>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/bb0233c0a8d99ed7c67d3db421b5af1b"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.card.withButtonsOnLeft}}</h3>
-            <p>
-                <ui-card>
-                    <ui-card-title>Lorem ipsum</ui-card-title>
-                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
-                    <ui-card-content>
-                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit illum, minus
-                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla sint sunt totam?
-                    </ui-card-content>
-                    <div class="ui-button-container cover align-left">
-                        <button class="ui-button flat primary" uiRipple>Action</button>
-                        <button class="ui-button flat" uiRipple>Secondary</button>
-                    </div>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/0ce1d859945023e6a6f248c9086ce314"></code-gits>
-        </div>
-        <div class="separator">
-            <h3>{{region.card.withImage}}</h3>
-            <p>
-                <ui-card>
-                    <img *ngIf="region.language == 'pt-br'"
-                         src="https://conteudo.imguol.com.br/2012/09/25/vampeta-fala-sobre-ensaio-nu-para-a-g-magazine-1348607286095_956x500.jpg"
-                         class="responsive">
-                    <img *ngIf="region.language == 'en-us'"
-                         src="https://assets.metrolatam.com/gt/2016/02/25/screen-shot-2016-02-24-at-7-01-32-pm-1600x800.jpg"
-                         class="responsive">
-                    <ui-card-title>{{region.card.imageActor}} ipsum</ui-card-title>
-                    <ui-card-subtitle>Dolor sit amet</ui-card-subtitle>
-                    <ui-card-content>
-                        Consectetur adipisicing elit. Accusamus aperiam deserunt dolore expedita fugit illum, minus
-                        nihil obcaecati pariatur porro quibusdam tempore totam ut. Deleniti iusto nulla sint sunt totam?
-                    </ui-card-content>
-                    <div class="ui-button-container cover align-left">
-                        <button class="ui-button flat primary" uiRipple>Action</button>
-                        <button class="ui-button flat" uiRipple>Secondary</button>
-                    </div>
-                </ui-card>
-            </p>
-            <code-gits id="GabrielFerreir/970a7e7a45503ead3d2f0d6871f732a9"></code-gits>
+            <h2>API</h2>
+
+            <ui-card>
+                <ui-data-table>
+                    <tbody>
+                        <tr>
+                            <th style="width: 160px">Classes</th>
+                            <th>{{translate.labels.function}}</th>
+                        </tr>
+                        <tr class="disabled" *ngFor="let item of translate.cardContainer?.classes">
+                            <td>{{item.name}}</td>
+                            <td>{{item.function}}</td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </ui-data-table>
+            </ui-card>
         </div>
     </div>
 </div>
