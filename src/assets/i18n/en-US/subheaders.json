@@ -19,9 +19,11 @@
             }
         ]
     },
-    "card": {
-        "cardComSubheader": "Card with Subheader",
-        "texto": "A meaningless text below",
-        "exemplo": "Exemple"
-    }
+    "card": [
+        {
+            "cardComSubheader": "Card with Subheader",
+            "texto": "A meaningless text below",
+            "exemplo": "Exemple"
+        }
+    ]
 }
