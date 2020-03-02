@@ -18,6 +18,9 @@ export class AvatarComponent implements OnInit, AfterViewInit {
         this.translate = {
             labels: {}
         };
+        this.translateService.change.subscribe(async () => {
+            this.translate = await this.translateService.getLanguageData('avatar');
+        });
         this.info = {
             name: 'Barry Allen',
             color: '#F44336',
@@ -27,6 +30,7 @@ export class AvatarComponent implements OnInit, AfterViewInit {
 
     async ngOnInit() {
         this.translate = await this.translateService.getLanguageData('avatar');
+        console.log(this.translate);
     }
 
     ngAfterViewInit(): void {
