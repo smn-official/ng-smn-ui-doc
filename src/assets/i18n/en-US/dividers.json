@@ -1,0 +1,25 @@
+{
+    "introduction": "Dividers are a very thin line that separates and groups content into lists and layouts.",
+    "labels": {
+        "function": "Função"
+    },
+    "api": {
+        "attributes": [
+            {
+                "attribute": "uiRipple",
+                "function": "Adds ripple effect on button click."
+            }
+        ]
+    },
+    "dividers": {
+        "classes": [
+            {
+                "name": "ui-dividers",
+                "function": "Line generator."
+            }
+        ]
+    },
+    "card": {
+        "exemplo": "Exemple"
+    }
+}
