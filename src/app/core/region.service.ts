@@ -27,7 +27,7 @@ const regions = {
             withButtons: 'Com botões',
             withButtonsOnLeft: 'Com botões (alinhados a esquerda)',
             withImage: 'Com imagem',
-            imageActor: 'Vampeta',
+            imageActor: 'Lorem ipsum',
             imageLink: 'http://vampeta.com.br/vampeta.jpg'
         },
         fab: {
@@ -87,6 +87,7 @@ import {Injectable, EventEmitter} from '@angular/core';
 
 @Injectable()
 export class RegionService {
+    // tslint:disable-next-line: ban-types
     sharedValue: String;
     change: EventEmitter<any> = new EventEmitter();
 
@@ -97,6 +98,7 @@ export class RegionService {
         return region(this.sharedValue);
     }
 
+    // tslint:disable-next-line: ban-types
     public set(sharedValue: String) {
         this.sharedValue = sharedValue;
 

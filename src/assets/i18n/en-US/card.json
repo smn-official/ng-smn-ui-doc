@@ -1,0 +1,31 @@
+{
+    "introduction": "Card is a component that serves as an entry point for more detailed information.",
+    "labels": {
+        "function": "Função"
+    },
+    "cardContainer": {
+        "classes": [
+            {
+                "name": "ui-card-content",
+                "function": "Primary card content. Intended for blocks of text."
+            },
+            {
+                "name": "ui-card-title",
+                "function": "Card title."
+            },
+            {
+                "name": "ui-card-subtitle",
+                "function": "Card subtitle."
+            }
+        ]
+    },
+    "card": {
+        "simple": "Simple",        
+        "content": "Content",
+        "withButtons": "With buttons",
+        "withButtonsOnLeft": "With buttons (left aligned)",
+        "withImage": "With image"
+       
+        
+    }
+}
