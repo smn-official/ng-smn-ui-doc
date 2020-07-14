@@ -1,0 +1,27 @@
+{
+    "introduction": "Subheaders fornecem informação sobre uma seção.",
+    "labels": {
+        "function": "Função"
+    },
+    "subheadersContainer": {
+        "classes": [
+            {
+                "name": "ui-subheader",
+                "function": "Subtitulo da página."
+            },
+            {
+                "name": "primary",
+                "function": "Adiciona cor primaria no sistema."
+            },
+            {
+                "name": "accent",
+                "function": "Adiciona cor secundária no sistema."
+            }
+        ]
+    },
+    "card": {
+        "cardComSubheader": "Card com Subheader",
+        "texto": "Um texto sem sentido abaixo",
+        "exemplo": "Exemplo"
+    }
+}
